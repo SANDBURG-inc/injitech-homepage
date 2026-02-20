@@ -50,7 +50,7 @@ export default function Header() {
                     <div className="flex-shrink-0 relative z-50">
                         <Link href="/" className="group" onClick={() => setIsDrawerOpen(false)}>
                             <img
-                                src="http://localhost:3845/assets/f36d64c64963834185ad23a4a39ba58b639eaabf.svg"
+                                src="/assets/Logo.svg"
                                 alt="Injitech Logo"
                                 className="w-[100px] lg:w-[118px] h-[40px] object-contain transition-transform"
                             />
