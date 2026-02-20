@@ -1,0 +1,68 @@
+--- src/translations/translations.ts
++++ src/translations/translations.ts
+@@ -434,6 +434,31 @@
+             }
+           }
+         },
++        useCases: {
++          tag: "Use cases",
++          title: "다양한 산업 환경에서 Dell 서버 기반 인프라를 성공적으로 구축합니다.",
++          items: [
++            {
++              title: "국민건강보험",
++              description: "Dell HCI, x86 서버 공급 완료\nnbn 전자기록물 저장장치 증설",
++              image: "/assets/infra/dell/img.png"
++            },
++            {
++              title: "부민병원",
++              description: "PACS 스토리지 구축 및 증설, 교체 지원\nDell 서버 및 스토리지 공급",
++              image: "/assets/infra/dell/img2.png"
++            },
++            {
++              title: "법무부",
++              description: "차세대 범죄예방 정보시스템 구축사업 (1차)\nDell 서버 및 스토리지 공급",
++              image: "/assets/infra/dell/img3.png"
++            },
++            {
++              title: "국방부",
++              description: "국방홍보원 정보시스템 사업 수행\nDell x86 서버 공급 및 구축 제공",
++              image: "/assets/infra/dell/img4.png"
++            }
++          ]
++        }
+       },
+       hpe: {
+         title: "HPE",
+@@ -921,6 +946,31 @@
+             }
+           }
+         },
++        useCases: {
++          tag: "Use cases",
++          title: "Successfully building Dell server-based infrastructure\nin diverse industrial environments.",
++          items: [
++            {
++              title: "National Health Insurance",
++              description: "Completed Dell HCI, x86 server supply\nnbn electronic record storage expansion",
++              image: "/assets/infra/dell/img.png"
++            },
++            {
++              title: "Bumin Hospital",
++              description: "PACS storage construction and expansion\nDell server and storage supply",
++              image: "/assets/infra/dell/img2.png"
++            },
++            {
++              title: "Ministry of Justice",
++              description: "Next-gen crime prevention info system (Phase 1)\nDell server and storage supply",
++              image: "/assets/infra/dell/img3.png"
++            },
++            {
++              title: "Ministry of Defense",
++              description: "Defense Intelligence Agency info system project\nDell x86 server supply and construction",
++              image: "/assets/infra/dell/img4.png"
++            }
++          ]
++        }
+       },
+       hpe: {
+         title: "HPE",
