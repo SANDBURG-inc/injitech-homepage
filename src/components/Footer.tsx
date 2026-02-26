@@ -7,7 +7,7 @@ export default function Footer() {
     const { t } = useLanguage();
 
     return (
-        <footer className="bg-[#1D1F23] text-white py-[144px] px-5 flex justify-center">
+        <footer className="bg-[#1D1F23] text-white py-[144px] px-8 flex justify-center">
             <div className="max-w-[1400px] w-full flex flex-col gap-14">
                 {/* Logo and Branding Area */}
                 <div className="flex flex-col gap-10">

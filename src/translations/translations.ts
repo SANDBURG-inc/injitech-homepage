@@ -85,7 +85,7 @@ export const translations = {
     },
     footer: {
       companyInfo: "주식회사 인지테크 대표자 임정완",
-      bizNumber: "사업자등록번호 000-00-00000",
+      bizNumber: "사업자등록번호 214-88-86449",
       addressSeoul:
         "(서울) 서울특별시 서초구 방배천로 24길 7, 조석빌딩 7층(방배동)",
       addressWonju:
@@ -115,6 +115,8 @@ export const translations = {
             "인지테크는 2011년 설립 이후,\n전문 인력과 기술력을 바탕으로 지속적인 성장을 이뤄온 첨단 IT서비스\n전문 기업입니다. 정부기관, 공공기관, ",
           descriptionAssistive:
             "민간기업 등 다양한 산업군에걸쳐\n맞춤형 IT 솔루션과 첨단 인프라 구축 서비스를 제공하며,\n고객의 비즈니스 혁신과 성과창출에 기여하는\n‘신뢰받는 디지털 전환 파트너’로 자리매김하고 있습니다.",
+          descriptionMobile:
+            "인지테크는 2011년 설립 이후,\n 전문 인력과 기술력을 바탕으로 지속적인\n 성장을 이뤄온 첨단 IT서비스 전문 기업입니다. \n정부기관, 공공기관, 민간기업 등 다양한 \n산업군에 걸쳐 맞춤형 IT 솔루션과 첨단 인프라 구축 서비스를 제공하며, 고객의 비즈니스 혁신과 \n성과창출에 기여하는‘신뢰받는 디지털 전환 파트너’로 자리매김하고 있습니다.",
         },
         vision: {
           title: "Our Vision",
@@ -141,7 +143,7 @@ export const translations = {
         organization: {
           label: "Organization",
           title:
-            "기술 이해와 현장 실행력을 겸비한 전문가들이 모여\n고객 성공을 만들어가는 조직입니다.",
+            "기술 이해와 현장 실행력을 겸비한 전문가들이 모여 고객 성공을 만들어가는 조직입니다.",
           ceo: "대표이사 임정한",
           departments: [
             {
@@ -1220,7 +1222,7 @@ export const translations = {
     },
     footer: {
       companyInfo: "Injitech Co., Ltd. CEO Lim Jeong-wan",
-      bizNumber: "Business Registration Number 000-00-00000",
+      bizNumber: "Business Registration Number 214-88-86449",
       addressSeoul:
         "(Seoul) 7F, Joseok Building, 7, Bangbaecheon-ro 24-gil, Seocho-gu, Seoul",
       addressWonju:
@@ -1251,6 +1253,8 @@ export const translations = {
             "Since its establishment in 2011, Injitech is a specialized high-tech IT service company\nthat has achieved continuous growth based on expert personnel and technical prowess.\nAcross various industries including government agencies and public institutions, ",
           descriptionAssistive:
             'we provide customized IT solutions\nand advanced infrastructure deployment services, establishing ourselves as a\n"Trusted Digital Transformation Partner" that contributes to\ncustomers\' business innovation and performance creation.',
+          descriptionMobile:
+            "Since its establishment in 2011, Injitech is a specialized high-tech IT service company that has achieved continuous growth based on expert personnel and technical prowess. Across various industries including government agencies and public institutions, we provide customized IT solutions and advanced infrastructure deployment services, establishing ourselves as a \"Trusted Digital Transformation Partner\" that contributes to customers' business innovation and performance creation.",
         },
         vision: {
           title: "Our Vision",

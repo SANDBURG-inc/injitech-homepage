@@ -16,7 +16,7 @@ type BusinessCardProps = {
 
 const BusinessCard = ({ title, description, bgType, imageSrc }: BusinessCardProps) => {
     return (
-        <div className={`relative flex flex-col items-start pt-[56px] pb-[48px] px-10 lg:p-10 min-h-[480px] rounded-[12px] overflow-hidden group transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] ${bgType === "gradient" ? "bg-gradient-to-l from-[#38bdf8] to-[#0ea5e9]" : ""
+        <div className={`relative flex flex-col items-start pt-[32px] lg:pt-[56px] pb-[24px] lg:pb-[48px] px-8 lg:p-10 min-h-[240px] lg:min-h-[480px] rounded-[12px] overflow-hidden group transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] ${bgType === "gradient" ? "bg-gradient-to-l from-[#38bdf8] to-[#0ea5e9]" : ""
             }`}>
             {bgType === "image" && imageSrc && (
                 <>
@@ -29,17 +29,17 @@ const BusinessCard = ({ title, description, bgType, imageSrc }: BusinessCardProp
                 </>
             )}
 
-            <div className="relative z-10 flex flex-col h-full justify-between items-start gap-[48px] lg:gap-0">
-                <div className="space-y-[16px] lg:space-y-4">
-                    <h3 className="text-[24px] font-semibold text-white leading-[36px] tracking-[-0.01em]">
+            <div className="relative z-10 flex flex-col h-full justify-between items-start gap-[24px] lg:gap-0">
+                <div className="space-y-[8px] lg:space-y-4">
+                    <h3 className="text-[18px] lg:text-[24px] font-semibold text-white leading-[28px] lg:leading-[36px] tracking-[-0.01em]">
                         {title}
                     </h3>
-                    <p className="text-[18px] font-normal text-white leading-[28px] tracking-[-0.01em] whitespace-pre-line">
+                    <p className="text-[14px] lg:text-[18px] font-normal text-white leading-[22px] lg:leading-[28px] tracking-[-0.01em] whitespace-pre-line">
                         {description}
                     </p>
                 </div>
 
-                <div className="h-[160px] lg:h-40 w-full" />
+                <div className="h-[80px] lg:h-40 w-full" />
             </div>
         </div>
     );
@@ -75,7 +75,7 @@ export default function MainBusiness() {
 
     return (
         <section className="w-full bg-white flex flex-col items-center">
-            <div className="w-full max-w-[1400px] flex flex-col py-20 lg:py-[160px] px-5 lg:px-0">
+            <div className="w-full max-w-[1400px] flex flex-col py-20 lg:py-[160px] px-8 lg:px-0">
                 {/* Title Content */}
                 <ScrollReveal>
                     <div className="flex flex-col gap-[32px] lg:gap-8 mb-[40px] lg:mb-[72px]">

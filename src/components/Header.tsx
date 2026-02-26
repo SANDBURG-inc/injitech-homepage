@@ -45,7 +45,7 @@ export default function Header() {
                 className={`fixed top-0 left-0 right-0 z-[50] h-[64px] lg:h-[80px] transition-all duration-300 ${scrolled || isDrawerOpen ? "bg-black/90 backdrop-blur-md" : "bg-transparent"
                     }`}
             >
-                <div className="max-w-[1440px] h-full mx-auto px-5 lg:px-10 flex items-center justify-between">
+                <div className="max-w-[1440px] h-full mx-auto px-8 lg:px-10 flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex-shrink-0 relative z-50">
                         <Link href="/" className="group" onClick={() => setIsDrawerOpen(false)}>
@@ -65,14 +65,14 @@ export default function Header() {
                                     {link.onClick ? (
                                         <button
                                             onClick={link.onClick}
-                                            className="px-6 py-2 text-[17px] font-medium text-[#fbfcfd]/80 hover:text-[#fbfcfd] hover:bg-white/5 rounded-full transition-all tracking-tight"
+                                            className="px-8 py-2 text-[17px] font-medium text-[#fbfcfd]/80 hover:text-[#fbfcfd] hover:bg-white/5 rounded-full transition-all tracking-tight"
                                         >
                                             {link.name}
                                         </button>
                                     ) : (
                                         <Link
                                             href={link.href}
-                                            className="px-6 py-2 text-[17px] font-medium text-[#fbfcfd]/80 hover:text-[#fbfcfd] hover:bg-white/5 rounded-full transition-all tracking-tight"
+                                            className="px-8 py-2 text-[17px] font-medium text-[#fbfcfd]/80 hover:text-[#fbfcfd] hover:bg-white/5 rounded-full transition-all tracking-tight"
                                         >
                                             {link.name}
                                         </Link>
@@ -157,13 +157,13 @@ export default function Header() {
 
             {/* Mobile Drawer Menu Overlay */}
             <div
-                className={`fixed inset-0 z-[60] bg-black/70 lg:hidden transition-opacity duration-300 pointer-events-auto cursor-pointer ${isDrawerOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                className={`fixed top-0 left-0 right-0 h-[150dvh] z-[60] bg-black/70 lg:hidden transition-opacity duration-300 pointer-events-auto cursor-pointer ${isDrawerOpen ? "opacity-100 visible" : "opacity-0 invisible"
                     }`}
                 onClick={() => setIsDrawerOpen(false)}
             >
                 {/* Content Area */}
                 <div
-                    className={`absolute top-0 right-0 w-[80%] h-[100dvh] bg-[#1D1F23] pt-[80px] px-6 transition-transform duration-300 ease-out transform cursor-default ${isDrawerOpen ? "translate-x-0" : "translate-x-full"
+                    className={`absolute top-0 right-0 bottom-0 w-[80%] h-full bg-[#1D1F23] pt-[80px] px-8 transition-transform duration-300 ease-out transform cursor-default overflow-y-auto ${isDrawerOpen ? "translate-x-0" : "translate-x-full"
                         }`}
                     onClick={(e) => e.stopPropagation()}
                 >

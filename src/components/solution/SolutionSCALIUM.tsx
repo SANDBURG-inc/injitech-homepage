@@ -15,7 +15,7 @@ export default function SolutionSCALIUM() {
     return (
         <div className="w-full">
             {/* Section 1: Introduction */}
-            <section className="bg-white flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col items-center pb-20 md:pb-[160px] pt-24 md:pt-[200px] w-full max-w-[1400px]">
                     <div className="flex flex-col gap-10 md:gap-[72px] items-center justify-center max-w-[960px] w-full">
                         {/* SCALIUM Logo */}
@@ -34,7 +34,7 @@ export default function SolutionSCALIUM() {
                         <div className="content-stretch flex flex-col gap-[56px] items-center justify-center w-full">
                             {/* Intro Text */}
                             <ScrollReveal>
-                                <div className="flex flex-col text-[#121213] text-xl md:text-[32px] font-semibold leading-snug md:leading-[48px] text-center tracking-tight md:tracking-[-0.32px] md:whitespace-pre-wrap whitespace-normal">
+                                <div className="flex flex-col text-[#121213] text-xl md:text-[32px] font-semibold leading-snug md:leading-[48px] text-center tracking-tight md:tracking-[-0.32px] whitespace-normal md:whitespace-pre-wrap break-keep">
                                     <p>
                                         {data.intro}
                                     </p>
@@ -59,7 +59,7 @@ export default function SolutionSCALIUM() {
             </section>
 
             {/* Section 2: Major Advantages */}
-            <section className="bg-[#f0f9ff] flex flex-col items-center px-6 md:px-[120px] w-full border-b border-[#d0d5dc]">
+            <section className="bg-[#f0f9ff] flex flex-col items-center px-8 md:px-[120px] w-full border-b border-[#d0d5dc]">
                 <div className="flex flex-col gap-10 md:gap-[72px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
                     {/* Header */}
                     <ScrollReveal>
@@ -96,7 +96,7 @@ export default function SolutionSCALIUM() {
             </section>
 
             {/* Section 3: Comparison Table */}
-            <section className="bg-white flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col gap-10 md:gap-[48px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
                     {/* Header */}
                     <ScrollReveal>
@@ -153,7 +153,7 @@ export default function SolutionSCALIUM() {
             </section>
 
             {/* Section 4: Use Cases */}
-            <section className="bg-[#1d1f23] flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-[#1d1f23] flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col gap-10 md:gap-[72px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
                     {/* Header */}
                     <ScrollReveal>
@@ -206,7 +206,7 @@ export default function SolutionSCALIUM() {
             </section>
 
             {/* Section 5: Partner Capabilities */}
-            <section className="bg-white flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col gap-8 md:gap-[32px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
                     <ScrollReveal>
                         <div className="flex flex-col gap-8 md:gap-[32px] items-start w-full">

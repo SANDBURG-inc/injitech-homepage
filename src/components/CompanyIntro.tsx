@@ -11,7 +11,7 @@ export default function CompanyIntro() {
 
     return (
         <section className="w-full bg-white flex flex-col items-center">
-            <div className="w-full max-w-[1400px] flex flex-col pt-[100px] pb-[80px] lg:pt-[200px] lg:pb-[160px] px-5 lg:px-0">
+            <div className="w-full max-w-[1400px] flex flex-col pt-[100px] pb-[80px] lg:pt-[200px] lg:pb-[160px] px-8 lg:px-0">
                 {/* Text Content */}
                 <ScrollReveal>
                     <div className="flex flex-col gap-[32px] lg:gap-8 mb-[40px] lg:mb-[72px]">

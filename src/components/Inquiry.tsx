@@ -12,7 +12,7 @@ export default function Inquiry() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <section className="bg-white py-[80px] md:py-[60px] md:pb-[160px] flex justify-center px-5">
+        <section className="bg-white py-[80px] md:py-[60px] md:pb-[160px] flex justify-center px-8">
             <InquiryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
             <ScrollReveal className="w-full max-w-[1400px]">
                 <div className="relative w-full h-[240px] md:h-[500px] flex items-center justify-center overflow-hidden rounded-[16px]">
@@ -30,7 +30,7 @@ export default function Inquiry() {
                     </div>
 
                     {/* Content */}
-                    <div className="relative z-10 flex flex-col items-center gap-4 md:gap-8 px-5 text-center">
+                    <div className="relative z-10 flex flex-col items-center gap-4 md:gap-8 px-8 text-center">
                         <span className="text-[#0EA5E9] text-[16px] md:text-[20px] font-medium leading-[24px] md:leading-[28px] tracking-[-0.2px]">
                             {t.inquiry.tag}
                         </span>
@@ -39,7 +39,7 @@ export default function Inquiry() {
                         </h2>
                         <button
                             onClick={() => setIsModalOpen(true)}
-                            className="flex items-center gap-1 md:gap-2 bg-[#0EA5E9] hover:bg-[#0284C7] text-white px-6 py-3 md:px-10 md:py-5 rounded-[6px] md:rounded-[4px] transition-all group font-semibold text-[16px] md:text-[18px]"
+                            className="flex items-center gap-1 md:gap-2 bg-[#0EA5E9] hover:bg-[#0284C7] text-white px-8 py-3 md:px-10 md:py-5 rounded-[6px] md:rounded-[4px] transition-all group font-semibold text-[16px] md:text-[18px]"
                         >
                             {t.inquiry.button}
                             <img src="/assets/move-right.svg" alt="" className="w-6 h-6 transform group-hover:translate-x-1 transition-transform" />

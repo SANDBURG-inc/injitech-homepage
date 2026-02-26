@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import InquiryModal from "../common/InquiryModal";
 import ScrollReveal from "../common/ScrollReveal";
+import MobileTabDropdown from "../common/MobileTabDropdown";
 
 export default function InfraDell() {
     const { t } = useLanguage();
@@ -16,7 +17,7 @@ export default function InfraDell() {
     return (
         <div className="w-full">
             {/* Section 1: Introduction */}
-            <section className="bg-white flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col items-center pb-20 md:pb-[160px] pt-24 md:pt-[200px] w-full max-w-[1400px]">
                     <div className="flex flex-col gap-10 md:gap-[56px] items-center justify-center max-w-[960px] w-full">
                         {/* Dell Logo */}
@@ -35,7 +36,7 @@ export default function InfraDell() {
                         {/* Intro Text */}
                         <ScrollReveal>
                             <div className="flex flex-col text-[#121213] text-xl md:text-[32px] font-semibold leading-snug md:leading-[48px] text-center tracking-tight md:tracking-[-0.32px] whitespace-pre-wrap">
-                                <p className="mb-4 md:mb-0">
+                                <p className="mb-4 md:mb-0 break-keep">
                                     {t.infra.dell.intro}
                                 </p>
                             </div>
@@ -45,7 +46,7 @@ export default function InfraDell() {
             </section>
 
             {/* Section 2: Major Advantages */}
-            <section className="bg-[#f0f9ff] flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-[#f0f9ff] flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col gap-10 md:gap-[72px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
                     {/* Header */}
                     <ScrollReveal>
@@ -81,9 +82,9 @@ export default function InfraDell() {
             </section>
 
             {/* Section 3: Major Solution */}
-            <section className="bg-white flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col gap-10 md:gap-[72px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
-                    <ScrollReveal>
+                    <ScrollReveal className="relative z-20 w-full">
                         <div className="flex flex-col gap-8 md:gap-[32px] items-start w-full">
                             {/* Tag */}
                             <span className="text-[#0ea5e9] text-lg md:text-[20px] font-medium tracking-tight">
@@ -91,20 +92,11 @@ export default function InfraDell() {
                             </span>
 
                             {/* Solution Tabs */}
-                            <div className="flex flex-wrap gap-2 md:gap-[8px] items-start">
-                                {(Object.keys(t.infra.dell.solutions.tabs) as Array<keyof typeof t.infra.dell.solutions.tabs>).map((tabKey) => (
-                                    <button
-                                        key={tabKey}
-                                        onClick={() => setActiveSolution(tabKey)}
-                                        className={`px-5 py-2 md:px-[20px] md:py-[8px] rounded-full text-sm md:text-[16px] font-semibold tracking-tight transition-all border ${activeSolution === tabKey
-                                            ? "bg-[#0ea5e9] text-white border-[#0ea5e9]"
-                                            : "bg-white text-[#495461] border-[#d0d5dc] hover:border-[#0ea5e9] hover:text-[#0ea5e9]"
-                                            }`}
-                                    >
-                                        {t.infra.dell.solutions.tabs[tabKey]}
-                                    </button>
-                                ))}
-                            </div>
+                            <MobileTabDropdown
+                                tabs={t.infra.dell.solutions.tabs}
+                                activeTab={activeSolution}
+                                onTabChange={(tabKey) => setActiveSolution(tabKey as any)}
+                            />
 
                             {/* Title & Description */}
                             <div className="flex flex-col gap-3 md:gap-[12px] items-start w-full">
@@ -136,7 +128,7 @@ export default function InfraDell() {
             </section>
 
             {/* Section 4: Use Cases */}
-            <section className="bg-[#121213] flex flex-col items-center px-6 md:px-[120px] w-full border-t border-white/10">
+            <section className="bg-[#121213] flex flex-col items-center px-8 md:px-[120px] w-full border-t border-white/10">
                 <div className="flex flex-col gap-10 md:gap-[72px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
                     {/* Header */}
                     <ScrollReveal>
@@ -155,7 +147,7 @@ export default function InfraDell() {
                         {t.infra.dell.useCases.items.map((item, index) => (
                             <div key={index} className="flex flex-col gap-6 w-full">
                                 {/* Logo Container */}
-                                <div className="bg-white rounded-[20px] flex items-center justify-center aspect-[323/240] w-full px-6 overflow-hidden">
+                                <div className="bg-white rounded-[20px] flex items-center justify-center aspect-[323/240] w-full px-8 overflow-hidden">
                                     <div className="relative w-full h-full max-h-[200px]">
                                         <Image
                                             src={item.image}
@@ -181,7 +173,7 @@ export default function InfraDell() {
             </section>
 
             {/* Section 5: Partner Capabilities */}
-            <section className="bg-white flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col gap-10 md:gap-[72px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
                     {/* Header */}
                     <div className="flex flex-col gap-4 md:gap-[32px] items-start text-left w-full">
@@ -220,7 +212,7 @@ export default function InfraDell() {
                         <div className="flex justify-center w-full">
                             <button
                                 onClick={() => setIsModalOpen(true)}
-                                className="flex items-center gap-2 bg-[#0ea5e9] hover:bg-[#0284c7] text-white px-6 py-4 md:px-[24px] h-12 md:h-[64px] rounded-[8px] transition-all group font-semibold text-base md:text-[18px]"
+                                className="flex items-center gap-2 bg-[#0ea5e9] hover:bg-[#0284c7] text-white px-8 py-4 md:px-[24px] h-12 md:h-[64px] rounded-[8px] transition-all group font-semibold text-base md:text-[18px]"
                             >
                                 <div className="flex items-center justify-center px-1">
                                     {t.infra.dell.partnerCapabilities.button}

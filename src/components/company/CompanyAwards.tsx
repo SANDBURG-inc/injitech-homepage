@@ -11,7 +11,7 @@ export default function CompanyAwards() {
     return (
         <div className="w-full bg-white flex flex-col items-center">
             {/* Awards Header */}
-            <div className="w-full max-w-[1400px] px-5 lg:px-0 py-[80px] md:py-[160px]">
+            <div className="w-full max-w-[1400px] px-8 lg:px-0 py-[80px] md:py-[160px]">
                 <div className="flex flex-col items-start gap-[32px]">
                     <span className="text-[#0EA5E9] text-[16px] md:text-[20px] font-medium leading-[28px] tracking-[-0.2px] uppercase">
                         {awards.tag}

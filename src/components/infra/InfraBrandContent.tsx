@@ -11,7 +11,7 @@ interface InfraBrandContentProps {
 
 export default function InfraBrandContent({ logo, title, description }: InfraBrandContentProps) {
     return (
-        <section className="bg-white py-20 md:py-[160px] flex flex-col items-center px-6 md:px-[120px] w-full">
+        <section className="bg-white py-20 md:py-[160px] flex flex-col items-center px-8 md:px-[120px] w-full">
             <div className="flex flex-col gap-12 md:gap-[80px] items-start w-full max-w-[1400px]">
                 {/* Logo and Title */}
                 <div className="flex flex-col items-start gap-6 md:gap-[32px]">

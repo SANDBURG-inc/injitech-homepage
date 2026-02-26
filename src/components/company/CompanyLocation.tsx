@@ -18,14 +18,14 @@ export default function CompanyLocation() {
         : `https://maps.google.com/maps?q=${seoulMapQuery}&t=&z=17&ie=UTF8&iwloc=&output=embed`;
 
     return (
-        <section id="location" className="bg-white flex flex-col items-center px-6 md:px-[120px] w-full">
+        <section id="location" className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
             <div className="flex flex-col gap-8 md:gap-[48px] items-start pb-20 md:pb-[160px] pt-24 md:pt-[200px] w-full max-w-[1400px]">
                 {/* Header & Tabs */}
                 <div className="flex flex-col gap-6 md:gap-[32px] items-start w-full">
                     <div className="flex gap-2 items-start shrink-0">
                         <button
                             onClick={() => setActiveTab('hq')}
-                            className={`px-5 py-2 rounded-full font-semibold text-base transition-colors ${activeTab === 'hq'
+                            className={`px-8 py-2 rounded-full font-semibold text-base transition-colors ${activeTab === 'hq'
                                     ? 'bg-[#0ea5e9] text-white'
                                     : 'bg-white border border-[#d0d5dc] text-[#495461] hover:bg-gray-50'
                                 }`}
@@ -34,7 +34,7 @@ export default function CompanyLocation() {
                         </button>
                         <button
                             onClick={() => setActiveTab('seoul')}
-                            className={`px-5 py-2 rounded-full font-semibold text-base transition-colors ${activeTab === 'seoul'
+                            className={`px-8 py-2 rounded-full font-semibold text-base transition-colors ${activeTab === 'seoul'
                                     ? 'bg-[#0ea5e9] text-white'
                                     : 'bg-white border border-[#d0d5dc] text-[#495461] hover:bg-gray-50'
                                 }`}

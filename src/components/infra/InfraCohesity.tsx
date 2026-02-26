@@ -3,8 +3,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
-import InquiryModal from "../common/InquiryModal";
 import ScrollReveal from "../common/ScrollReveal";
+import MobileTabDropdown from "../common/MobileTabDropdown";
+import InquiryModal from "../common/InquiryModal";
 
 export default function InfraCohesity() {
     const { t } = useLanguage();
@@ -17,7 +18,7 @@ export default function InfraCohesity() {
     return (
         <div className="flex flex-col w-full">
             {/* Section 1: Logo & Intro */}
-            <section className="bg-white flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col items-center py-20 md:pb-[160px] md:pt-[200px] w-full max-w-[960px]">
                     <div className="flex flex-col gap-10 md:gap-[56px] items-center text-center w-full">
                         {/* Logo */}
@@ -34,7 +35,7 @@ export default function InfraCohesity() {
                         {/* Intro Text */}
                         <ScrollReveal>
                             <div className="flex flex-col gap-6 w-full">
-                                <p className="text-[#121213] text-xl md:text-[32px] font-semibold leading-relaxed md:leading-[48px] tracking-tight md:tracking-[-0.32px] whitespace-pre-line">
+                                <p className="text-[#121213] text-xl md:text-[32px] font-semibold leading-relaxed md:leading-[48px] tracking-tight md:tracking-[-0.32px] whitespace-normal md:whitespace-pre-line break-keep">
                                     {t.infra.cohesity.intro}
                                 </p>
                             </div>
@@ -44,7 +45,7 @@ export default function InfraCohesity() {
             </section>
 
             {/* Section 2: Major Advantages */}
-            <section className="bg-[#f0f9ff] flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-[#f0f9ff] flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col gap-10 md:gap-[72px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
                     {/* Header */}
                     <ScrollReveal>
@@ -79,30 +80,21 @@ export default function InfraCohesity() {
             </section>
 
             {/* Section 3: Major Solution */}
-            <section className="bg-white flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col gap-10 md:gap-[48px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
                     {/* Header */}
-                    <ScrollReveal>
+                    <ScrollReveal className="relative z-20 w-full">
                         <div className="flex flex-col gap-8 md:gap-[32px] items-start w-full">
                             <span className="text-[#0ea5e9] text-xl md:text-[20px] font-medium leading-normal md:leading-[28px] tracking-tight md:tracking-[-0.2px]">
                                 {t.infra.cohesity.major_solution.tag}
                             </span>
 
                             {/* Solution Tabs */}
-                            <div className="flex flex-wrap gap-2 md:gap-[8px] items-start">
-                                {(Object.keys(t.infra.cohesity.major_solution.tabs) as Array<keyof typeof t.infra.cohesity.major_solution.tabs>).map((tabKey) => (
-                                    <button
-                                        key={tabKey}
-                                        onClick={() => setActiveSolution(tabKey)}
-                                        className={`px-5 py-2 md:px-[20px] md:py-[8px] rounded-full text-sm md:text-[16px] font-semibold tracking-tight transition-all border ${activeSolution === tabKey
-                                            ? "bg-[#0ea5e9] text-white border-[#0ea5e9]"
-                                            : "bg-white text-[#495461] border-[#d0d5dc] hover:border-[#0ea5e9] hover:text-[#0ea5e9]"
-                                            }`}
-                                    >
-                                        {t.infra.cohesity.major_solution.tabs[tabKey]}
-                                    </button>
-                                ))}
-                            </div>
+                            <MobileTabDropdown
+                                tabs={t.infra.cohesity.major_solution.tabs}
+                                activeTab={activeSolution}
+                                onTabChange={(tabKey) => setActiveSolution(tabKey as any)}
+                            />
 
                             <div className="flex flex-col gap-3 md:gap-[12px] items-start w-full">
                                 <h2 className="text-[#121213] text-3xl md:text-[48px] font-medium leading-tight md:leading-[64px] tracking-tight md:tracking-[-0.48px] whitespace-pre-line">
@@ -133,7 +125,7 @@ export default function InfraCohesity() {
             </section>
 
             {/* Section 4: Use Cases */}
-            <section className="bg-[#1d1f23] flex flex-col items-center px-6 md:px-[120px] w-full border-t border-white/10">
+            <section className="bg-[#1d1f23] flex flex-col items-center px-8 md:px-[120px] w-full border-t border-white/10">
                 <div className="flex flex-col gap-10 md:gap-[72px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
                     {/* Header */}
                     <ScrollReveal>
@@ -193,7 +185,7 @@ export default function InfraCohesity() {
             </section>
 
             {/* Section 5: Operating Model */}
-            <section className="bg-white flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col gap-10 md:gap-[72px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
                     {/* Header */}
                     <div className="flex flex-col gap-8 md:gap-[32px] items-start w-full">
@@ -214,7 +206,7 @@ export default function InfraCohesity() {
                     {/* Cards */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
                         {t.infra.cohesity.partnerCapabilities.cards.map((card, index) => (
-                            <div key={index} className="bg-[#f0f9ff] rounded-[12px] px-6 py-10 md:px-[40px] md:py-[56px] flex flex-col gap-6 items-start w-full">
+                            <div key={index} className="bg-[#f0f9ff] rounded-[12px] px-8 py-10 md:px-[40px] md:py-[56px] flex flex-col gap-6 items-start w-full">
                                 <h3 className="text-[#121213] text-2xl md:text-[28px] font-semibold leading-tight md:leading-[40px] tracking-tight md:tracking-[-0.28px] whitespace-pre-line">
                                     {card.title}
                                 </h3>

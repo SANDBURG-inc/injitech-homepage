@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import InquiryModal from "../common/InquiryModal";
 import ScrollReveal from "../common/ScrollReveal";
+import MobileTabDropdown from "../common/MobileTabDropdown";
 
 export default function SolutionSAS() {
     const { t } = useLanguage();
@@ -17,12 +18,12 @@ export default function SolutionSAS() {
     return (
         <div className="w-full">
             {/* Section 1: Introduction */}
-            <section className="bg-white flex flex-col items-center px-6 md:px-[120px] w-full">
-                <div className="flex flex-col items-center pb-[160px] pt-[200px] w-full max-w-[1400px]">
-                    <div className="flex flex-col gap-[56px] items-center justify-center max-w-[960px] w-full">
+            <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
+                <div className="flex flex-col items-center pb-[80px] pt-[120px] md:pb-[160px] md:pt-[200px] w-full max-w-[1400px]">
+                    <div className="flex flex-col gap-[32px] md:gap-[56px] items-center justify-center max-w-[960px] w-full">
                         {/* SAS Logo */}
                         <ScrollReveal delay={100} className="w-full flex justify-center">
-                            <div className="relative w-full max-w-[300px] h-[112px] md:max-w-[400px] md:h-[112px]">
+                            <div className="relative w-full max-w-[200px] h-[72px] md:max-w-[400px] md:h-[112px]">
                                 <Image
                                     src="/assets/solution/SAS/SAS_logo.png"
                                     alt="SAS"
@@ -59,7 +60,7 @@ export default function SolutionSAS() {
             </section>
 
             {/* Section 2: Major Advantages */}
-            <section className="bg-[#f0f9ff] flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-[#f0f9ff] flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col gap-10 md:gap-[72px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
                     {/* Header */}
                     <ScrollReveal>
@@ -94,29 +95,20 @@ export default function SolutionSAS() {
             </section>
 
             {/* Section 3: Major Solution */}
-            <section className="bg-white flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col gap-10 md:gap-[48px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
-                    <ScrollReveal>
+                    <ScrollReveal className="relative z-20 w-full">
                         <div className="flex flex-col gap-8 md:gap-[32px] items-start w-full">
                             <span className="text-[#0ea5e9] text-lg md:text-[20px] font-medium tracking-tight">
                                 {data.solutions.tag}
                             </span>
 
                             {/* Solution Tabs */}
-                            <div className="flex flex-wrap gap-2 md:gap-[8px] items-start">
-                                {(Object.keys(data.solutions.tabs) as Array<keyof typeof data.solutions.tabs>).map((tabKey) => (
-                                    <button
-                                        key={tabKey}
-                                        onClick={() => setActiveSolution(tabKey as any)}
-                                        className={`px-5 py-2 md:px-[20px] md:py-[8px] rounded-full text-sm md:text-[16px] font-semibold tracking-tight transition-all border ${activeSolution === tabKey
-                                            ? "bg-[#0ea5e9] text-white border-[#0ea5e9]"
-                                            : "bg-white text-[#495461] border-[#d0d5dc] hover:border-[#0ea5e9] hover:text-[#0ea5e9]"
-                                            }`}
-                                    >
-                                        {data.solutions.tabs[tabKey]}
-                                    </button>
-                                ))}
-                            </div>
+                            <MobileTabDropdown
+                                tabs={data.solutions.tabs}
+                                activeTab={activeSolution}
+                                onTabChange={(tabKey) => setActiveSolution(tabKey as any)}
+                            />
 
                             {/* Title & Description */}
                             <div className="flex flex-col gap-3 md:gap-[12px] items-start w-full">
@@ -147,7 +139,7 @@ export default function SolutionSAS() {
             </section>
 
             {/* Section 4: Use Cases */}
-            <section className="bg-[#1d1f23] flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-[#1d1f23] flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col gap-10 md:gap-[72px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
                     <div className="flex flex-col gap-8 md:gap-[32px] items-start w-full">
                         <span className="text-[#0ea5e9] text-lg md:text-[20px] font-medium tracking-tight">
@@ -202,7 +194,7 @@ export default function SolutionSAS() {
             </section>
 
             {/* Section 5: Awards & Recognition */}
-            <section className="bg-white flex flex-col items-center px-6 md:px-[120px] w-full">
+            <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col gap-10 md:gap-[72px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
                     <div className="flex flex-col gap-8 md:gap-[32px] items-start w-full font-medium">
                         <span className="text-[#0ea5e9] text-lg md:text-[20px] tracking-tight">

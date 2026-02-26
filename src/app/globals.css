@@ -27,6 +27,10 @@
   --leading-6: 24px;
 }
 
+html {
+  zoom: 0.8;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -55,6 +59,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

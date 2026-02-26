@@ -12,7 +12,7 @@ export default function CompanyHistory() {
     return (
         <div className="bg-white flex flex-col items-center">
             {/* Header Section */}
-            <div className="w-full max-w-[1400px] px-5 lg:px-0 pt-[80px] md:pt-[200px] pb-[60px] md:pb-[72px]">
+            <div className="w-full max-w-[1400px] px-8 lg:px-0 pt-[80px] md:pt-[200px] pb-[60px] md:pb-[72px]">
                 <ScrollReveal>
                     <div className="flex flex-col items-start">
                         <span className="text-[#0EA5E9] text-[16px] md:text-[20px] font-medium leading-[28px] tracking-[-0.2px] uppercase mb-[12px] md:mb-[32px]">
@@ -31,7 +31,7 @@ export default function CompanyHistory() {
             </div>
 
             {/* Banner Section */}
-            <div className="w-full max-w-[1400px] px-5 lg:px-0 pb-[80px] md:pb-[72px]">
+            <div className="w-full max-w-[1400px] px-8 lg:px-0 pb-[80px] md:pb-[72px]">
                 <ScrollReveal>
                     <div className="relative w-full h-[240px] md:h-[480px] rounded-[12px] overflow-hidden">
                         <Image

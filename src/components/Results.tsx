@@ -39,7 +39,7 @@ export default function Results() {
 
     return (
         <section className="bg-white py-[80px] lg:py-[160px] flex justify-center overflow-hidden">
-            <div className="max-w-[1400px] w-full px-5 lg:px-0 flex flex-col gap-[40px] lg:gap-[72px]">
+            <div className="max-w-[1400px] w-full px-8 lg:px-0 flex flex-col gap-[40px] lg:gap-[72px]">
                 {/* Header */}
                 <ScrollReveal>
                     <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-[32px] lg:gap-8">
