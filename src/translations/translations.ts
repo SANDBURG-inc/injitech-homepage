@@ -92,10 +92,10 @@ export const translations = {
       button: "도입문의",
     },
     footer: {
-      companyInfo: "주식회사 인지테크 대표자 임정완",
+      companyInfo: "주식회사 인지테크 대표자 임정한",
       bizNumber: "사업자등록번호 214-88-86449",
       addressSeoul:
-        "(서울) 서울특별시 서초구 방배천로 24길 7, 조석빌딩 7층(방배동)",
+        "(서울) 서울특별시 서초구 방배천로 24길 7, 초석빌딩 7층(방배동)",
       addressWonju:
         "(원주) 강원도 원주시 입춘로 45, B동 925호(반곡동, 엔터비즈타워)",
       phoneSeoul: "(서울) 전화: 02-3487-6235 / FAX: 02-3487-6236",
@@ -1203,10 +1203,10 @@ export const translations = {
       button: "Contact Us",
     },
     footer: {
-      companyInfo: "Injitech Co., Ltd. CEO Lim Jeong-wan",
+      companyInfo: "Injitech Co., Ltd. CEO Lim Jeong-hwan",
       bizNumber: "Business Registration Number 214-88-86449",
       addressSeoul:
-        "(Seoul) 7F, Joseok Building, 7, Bangbaecheon-ro 24-gil, Seocho-gu, Seoul",
+        "(Seoul) 7F, Choseok Building, 7, Bangbaecheon-ro 24-gil, Seocho-gu, Seoul",
       addressWonju:
         "(Wonju) #925, Building B, 45, Ipchun-ro, Wonju-si, Gangwon-do (Enter Biz Tower)",
       phoneSeoul: "(Seoul) Tel: 02-3487-6235 / FAX: 02-3487-6236",
