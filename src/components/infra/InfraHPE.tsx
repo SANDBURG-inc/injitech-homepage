@@ -8,7 +8,7 @@ import MobileTabDropdown from "../common/MobileTabDropdown";
 
 export default function InfraHPE() {
     const { t } = useLanguage();
-    const [activeSolution, setActiveSolution] = useState<keyof typeof t.infra.hpe.solutions.tabs>("proliant");
+    const [activeSolution, setActiveSolution] = useState<keyof typeof t.infra.hpe.solutions.tabs>("server");
 
     const solutionData = t.infra.hpe.solutions.items[activeSolution];
 
@@ -35,6 +35,22 @@ export default function InfraHPE() {
                                 <p className="text-[#121213] text-xl md:text-[32px] font-semibold leading-relaxed md:leading-[48px] tracking-tight md:tracking-[-0.32px] whitespace-normal md:whitespace-pre-line break-keep">
                                     {t.infra.hpe.intro}
                                 </p>
+                            </div>
+                        </ScrollReveal>
+
+                        {/* Intro Video */}
+                        <ScrollReveal delay={200} className="w-full">
+                            <div className="w-full relative rounded-2xl overflow-hidden aspect-video shadow-lg bg-[#121213]">
+                                <video
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    className="w-full h-full object-cover"
+                                >
+                                    <source src="/assets/infra/hpe/HPE_video.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </ScrollReveal>
                     </div>
@@ -91,7 +107,12 @@ export default function InfraHPE() {
                             />
 
                             {/* Title & Description */}
-                            <div className="flex flex-col gap-3 md:gap-[12px] items-start w-full">
+                            <div className="flex flex-col gap-3 md:gap-[12px] items-start w-full transition-all duration-300">
+                                {solutionData.tag && (
+                                    <span className="text-[#0ea5e9] text-base md:text-[20px] font-semibold tracking-tight">
+                                        {solutionData.tag}
+                                    </span>
+                                )}
                                 <h2 className="text-[#121213] text-2xl md:text-[48px] font-medium leading-tight md:leading-[64px] tracking-tight md:tracking-[-0.48px] whitespace-pre-line">
                                     {solutionData.title}
                                 </h2>

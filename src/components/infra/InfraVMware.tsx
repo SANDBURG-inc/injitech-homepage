@@ -8,7 +8,7 @@ import MobileTabDropdown from "../common/MobileTabDropdown";
 
 export default function InfraVMware() {
     const { t } = useLanguage();
-    const [activeSolution, setActiveSolution] = useState<keyof typeof t.infra.vmware.major_solution.tabs>("vcf");
+    const [activeSolution, setActiveSolution] = useState<keyof typeof t.infra.vmware.major_solution.tabs>("vsan");
 
     // Ensure data exists before accessing
     const solutionData = t.infra.vmware.major_solution.items[activeSolution];
@@ -36,6 +36,22 @@ export default function InfraVMware() {
                                 <p className="text-[#121213] text-xl md:text-[32px] font-semibold leading-relaxed md:leading-[48px] tracking-tight md:tracking-[-0.32px] whitespace-pre-line break-keep">
                                     {t.infra.vmware.intro}
                                 </p>
+                            </div>
+                        </ScrollReveal>
+
+                        {/* Intro Video */}
+                        <ScrollReveal delay={200} className="w-full">
+                            <div className="w-full relative rounded-2xl overflow-hidden aspect-video shadow-lg bg-[#121213]">
+                                <video
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    className="w-full h-full object-cover"
+                                >
+                                    <source src="/assets/infra/vmware/vmware_video.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </ScrollReveal>
                     </div>
@@ -105,19 +121,16 @@ export default function InfraVMware() {
                         </div>
                     </ScrollReveal>
 
-                    {/* Video Content */}
-                    <div className="w-full relative rounded-md overflow-hidden shadow-lg h-[400px] md:h-[788px]">
-                        <video
+                    {/* Solution Image */}
+                    <div className="w-full relative rounded-md overflow-hidden shadow-lg h-[400px] md:h-[788px] bg-white border border-gray-100">
+                        <Image
                             key={activeSolution}
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            className="w-full h-full object-cover"
-                        >
-                            <source src={solutionData.video} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                            src={solutionData.image}
+                            alt={solutionData.title}
+                            fill
+                            className="object-contain p-4 md:p-8"
+                            priority
+                        />
                     </div>
                 </div>
             </section>

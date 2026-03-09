@@ -9,7 +9,7 @@ import MobileTabDropdown from "../common/MobileTabDropdown";
 
 export default function SolutionMedallia() {
     const { t } = useLanguage();
-    const [activeSolution, setActiveSolution] = useState<"experience_cloud" | "athena" | "clf" | "dxa">("experience_cloud");
+    const [activeSolution, setActiveSolution] = useState<"experience_cloud" | "dxa" | "clf">("experience_cloud");
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const data = t.solution.medallia;
@@ -122,15 +122,27 @@ export default function SolutionMedallia() {
                         </div>
                     </ScrollReveal>
 
-                    {/* Platform Image Content */}
                     <div className="w-full relative rounded-md overflow-hidden bg-white border border-[#d0d5dc]/50">
-                        <Image
-                            src={solutionData.image}
-                            alt={solutionData.title}
-                            width={1400}
-                            height={788}
-                            className="w-full h-auto object-contain"
-                        />
+                        {(solutionData as any).video ? (
+                            <video
+                                key={activeSolution}
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                className="w-full h-auto object-contain"
+                            >
+                                <source src={(solutionData as any).video} type="video/mp4" />
+                            </video>
+                        ) : (
+                            <Image
+                                src={solutionData.image}
+                                alt={solutionData.title}
+                                width={1400}
+                                height={788}
+                                className="w-full h-auto object-contain"
+                            />
+                        )}
                     </div>
                 </div>
             </section>

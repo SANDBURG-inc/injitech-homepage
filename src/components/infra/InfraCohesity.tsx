@@ -6,13 +6,19 @@ import { useLanguage } from "@/context/LanguageContext";
 import ScrollReveal from "../common/ScrollReveal";
 import MobileTabDropdown from "../common/MobileTabDropdown";
 import InquiryModal from "../common/InquiryModal";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function InfraCohesity() {
     const { t } = useLanguage();
-    const [activeSolution, setActiveSolution] = useState<keyof typeof t.infra.cohesity.major_solution.tabs>("dataprotect");
+    const [activeSolution, setActiveSolution] = useState<'gaia' | 'dataprotect' | 'smartfiles'>('gaia');
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    // Ensure data exists before accessing
+    const solutions = [
+        { id: 'gaia' as const, name: t.infra.cohesity.major_solution.tabs.gaia },
+        { id: 'dataprotect' as const, name: t.infra.cohesity.major_solution.tabs.dataprotect },
+        { id: 'smartfiles' as const, name: t.infra.cohesity.major_solution.tabs.smartfiles },
+    ];
+
     const solutionData = t.infra.cohesity.major_solution.items[activeSolution];
 
     return (
@@ -38,6 +44,22 @@ export default function InfraCohesity() {
                                 <p className="text-[#121213] text-xl md:text-[32px] font-semibold leading-relaxed md:leading-[48px] tracking-tight md:tracking-[-0.32px] whitespace-normal md:whitespace-pre-line break-keep">
                                     {t.infra.cohesity.intro}
                                 </p>
+                            </div>
+                        </ScrollReveal>
+
+                        {/* Intro Video */}
+                        <ScrollReveal delay={200} className="w-full">
+                            <div className="w-full relative rounded-[12px] overflow-hidden shadow-lg aspect-video">
+                                <video
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    className="w-full h-full object-cover"
+                                >
+                                    <source src="/assets/infra/cohesity/cohesity_video.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </ScrollReveal>
                     </div>
@@ -107,19 +129,16 @@ export default function InfraCohesity() {
                         </div>
                     </ScrollReveal>
 
-                    {/* Video Content */}
-                    <div className="w-full relative rounded-md overflow-hidden shadow-lg h-[400px] md:h-[788px]">
-                        <video
+                    {/* Solution Image */}
+                    <div className="w-full relative rounded-md overflow-hidden shadow-lg h-[400px] md:h-[788px] bg-white border border-gray-100">
+                        <Image
                             key={activeSolution}
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            className="w-full h-full object-cover"
-                        >
-                            <source src={solutionData.video} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                            src={solutionData.image}
+                            alt={solutionData.title}
+                            fill
+                            className="object-contain p-4 md:p-8"
+                            priority
+                        />
                     </div>
                 </div>
             </section>
@@ -174,13 +193,13 @@ export default function InfraCohesity() {
                     </div>
 
                     {/* Load More Button */}
-                    <div className="w-full flex justify-center mt-8 md:mt-0">
+                    {/* <div className="w-full flex justify-center mt-8 md:mt-0">
                         <button className="bg-white border border-[#9aa2b0] rounded-[8px] h-[64px] px-[24px] flex items-center justify-center hover:bg-gray-50 transition-colors">
                             <span className="text-[#25272e] text-[18px] font-semibold tracking-[-0.18px]">
                                 더보기
                             </span>
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 

@@ -76,7 +76,7 @@ export default function CompanyOverview() {
                             <span className="text-[#0EA5E9] text-[16px] md:text-[20px] font-medium leading-[28px] tracking-[-0.2px] uppercase">
                                 {t.company.overview.organization.label}
                             </span>
-                            <h2 className="text-[#121213] text-[24px] md:text-[48px] font-bold md:font-medium leading-[34px] md:leading-[64px] tracking-[-0.48px] whitespace-pre-line">
+                            <h2 className="text-[#121213] text-[24px] md:text-[48px] font-bold md:font-medium leading-[34px] md:leading-[64px] tracking-[-0.48px] whitespace-normal md:whitespace-pre-line">
                                 {t.company.overview.organization.title}
                             </h2>
                         </div>
@@ -88,7 +88,7 @@ export default function CompanyOverview() {
 
                     <div className="flex flex-col gap-[32px] md:gap-[64px] w-full">
                         {/* 3x3 Grid Implementation - Mobile 2 columns */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-[16px] gap-y-[40px] md:gap-[24px]">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-[16px] gap-y-[40px] md:gap-x-[24px] md:gap-y-[64px]">
                             {t.company.overview.organization.departments.map((dept: any) => (
                                 <div
                                     key={dept.id}

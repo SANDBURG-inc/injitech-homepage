@@ -17,7 +17,7 @@ export const translations = {
     },
     companyIntro: {
       tag: "Company Introduction",
-      title: "‘신뢰받는 디지털 전환 파트너’로 자리매김하고 있습니다.",
+      title: "신뢰받는 디지털 전환 파트너로 자리매김하고 있습니다.",
       description:
         "글로벌 솔루션 파트너십과 국내 구축 경험을 바탕으로, 고객 환경에 최적화된 디지털 전환을 지원합니다.",
     },
@@ -58,18 +58,26 @@ export const translations = {
       description:
         "데이터 분석, 고객 경험, IT 인프라 등 각 산업과 목적에 맞는 실제 적용 사례를 보유하고 있습니다.",
       items: {
-        useCase1: { category: "서비스", title: "인프라 구축" },
-        useCase2: { category: "서비스", title: "인프라 구축" },
-        useCase3: { category: "서비스", title: "인프라 구축" },
-        useCase4: { category: "서비스", title: "인프라 구축" },
-        useCase5: { category: "서비스", title: "인프라 구축" },
-        useCase6: { category: "서비스", title: "인프라 구축" },
-        useCase7: { category: "서비스", title: "인프라 구축" },
-        useCase8: { category: "서비스", title: "인프라 구축" },
-        useCase9: { category: "하드웨어", title: "인프라 구축" },
-        useCase10: { category: "하드웨어", title: "인프라 구축" },
-        useCase11: { category: "하드웨어", title: "인프라 구축" },
-        useCase12: { category: "하드웨어", title: "인프라 구축" },
+        useCase1: { category: "인프라-Dell", title: "국민건강보험\nDell HCI, x86 서버 공급 완료" },
+        useCase2: { category: "인프라-Dell", title: "부민병원\nPACS 스토리지 구축 및 증설, 교체 지원" },
+        useCase3: { category: "인프라-Dell", title: "법무부\n차세대 범죄예방 정보시스템 구축사업" },
+        useCase4: { category: "인프라-Dell", title: "국방부\n국방홍보원 정보시스템 사업 수행" },
+        useCase5: { category: "인프라-HPE", title: "한국고용정보원\n디지털 고용 서비스 플랫폼 고용24 구축" },
+        useCase6: { category: "인프라-HPE", title: "한화생명\nHPE x86 서버 및 인프라 구축" },
+        useCase7: { category: "인프라-HPE", title: "건강보험심사평가원\n보건의료 영상진료 판독 시스템용 서버 구축" },
+        useCase8: { category: "인프라-HPE", title: "대법원\n부동산 등기 시스템 HPE Unix 서버 공급" },
+        useCase9: { category: "인프라-Cohesity", title: "새마을금고\n금융 데이터센터 고성능 서버 구축" },
+        useCase10: { category: "솔루션-SAS", title: "한국은행\n통계 SW SAS 임차갱신 계약" },
+        useCase11: { category: "솔루션-SAS", title: "우리은행\n신용리스크 및 시장리스크 분석" },
+        useCase12: { category: "솔루션-SAS", title: "케이뱅크\nSAS 시스템 라이선스 갱신" },
+        useCase13: { category: "솔루션-SAS", title: "삼성화재\nSAS 임차 계약" },
+        useCase14: { category: "솔루션-SAS", title: "국민연금공단\nDesktop Cloud 환경 구축" },
+        useCase15: { category: "솔루션-SAS", title: "통계청\nPowerEdge 서버 기반 인프라 구축" },
+        useCase16: { category: "솔루션-SAS", title: "국세청\n24시간 물류 추적 서비스 가능 서버 구성" },
+        useCase17: { category: "솔루션-Medallia", title: "엘지유플러스\n실시간 디지털 고객경험 설문 수집 및 분석" },
+        useCase18: { category: "솔루션-Medallia", title: "HMM\n고객경험 분석" },
+        useCase19: { category: "솔루션-Medallia", title: "삼성전자판매\n고객경험 분석" },
+        useCase20: { category: "솔루션-Medallia", title: "서울대학교병원\n환자경험조사" },
       },
     },
     results: {
@@ -143,7 +151,7 @@ export const translations = {
         organization: {
           label: "Organization",
           title:
-            "기술 이해와 현장 실행력을 겸비한 전문가들이 모여 고객 성공을 만들어가는 조직입니다.",
+            "기술 이해와 현장 실행력을 겸비한 전문가들이 모여\n 고객 성공을 만들어가는 조직입니다.",
           ceo: "대표이사 임정한",
           departments: [
             {
@@ -187,6 +195,12 @@ export const translations = {
               title: "기술지원부",
               desc: "안정적 운영·기술 지원",
               icon: "/assets/company/icon7.png",
+            },
+            {
+              id: "479:7182",
+              title: "ITO사업부",
+              desc: "IT 운영 아웃소싱 수행",
+              icon: "/assets/company/icon8.png",
             },
           ],
         },
@@ -414,24 +428,27 @@ export const translations = {
         solutions: {
           tag: "Major Solution",
           tabs: {
-            poweredge: "POWEREDGE SEVER",
-            san: "SAN STORAGE",
-            nas: "NAS STORAGE"
+            storage: "STORAGE",
+            server: "SERVER",
+            etc: "ETC"
           },
           items: {
-            poweredge: {
-              title: "가상화, 데이터베이스, AI 등 모든\n자동화된 관리 기능과 강력한 보안 아키텍처",
-              description: "PowerEdge 제품군은 랙(Rack)에 장착하는 R 시리즈, 일반 사무공간에 설치 가능한 타워형 T 시리즈, 극한의 엣지 환경에 최적화된 XR 시리즈, 생성형 AI를 위해 고성능 GPU가 탑재된 XE 시리즈, 모듈식 서버인 MX 시리즈 등 다양한 폼팩터와 규격으로 구성되어 있습니다.",
+            storage: {
+              tag: "AI와 멀티클라우드 환경을 완벽히 지원하는 통합 스토리지",
+              title: "데이터의 경계를 허무는 Dell 엔터프라이즈 솔루션",
+              description: "Dell PowerStore, PowerScale, ECS 스토리지는 블록·파일·오브젝트를 아우르는 통합 스토리지 포트폴리오로, 멀티클라우드와 AI 데이터 활용까지 고려한 엔터프라이즈 표준 스토리지 환경을 제공합니다.",
               video: "/assets/infra/dell/dell_video.mp4"
             },
-            san: {
-              title: "미션 크리티컬 데이터를 위한\n고성능 SAN 스토리지 솔루션",
-              description: "금융, 공공 등 핵심 업무 환경에서 요구되는 최상의 가용성과 성능을 제공하며, 지능형 소프트웨어를 통해 복잡한 데이터 인프라를 단순화합니다.",
+            server: {
+              tag: "자동화와 확장성으로 대규모 데이터센터에 최적화된 플랫폼",
+              title: "모든 워크로드를 품는 혁신의 기반, Dell PowerEdge 서버",
+              description: "Dell PowerEdge 서버는 AI, 가상화, 업무 시스템 등 다양한 워크로드를 하나의 표준 인프라에서 안정적으로 운영할 수 있도록 설계된 범용 서버 플랫폼입니다. 자동화된 관리와 높은 확장성을 기반으로 대규모 데이터센터 운영에 최적화되어 있습니다.",
               video: "/assets/infra/dell/dell_video.mp4"
             },
-            nas: {
-              title: "방대한 비정형 데이터를 효율적으로\n관리하는 스케일아웃 NAS 솔루션",
-              description: "폭발적으로 증가하는 파일 및 오브젝트 데이터를 단일 네임스페이스에서 통합 관리하며, 필요에 따라 성능과 용량을 선형적으로 확장할 수 있습니다.",
+            etc: {
+              tag: "복잡한 IT 환경을 하나로 묶는 단일 표준 플랫폼의 완성",
+              title: "효율과 안정을 극대화한 Dell 차세대 데이터센터 인프라",
+              description: "Dell은 서버·스토리지·네트워크·백업·AI 인프라를 단일 플랫폼으로 표준화·통합하여, 다양한 워크로드를 안정적이고 효율적으로 운영할 수 있는 데이터센터 인프라를 제공합니다.",
               video: "/assets/infra/dell/dell_video.mp4"
             }
           }
@@ -511,31 +528,21 @@ export const translations = {
         solutions: {
           tag: "Major Solution",
           tabs: {
-            proliant: "PROLIANT SERVER",
-            hci: "Hyper-Converged Infrastructure",
-            blade: "Blade Server",
-            hpc: "HPC Server"
+            server: "Server",
+            storage: "Storage"
           },
           items: {
-            proliant: {
-              title: "가상화, 데이터베이스, AI 등 모든\n자동화된 관리 기능과 강력한 보안 아키텍처",
-              description: "HPE ProLiant 서버는 세계에서 가장 안전한 업계 표준 서버로서, 자동화된 관리 기능과 강력한 보안 설계로 지능형 컴퓨팅 기반을 제공합니다.",
-              video: "/assets/infra/hpe/HPE_video.mp4"
+            server: {
+              tag: "HPC와 AI 혁신을 가속하는 고밀도·고효율 인프라",
+              title: "연산 집약적 워크로드를 위한 고성능의 기준, HPE 서버",
+              description: "HPE ProLiant 및 Apollo 서버는 HPC, AI, 빅데이터 분석 등 연산 집약적 워크로드에 최적화된 고성능 서버로,\n고밀도 설계와 전력·냉각 효율을 통해 성능 중심의 인프라를 제공합니다.",
+              video: "/assets/infra/hpe/HPE_major_solution_video_server.mp4"
             },
-            hci: {
-              title: "클라우드 운영 경험을 온프레미스로\n확장하는 HPE HCI 솔루션",
-              description: "HPE Alletra dHCI 솔루션은 비즈니스 크리티컬 애플리케이션을 위해 클라우드의 민첩성과 하이엔드 스토리지의 회복탄력성을 결합합니다.",
-              video: "/assets/infra/hpe/HPE_video.mp4"
-            },
-            blade: {
-              title: "복잡한 데이터센터 환경을 단순화하고\n효율을 극대화하는 컴포저블 인프라",
-              description: "HPE Synergy는 유연한 유동 자원을 통해 단일 인프라에서 모든 워크로드를 처리하며 자동화된 인계 방식으로 배포 시간을 단축합니다.",
-              video: "/assets/infra/hpe/HPE_video.mp4"
-            },
-            hpc: {
-              title: "대규모 연산과 고성능 분석을 선도하는\nHPE HPC 및 AI 컴퓨팅",
-              description: "HPE Apollo와 Cray 솔루션은 방대한 데이터 처리와 복잡한 연산이 필요한 AI 및 시뮬레이션 환경에 최적화된 성능을 제공합니다.",
-              video: "/assets/infra/hpe/HPE_video.mp4"
+            storage: {
+              tag: "컴퓨팅과의 완벽한 결합으로 초고속 데이터 처리 구현",
+              title: "대용량 분석과 HPC·AI 성능을 극대화하는 HPE 스토리지",
+              description: "HPE 스토리지는 고속 처리와 대용량 분석 환경에 적합한 구조로 설계되어, 컴퓨팅과 밀접하게 결합된 고성능 데이터 처리를 지원합니다.\n특히 HPC·AI 환경에서 성능 극대화에 강점이 있습니다.",
+              video: "/assets/infra/hpe/HPE_major_solution_video_storage.mp4"
             }
           }
         },
@@ -610,31 +617,25 @@ export const translations = {
         major_solution: {
           tag: "Major Solution",
           tabs: {
-            vcf: "VMware Cloud Foundation",
             vsan: "VSAN",
             nsx: "NSX",
-            vrealize: "Vrealize Suite"
+            vrealize: "VEALIZE SUITE"
           },
           items: {
-            vcf: {
-              title: "VMware Cloud Foundation Modernize\n데이터 센터 구축",
-              description: "하이브리드 클라우드를 위한 하이퍼컨퍼지드 인프라의 Full stack 제공합니다.",
-              video: "/assets/infra/vmware/vmware_video.mp4"
-            },
             vsan: {
-              title: "vSAN: 엔터프라이즈급\n스토리지 가상화",
-              description: "vSAN은 서버의 로컬 스토리지를 가상화하여 유연하고 고성능의 공유 스토리지를 제공하며, TCO를 절감하고 운영 효율성을 극대화합니다.",
-              video: "/assets/infra/vmware/vmware_video.mp4"
+              title: "외장 스토리지 없이 완성하는 고성능·고가용성 VMware 통합 솔루션",
+              description: "서버에 장착된 로컬 디스크를 통합해 별도 스토리지 장비 없이 고성능·고가용성 스토리지 환경을 구성\nVMware 가상화 환경과 완전 통합되어 운영 단순화·TCO 절감·확장성을 동시에 확보",
+              image: "/assets/infra/vmware/vmware_VSAN.jpg"
             },
             nsx: {
-              title: "NSX: 네트워크 및\n보안 가상화 플랫폼",
-              description: "NSX는 L2-L7 네트워크 및 보안 서비스를 소프트웨어로 제공하여, 물리적 네트워크의 제약 없이 민첩하고 안전한 네트워크 환경을 구현합니다.",
-              video: "/assets/infra/vmware/vmware_video.mp4"
+              title: "가상머신 단위 초정밀 제로트러스트 보안",
+              description: "네트워크를 소프트웨어로 정의해 가상머신 단위까지 세밀한 보안 정책과 트래픽 제어 제공\n마이크로 세그멘테이션 기반으로 랜섬웨어·내부 확산 공격을 원천 차단하는 제로트러스트 보안 구현",
+              image: "/assets/infra/vmware/vmware_NSX.png"
             },
             vrealize: {
-              title: "vRealize Suite:\n지능형 클라우드 관리",
-              description: "vRealize Suite는 하이브리드 클라우드 환경 전반에 걸친 자동화된 운영 및 관리를 지원하여 IT 서비스 전달 속도를 높이고 운영 복잡성을 줄입니다.",
-              video: "/assets/infra/vmware/vmware_video.mp4"
+              title: "자원 비용 최적화와 스마트 운영 자동화",
+              description: "가상화·클라우드 전반의 자원 사용 현황을 분석해 비용 최적화와 성능 가시성 제공\n셀프서비스 기반 자동화로 운영 표준화·관리 효율 향상·운영 리스크 최소화 지원",
+              image: "/assets/infra/vmware/vmware_VEALIZE SUITE.png"
             }
           }
         },
@@ -689,25 +690,25 @@ export const translations = {
         major_solution: {
           tag: "Major Solution",
           tabs: {
-            dataprotect: "DataProtect",
-            smartfiles: "SmartFiles",
-            gaia: "GAIA"
+            gaia: "GAIA",
+            dataprotect: "Data Protect",
+            smartfiles: "Smart Files"
           },
           items: {
+            gaia: {
+              title: "데이터 주권 보장형 안전한 AI 검색·분석",
+              description: "백업·보호된 데이터를 대상으로 자연어 기반 검색·요약을 제공하는 AI 기능\n내부 데이터를 외부로 노출하지 않는 구조로, 보안과 데이터 주권을 고려한 AI 활용 지원\n컴플라이언스, 감사, 내부 분석 등 공공·엔터프라이즈 업무 활용에 적합한 AI 기능 제공",
+              image: "/assets/infra/cohesity/cohesity_GAIA.png"
+            },
             dataprotect: {
-              title: "HA 기반의 안정적 보안 백업 운영 환경 제공",
-              description: "Cohesity 고유의 SpanFS 구조와 SnapTree 아키텍처를 통해 분산 구조 백업과 복구가 가능합니다.",
-              video: "/assets/infra/cohesity/cohesity_video.mp4"
+              title: "랜섬웨어 방어용 불변(Immutable) 백업 및 신속 복구",
+              description: "백업 데이터를 랜섬웨어로부터 보호하기 위해 변조 불가(Immutable) 백업과 강력한 접근 통제를 기본 구조로 제공\n장애·사이버 공격 상황에서도 신속하고 신뢰도 높은 복구를 지원하여 업무 연속성 확보\n보안, 컴플라이언스, 운영 안정성을 동시에 고려한 엔터프라이즈 데이터 보호 체계 제공",
+              image: "/assets/infra/cohesity/cohesity_Data Protect.png"
             },
             smartfiles: {
-              title: "엔터프라이즈급 소프트웨어 정의 파일 및 오브젝트 솔루션",
-              description: "관리 용이성, 확장성, 보안, 효율성을 제공하며, 여러 워크로드를 단일 플랫폼에서 통합 관리하는 스마트한 파일 서비스입니다.",
-              video: "/assets/infra/cohesity/cohesity_video.mp4"
-            },
-            gaia: {
-              title: "AI 기반 대화형 검색 및 인사이트 솔루션",
-              description: "생성형 AI를 활용하여 백업 데이터에서 통찰력을 얻고, 데이터를 실행 가능한 정보로 전환하여 스마트한 의사 결정을 지원합니다.",
-              video: "/assets/infra/cohesity/cohesity_video.mp4"
+              title: "대규모 비정형 데이터(파일·오브젝트) 통합 관리 및 보호",
+              description: "파일 및 오브젝트 데이터를 통합 관리하는 플랫폼으로, 대규모 비정형 데이터 환경의 안정적 운영 지원\n데이터 변경 이력 보호, 스냅샷 기반 복구 등으로 파일 데이터에 대한 보안과 가용성 강화\n온프레미스와 클라우드 환경 모두에서 일관된 데이터 관리 정책 적용 가능",
+              image: "/assets/infra/cohesity/cohesity_Smart Files.png"
             }
           }
         },
@@ -740,7 +741,7 @@ export const translations = {
         },
         partnerCapabilities: {
           tag: "Operating Model",
-          title: "가장 핵심적인 기술 파트너로서\n입지 확보",
+          title: "가장 핵심적인 기술 파트너로서 입지 확보",
           subtitle: "‘신뢰받는 디지털 전환 파트너’로 자리매김하고 있습니다.",
           cards: [
             {
@@ -810,42 +811,30 @@ export const translations = {
           tag: "Major Solution",
           tabs: {
             viya: "SAS Viya",
-            visual_analytics: "SAS Visual Analytics",
-            enterprise_miner: "SAS Enterprise Miner",
-            customer_intelligence: "SAS Customer Intelligence",
-            fraud_management: "SAS Fraud Management",
-            risk_management: "SAS Risk Management"
+            data_maker: "SAS Data Maker",
+            analytics_pro: "SAS Analytics Pro",
+            visual_analytics: "SAS Visual Analytics"
           },
           items: {
             viya: {
-              title: "클라우드 기반 통합 분석 플랫폼",
-              description: "AI, ML, 예측모델을 빠르게 개발·배포 가능",
-              video: "/assets/solution/SAS/SAS_video2.mp4"
+              title: "클라우드 기반 엔드투엔드 통합 AI 분석 플랫폼",
+              description: "SAS Viya는 클라우드 네이티브 기반의 통합 데이터 및 AI 분석 플랫폼으로,\n데이터 준비부터 모델 개발·배포·운영까지 분석 라이프사이클 전체를 지원합니다.",
+              video: "/assets/solution/SAS/SAS_video.mp4"
+            },
+            data_maker: {
+              title: "로우코드 기반 고품질 합성 데이터 생성 솔루션",
+              description: "SAS Data Maker는 합성 데이터 생성 도구로, 실제 데이터를 모방하면서 프라이버시를 보호하는\n고품질 synthetic data를 빠르게 생성할 수 있는 로우코드/노코드 솔루션입니다.",
+              video: "/assets/solution/SAS/SAS Data Maker.mp4"
+            },
+            analytics_pro: {
+              title: "데이터 처리부터 시각화까지 지원하는 종합 분석 패키지",
+              description: "SAS Analytics Pro는 데스크탑 및 서버 환경에서 데이터 접근·변환·분석·시각화·보고를 통합 제공하는 분석 툴입니다.\nBase SAS, SAS/STAT, SAS/GRAPH 등을 포함한 종합 분석 패키지입니다.",
+              image: "/assets/solution/SAS/SAS Analytics Pro.png"
             },
             visual_analytics: {
-              title: "강력한 데이터 시각화 및 리포팅",
-              description: "복잡한 데이터를 직관적인 시각화 정보로 변환하여 인사이트 도출",
-              video: "/assets/solution/SAS/SAS_video2.mp4"
-            },
-            enterprise_miner: {
-              title: "고급 머신러닝 프로세스 최적화",
-              description: "GUI 기반 워크플로우를 통한 데이터 마이닝 및 예측 모델링 수행",
-              video: "/assets/solution/SAS/SAS_video2.mp4"
-            },
-            customer_intelligence: {
-              title: "데이터 기반 실시간 고객 경험 최적화",
-              description: "고객 여정 전반의 데이터를 분석하여 정교한 개인화 마케팅 실현",
-              video: "/assets/solution/SAS/SAS_video2.mp4"
-            },
-            fraud_management: {
-              title: "지능형 이상 탐지 및 금융 보안 강화",
-              description: "실시간 모니터링을 통한 사기 탐지 및 비즈니스 리스크 최소화",
-              video: "/assets/solution/SAS/SAS_video2.mp4"
-            },
-            risk_management: {
-              title: "통합 리스크 관리 및 거버넌스",
-              description: "신용, 시장, 운영 리스크를 통합적으로 분석하여 의사결정 지원",
-              video: "/assets/solution/SAS/SAS_video2.mp4"
+              title: "셀프 서비스 기반 데이터 시각화 및 BI 도구",
+              description: "SAS Visual Analytics는 셀프 서비스 데이터 분석 및 시각화 도구로,\n특히 대시보드 생성, 인터랙티브 보고, BI 및 탐색적 분석에 특화되어 있으며 SAS Viya 기반에서도 실행됩니다.",
+              image: "/assets/solution/SAS/SAS Visual Analytics.png"
             }
           }
         },
@@ -962,31 +951,25 @@ export const translations = {
         solutions: {
           tag: "Major Solution",
           tabs: {
-            experience_cloud: "Medallia Experience Cloud",
-            athena: "Medallia Athena",
-            clf: "Closed Loop Feedback(CLF)",
-            dxa: "Medallia DXA"
+            experience_cloud: "Experience Cloud",
+            dxa: "Digital Experience Analytics",
+            clf: "Closed Loop Feedback"
           },
           items: {
             experience_cloud: {
-              title: "고객 피드백 관리 소프트웨어 플랫폼",
-              description: "고객 중심 브랜드를 위한 최고의 경험 관리 솔루션으로써 수집된 피드백을 다양한 관점에서 분석 및 시각화하여 더 나은 고객 경험을 만들 수 있습니다.",
-              image: "/assets/solution/Medallia/medallia_solution.png"
-            },
-            athena: {
-              title: "AI 기반 경험 데이터 분석",
-              description: "Medallia Athena는 AI와 머신러닝을 활용하여 수백만 개의 피드백에서 패턴을 발견하고 미래 행동을 예측합니다.",
-              image: "/assets/solution/Medallia/medallia_solution.png"
-            },
-            clf: {
-              title: "실시간 이슈 대응 시스템",
-              description: "부정적인 피드백이 발생하면 즉시 담당자에게 알림을 보내고 문제를 해결할 수 있는 워크플로우를 제공합니다.",
-              image: "/assets/solution/Medallia/medallia_solution.png"
+              title: "AI 기반 전사적 통합 경험 관리 플랫폼",
+              description: "기업의 모든 고객 및 직원 접점을 하나의 플랫폼에서 실시간으로 수집·분석·조치할 수 있는 엔터프라이즈급 경험 관리 솔루션으로,\nAI 기반 인사이트로 조직 전반의 경험 개선을 촉진합니다.",
+              image: "/assets/solution/Medallia/Medallia Experience Cloud.png"
             },
             dxa: {
-              title: "디지털 경험 분석",
-              description: "웹과 앱에서 고객의 디지털 행동을 분석하여 이탈 원인을 파악하고 온라인 사용자 경험을 최적화합니다.",
-              image: "/assets/solution/Medallia/medallia_solution.png"
+              title: "고객 행동 분석 기반 디지털 경험 최적화",
+              description: "디지털 채널 전반의 고객 행동과 실시간 피드백을 자동 분석해 전환 저해 요인을 즉시 도출하고,\n고객의 실제 행동을 세션 리플레이로 재현해 데이터 기반의 디지털 경험 개선을 지원합니다.",
+              video: "/assets/solution/Medallia/Medallia DEA.mp4"
+            },
+            clf: {
+              title: "실시간 피드백 자동 배정 및 신속 조치 시스템",
+              description: "고객 피드백이 접수되는 즉시 사전 정의된 규칙에 따라 담당자에게 자동 배정되고, 신속한 조치·추적·완료까지 연결함으로써\n고객 경험 이슈를 실시간으로 해결하는 액션 중심의 피드백 관리 프로세스입니다.",
+              image: "/assets/solution/Medallia/Medallia Closed Loop Feedback.png"
             }
           }
         },
@@ -1186,27 +1169,26 @@ export const translations = {
       description:
         "We have actual application cases for each industry and purpose, such as data analysis, customer experience, and IT infrastructure.",
       items: {
-        useCase1: { category: "Service", title: "Infrastructure\nDeployment" },
-        useCase2: { category: "Service", title: "Infrastructure\nDeployment" },
-        useCase3: { category: "Service", title: "Infrastructure\nDeployment" },
-        useCase4: { category: "Service", title: "Infrastructure\nDeployment" },
-        useCase5: { category: "Service", title: "Infrastructure\nDeployment" },
-        useCase6: { category: "Service", title: "Infrastructure\nDeployment" },
-        useCase7: { category: "Service", title: "Infrastructure\nDeployment" },
-        useCase8: { category: "Service", title: "Infrastructure\nDeployment" },
-        useCase9: { category: "Hardware", title: "Infrastructure\nDeployment" },
-        useCase10: {
-          category: "Hardware",
-          title: "Infrastructure\nDeployment",
-        },
-        useCase11: {
-          category: "Hardware",
-          title: "Infrastructure\nDeployment",
-        },
-        useCase12: {
-          category: "Hardware",
-          title: "Infrastructure\nDeployment",
-        },
+        useCase1: { category: "Infra-Dell", title: "National Health Insurance\nDell HCI, x86 Server Supply" },
+        useCase2: { category: "Infra-Dell", title: "Bumin Hospital\nPACS Storage Construction & Expansion" },
+        useCase3: { category: "Infra-Dell", title: "Ministry of Justice\nNext-Gen Crime Prevention System" },
+        useCase4: { category: "Infra-Dell", title: "Ministry of National Defense\nKDI Information System Project" },
+        useCase5: { category: "Infra-HPE", title: "KEIS\nDigital Employment Service Platform" },
+        useCase6: { category: "Infra-HPE", title: "Hanwha Life\nHPE x86 Server & Infra Construction" },
+        useCase7: { category: "Infra-HPE", title: "HIRA\nMedical Image Reading System Server" },
+        useCase8: { category: "Infra-HPE", title: "Supreme Court\nReal Estate Registry System Unix Server" },
+        useCase9: { category: "Infra-Cohesity", title: "KFCC\nHigh-Performance Data Center Server" },
+        useCase10: { category: "Solution-SAS", title: "Bank of Korea\nSAS Statistical SW Lease Renewal" },
+        useCase11: { category: "Solution-SAS", title: "Woori Bank\nCredit & Market Risk Analysis" },
+        useCase12: { category: "Solution-SAS", title: "K-Bank\nSAS System License Renewal" },
+        useCase13: { category: "Solution-SAS", title: "Samsung Fire & Marine\nSAS Lease Agreement" },
+        useCase14: { category: "Solution-SAS", title: "NPS\nDesktop Cloud Environment Construction" },
+        useCase15: { category: "Solution-SAS", title: "Statistics Korea\nPowerEdge Server Infra Construction" },
+        useCase16: { category: "Solution-SAS", title: "NTS\n24/7 Logistics Tracking Server" },
+        useCase17: { category: "Solution-Medallia", title: "LG U+\nReal-Time Customer Experience Survey" },
+        useCase18: { category: "Solution-Medallia", title: "HMM\nCustomer Experience Analysis" },
+        useCase19: { category: "Solution-Medallia", title: "Samsung Digital Plaza\nCustomer Experience Analysis" },
+        useCase20: { category: "Solution-Medallia", title: "SNU Hospital\nPatient Experience Survey" },
       },
     },
     results: {
@@ -1325,6 +1307,12 @@ export const translations = {
               title: "Tech Support Div.",
               desc: "Stable Operation & Technical Support",
               icon: "/assets/company/icon7.png",
+            },
+            {
+              id: "479:7182",
+              title: "ITO Div.",
+              desc: "IT Operation Outsourcing",
+              icon: "/assets/company/icon8.png",
             },
           ],
         },
@@ -1577,24 +1565,27 @@ export const translations = {
         solutions: {
           tag: "Major Solution",
           tabs: {
-            poweredge: "POWEREDGE SEVER",
-            san: "SAN STORAGE",
-            nas: "NAS STORAGE"
+            storage: "STORAGE",
+            server: "SERVER",
+            etc: "ETC"
           },
           items: {
-            poweredge: {
-              title: "All Automated Management and Strong Security\nArchitecture for Virtualization, Database, AI, etc.",
-              description: "The PowerEdge product line consists of various form factors and specifications, including the R series for rack mounting, the T series tower type for general office spaces, the XR series optimized for extreme edge environments, the XE series equipped with high-performance GPUs for generative AI, and the MX series, a modular server.",
+            storage: {
+              tag: "Integrated storage that fully supports AI and multi-cloud environments",
+              title: "Dell Enterprise Solutions Breaking Data Boundaries",
+              description: "Dell PowerStore, PowerScale, and ECS storage provide an integrated storage portfolio across block, file, and object, delivering an enterprise standard storage environment for multi-cloud and AI data utilization.",
               video: "/assets/infra/dell/dell_video.mp4"
             },
-            san: {
-              title: "High-Performance SAN Storage Solutions\nfor Mission-Critical Data",
-              description: "Provides top-tier availability and performance required for critical business environments like finance and public sectors, simplifying complex data infrastructure through intelligent software.",
+            server: {
+              tag: "Platform optimized for large-scale data centers with automation and scalability",
+              title: "The Foundation of Innovation for All Workloads, Dell PowerEdge Servers",
+              description: "Dell PowerEdge servers are universal server platforms designed to reliably operate various workloads such as AI, virtualization, and business systems on a single standard infrastructure. They are optimized for large-scale data center operations based on automated management and high scalability.",
               video: "/assets/infra/dell/dell_video.mp4"
             },
-            nas: {
-              title: "Scale-out NAS Solutions for Efficient\nManagement of Massive Unstructured Data",
-              description: "Integrates and manages explosively increasing file and object data in a single namespace, allowing performance and capacity to expand linearly as needed.",
+            etc: {
+              tag: "Completion of a single standard platform unifying complex IT environments",
+              title: "Next-Generation Dell Data Center Infrastructure with Maximized Efficiency and Stability",
+              description: "Dell standardizes and integrates server, storage, network, backup, and AI infrastructure into a single platform, providing data center infrastructure that can operate various workloads stably and efficiently.",
               video: "/assets/infra/dell/dell_video.mp4"
             }
           }
@@ -1674,31 +1665,21 @@ export const translations = {
         solutions: {
           tag: "Major Solution",
           tabs: {
-            proliant: "PROLIANT SERVER",
-            hci: "Hyper-Converged Infrastructure",
-            blade: "Blade Server",
-            hpc: "HPC Server"
+            server: "Server",
+            storage: "Storage"
           },
           items: {
-            proliant: {
-              title: "All automated management features and\nstrong security architecture for virtualization, DB, and AI",
-              description: "HPE ProLiant servers provide an intelligent computing foundation with automated management and a strong security-by-design approach.",
-              video: "/assets/infra/hpe/HPE_video.mp4"
+            server: {
+              tag: "High-density, high-efficiency infrastructure accelerating HPC and AI innovation",
+              title: "The standard for high performance for compute-intensive workloads, HPE servers",
+              description: "HPE ProLiant and Apollo servers are high-performance servers optimized for compute-intensive workloads such as HPC, AI, and big data analytics,\nproviding performance-oriented infrastructure through high-density design and power/cooling efficiency.",
+              video: "/assets/infra/hpe/HPE_major_solution_video_server.mp4"
             },
-            hci: {
-              title: "HPE HCI solutions extending the cloud\noperational experience to on-premises",
-              description: "HPE Alletra dHCI combines the agility of the cloud with the resilience of high-end storage for business-critical applications.",
-              video: "/assets/infra/hpe/HPE_video.mp4"
-            },
-            blade: {
-              title: "Composable infrastructure that simplifies complex\ndata center environments and maximizes efficiency",
-              description: "HPE Synergy handles all workloads on a single infrastructure through flexible fluid resources, reducing deployment time with automated handover.",
-              video: "/assets/infra/hpe/HPE_video.mp4"
-            },
-            hpc: {
-              title: "HPE HPC and AI computing leading large-scale\ncomputation and high-performance analysis",
-              description: "HPE Apollo and Cray solutions provide optimized performance for AI and simulation environments requiring massive data processing and complex calculations.",
-              video: "/assets/infra/hpe/HPE_video.mp4"
+            storage: {
+              tag: "Achieving ultra-fast data processing through seamless integration with computing",
+              title: "HPE storage that maximizes high-capacity analysis and HPC/AI performance",
+              description: "HPE storage is designed for high-speed processing and large-capacity analysis environments,\nsupporting high-performance data processing closely integrated with computing.\nIt has particular strengths in performance maximization in HPC/AI environments.",
+              video: "/assets/infra/hpe/HPE_major_solution_video_storage.mp4"
             }
           }
         },
@@ -1773,31 +1754,25 @@ export const translations = {
         major_solution: {
           tag: "Major Solution",
           tabs: {
-            vcf: "VMware Cloud Foundation",
             vsan: "VSAN",
             nsx: "NSX",
-            vrealize: "Vrealize Suite"
+            vrealize: "VEALIZE SUITE"
           },
           items: {
-            vcf: {
-              title: "VMware Cloud Foundation Modernize\nData Center Construction",
-              description: "Providing a full stack of hyper-converged infrastructure for hybrid clouds.",
-              video: "/assets/infra/vmware/vmware_video.mp4"
-            },
             vsan: {
-              title: "vSAN: Enterprise-Grade\nStorage Virtualization",
-              description: "vSAN virtualizes local server storage to provide flexible, high-performance shared storage, reducing TCO and maximizing operational efficiency.",
-              video: "/assets/infra/vmware/vmware_video.mp4"
+              title: "High-performance, high-availability VMware integrated solution without external storage",
+              description: "Consolidates local disks to configure high-performance, high-availability storage without separate hardware.\nFully integrated with VMware virtual environments to simplify operations, reduce TCO, and ensure scalability.",
+              image: "/assets/infra/vmware/vmware_VSAN.jpg"
             },
             nsx: {
-              title: "NSX: Network and Security\nVirtualization Platform",
-              description: "NSX delivers L2-L7 network and security services via software, enabling an agile and secure network environment without physical constraints.",
-              video: "/assets/infra/vmware/vmware_video.mp4"
+              title: "Ultra-precision Zero Trust security at the virtual machine level",
+              description: "Defines networking through software to provide granular security policies and traffic control at the VM level.\nImplements Zero Trust security to block ransomware and lateral movement based on micro-segmentation.",
+              image: "/assets/infra/vmware/vmware_NSX.png"
             },
             vrealize: {
-              title: "vRealize Suite:\nIntelligent Cloud Management",
-              description: "vRealize Suite supports automated operations and management across hybrid cloud environments, accelerating IT service delivery and reducing operational complexity.",
-              video: "/assets/infra/vmware/vmware_video.mp4"
+              title: "Resource cost optimization and smart operation automation",
+              description: "Analyzes resource usage across virtualization and cloud for cost optimization and performance visibility.\nSupports operation standardization, management efficiency, and risk minimization through self-service-based automation.",
+              image: "/assets/infra/vmware/vmware_VEALIZE SUITE.png"
             }
           }
         },
@@ -1852,25 +1827,25 @@ export const translations = {
         major_solution: {
           tag: "Major Solution",
           tabs: {
-            dataprotect: "DataProtect",
-            smartfiles: "SmartFiles",
-            gaia: "GAIA"
+            gaia: "GAIA",
+            dataprotect: "Data Protect",
+            smartfiles: "Smart Files"
           },
           items: {
+            gaia: {
+              title: "Secure AI Search & Analysis with Guaranteed Data Sovereignty",
+              description: "AI capability providing natural language-based search and summarization for backed-up/protected data.\nSupports AI utilization considering security and data sovereignty by not exposing internal data externally.\nProvides AI functions suitable for public and enterprise tasks such as compliance, auditing, and internal analysis.",
+              image: "/assets/infra/cohesity/cohesity_GAIA.png"
+            },
             dataprotect: {
-              title: "Providing Stable Secure Backup Environment based on HA",
-              description: "Enables distributed backup and recovery through Cohesity's unique SpanFS structure and SnapTree architecture.",
-              video: "/assets/infra/cohesity/cohesity_video.mp4"
+              title: "Immutable Backup and Rapid Recovery for Ransomware Defense",
+              description: "Provides immutable backup and strong access control as basic structures to protect backup data from ransomware.\nEnsures business continuity by supporting fast and reliable recovery even in failure or cyber attack situations.\nProvides an enterprise data protection framework considering security, compliance, and operational stability simultaneously.",
+              image: "/assets/infra/cohesity/cohesity_Data Protect.png"
             },
             smartfiles: {
-              title: "Enterprise-Class Software-Defined File & Object Solution",
-              description: "A smart file service that delivers manageability, scalability, security, and efficiency, managing multiple workloads on a single platform.",
-              video: "/assets/infra/cohesity/cohesity_video.mp4"
-            },
-            gaia: {
-              title: "AI-Powered Conversational Search & Insights Solution",
-              description: "Leverages Generative AI to derive insights from backup data, turning data into actionable information to support smart decision-making.",
-              video: "/assets/infra/cohesity/cohesity_video.mp4"
+              title: "Integrated Management and Protection of Large-Scale Unstructured Data (File/Object)",
+              description: "A platform for integrated management of file and object data, supporting stable operation of large-scale unstructured data environments.\nStrengthens security and availability for file data through data change history protection and snapshot-based recovery.\nConsistent data management policies can be applied in both on-premises and cloud environments.",
+              image: "/assets/infra/cohesity/cohesity_Smart Files.png"
             }
           }
         },
@@ -1973,42 +1948,30 @@ export const translations = {
           tag: "Major Solution",
           tabs: {
             viya: "SAS Viya",
-            visual_analytics: "SAS Visual Analytics",
-            enterprise_miner: "SAS Enterprise Miner",
-            customer_intelligence: "SAS Customer Intelligence",
-            fraud_management: "SAS Fraud Management",
-            risk_management: "SAS Risk Management"
+            data_maker: "SAS Data Maker",
+            analytics_pro: "SAS Analytics Pro",
+            visual_analytics: "SAS Visual Analytics"
           },
           items: {
             viya: {
-              title: "Cloud-native Integrated Analytics Platform",
-              description: "Rapid development and deployment of AI, ML, and predictive models",
+              title: "Cloud-native Integrated End-to-End AI Analytics Platform",
+              description: "SAS Viya is a cloud-native integrated data and AI analytics platform\nthat supports the entire analytics lifecycle, from data preparation to model development, deployment, and operation.",
               video: "/assets/solution/SAS/SAS_video2.mp4"
+            },
+            data_maker: {
+              title: "Low-code Based High-quality Synthetic Data Generation Solution",
+              description: "SAS Data Maker is a synthetic data generation tool, a low-code/no-code solution\nthat can quickly generate high-quality synthetic data that mimics real data while protecting privacy.",
+              video: "/assets/solution/SAS/SAS Data Maker.mp4"
+            },
+            analytics_pro: {
+              title: "Comprehensive Analytics Package Supporting Everything from Data Processing to Visualization",
+              description: "SAS Analytics Pro is an analytics tool that provides integrated data access, transformation, analysis, visualization, and reporting in desktop and server environments.\nIt is a comprehensive analytics package including Base SAS, SAS/STAT, SAS/GRAPH, etc.",
+              image: "/assets/solution/SAS/SAS Analytics Pro.png"
             },
             visual_analytics: {
-              title: "Powerful Data Visualization & Reporting",
-              description: "Transform complex data into intuitive visual insights",
-              video: "/assets/solution/SAS/SAS_video2.mp4"
-            },
-            enterprise_miner: {
-              title: "Advanced Machine Learning Optimization",
-              description: "Data mining and predictive modeling via GUI-based workflows",
-              video: "/assets/solution/SAS/SAS_video2.mp4"
-            },
-            customer_intelligence: {
-              title: "Real-time Customer Experience Optimization",
-              description: "Precision personalized marketing by analyzing customer journey data",
-              video: "/assets/solution/SAS/SAS_video2.mp4"
-            },
-            fraud_management: {
-              title: "Intelligent Fraud Detection",
-              description: "Detect fraud and minimize business risks with real-time monitoring",
-              video: "/assets/solution/SAS/SAS_video2.mp4"
-            },
-            risk_management: {
-              title: "Integrated Risk Management & Governance",
-              description: "Integrated credit, market, and operational risk analysis",
-              video: "/assets/solution/SAS/SAS_video2.mp4"
+              title: "Self-Service Based Data Visualization and BI Tool",
+              description: "SAS Visual Analytics is a self-service data analysis and visualization tool,\nspecifically specialized in dashboard creation, interactive reporting, BI, and exploratory analysis, and also runs on the SAS Viya platform.",
+              image: "/assets/solution/SAS/SAS Visual Analytics.png"
             }
           }
         },
@@ -2125,31 +2088,25 @@ export const translations = {
         solutions: {
           tag: "Major Solution",
           tabs: {
-            experience_cloud: "Medallia Experience Cloud",
-            athena: "Medallia Athena",
-            clf: "Closed Loop Feedback(CLF)",
-            dxa: "Medallia DXA"
+            experience_cloud: "Experience Cloud",
+            dxa: "Digital Experience Analytics",
+            clf: "Closed Loop Feedback"
           },
           items: {
             experience_cloud: {
-              title: "Customer Feedback Management Software Platform",
-              description: "As the premier experience management solution for customer-centric brands, it enables the creation of better customer experiences by analyzing and visualizing collected feedback from various perspectives.",
-              image: "/assets/solution/Medallia/medallia_solution.png"
-            },
-            athena: {
-              title: "AI-Powered Experience Data Analysis",
-              description: "Medallia Athena leverages AI and machine learning to discover patterns and predict future behavior across millions of feedback points.",
-              image: "/assets/solution/Medallia/medallia_solution.png"
-            },
-            clf: {
-              title: "Real-time Issue Response System",
-              description: "Instantly alerts responsible staff when negative feedback occurs and provides workflows to resolve issues.",
-              image: "/assets/solution/Medallia/medallia_solution.png"
+              title: "AI-Powered Enterprise-Wide Integrated Experience Management Platform",
+              description: "An enterprise-grade experience management solution that enables real-time collection, analysis, and action across all customer and employee touchpoints on a single platform,\npromoting experience improvement throughout the organization with AI-driven insights.",
+              image: "/assets/solution/Medallia/Medallia Experience Cloud.png"
             },
             dxa: {
-              title: "Digital Experience Analytics",
-              description: "Analyzes customer digital behavior on web and app to identify churn causes and optimize online user experience.",
-              image: "/assets/solution/Medallia/medallia_solution.png"
+              title: "Digital Experience Optimization Based on Customer Behavior Analysis",
+              description: "Automatically analyzes customer behavior and real-time feedback across digital channels to immediately identify conversion barriers,\nand supports data-driven digital experience improvement by recreating actual customer behavior through session replays.",
+              video: "/assets/solution/Medallia/Medallia DEA.mp4"
+            },
+            clf: {
+              title: "Real-time Feedback Auto-Assignment and Rapid Action System",
+              description: "An action-oriented feedback management process that resolves customer experience issues in real-time by automatically assigning feedback to the responsible person according to predefined rules as soon as it is received, and linking it to rapid action, tracking, and completion.",
+              image: "/assets/solution/Medallia/Medallia Closed Loop Feedback.png"
             }
           }
         },

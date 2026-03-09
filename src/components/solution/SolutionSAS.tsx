@@ -9,7 +9,7 @@ import MobileTabDropdown from "../common/MobileTabDropdown";
 
 export default function SolutionSAS() {
     const { t } = useLanguage();
-    const [activeSolution, setActiveSolution] = useState<"viya" | "visual_analytics" | "enterprise_miner" | "customer_intelligence" | "fraud_management" | "risk_management">("viya");
+    const [activeSolution, setActiveSolution] = useState<"viya" | "data_maker" | "analytics_pro" | "visual_analytics">("viya");
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const data = t.solution.sas;
@@ -52,7 +52,7 @@ export default function SolutionSAS() {
                                 playsInline
                                 className="w-full h-full object-cover"
                             >
-                                <source src="/assets/solution/SAS/SAS_video.mp4" type="video/mp4" />
+                                <source src="/assets/solution/SAS/SAS_video2.mp4" type="video/mp4" />
                             </video>
                         </div>
                     </div>
@@ -122,18 +122,29 @@ export default function SolutionSAS() {
                         </div>
                     </ScrollReveal>
 
-                    {/* Video Content */}
+                    {/* Asset Content (Video or Image) */}
                     <div className="w-full relative rounded-2xl overflow-hidden aspect-video bg-[#f5f6f7]">
-                        <video
-                            key={activeSolution}
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            className="w-full h-full object-cover"
-                        >
-                            <source src={solutionData.video} type="video/mp4" />
-                        </video>
+                        {(solutionData as any).video ? (
+                            <video
+                                key={activeSolution}
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                className="w-full h-full object-cover"
+                            >
+                                <source src={(solutionData as any).video} type="video/mp4" />
+                            </video>
+                        ) : (
+                            <Image
+                                key={activeSolution}
+                                src={(solutionData as any).image}
+                                alt={solutionData.title}
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        )}
                     </div>
                 </div>
             </section>

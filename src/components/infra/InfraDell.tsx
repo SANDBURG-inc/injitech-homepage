@@ -9,7 +9,7 @@ import MobileTabDropdown from "../common/MobileTabDropdown";
 
 export default function InfraDell() {
     const { t } = useLanguage();
-    const [activeSolution, setActiveSolution] = useState<"poweredge" | "san" | "nas">("poweredge");
+    const [activeSolution, setActiveSolution] = useState<"storage" | "server" | "etc">("storage");
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const solutionData = t.infra.dell.solutions.items[activeSolution];
@@ -39,6 +39,18 @@ export default function InfraDell() {
                                 <p className="mb-4 md:mb-0 break-keep">
                                     {t.infra.dell.intro}
                                 </p>
+                            </div>
+                        </ScrollReveal>
+
+                        {/* Intro Image */}
+                        <ScrollReveal delay={200} className="w-full">
+                            <div className="relative w-full aspect-[960/338] md:h-[338px] overflow-hidden rounded-xl">
+                                <Image
+                                    src="/assets/infra/dell/dell_intro_img.png"
+                                    alt="Dell Technologies Infrastructure Overview"
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
                         </ScrollReveal>
                     </div>
@@ -99,7 +111,12 @@ export default function InfraDell() {
                             />
 
                             {/* Title & Description */}
-                            <div className="flex flex-col gap-3 md:gap-[12px] items-start w-full">
+                            <div className="flex flex-col gap-3 md:gap-[12px] items-start w-full transition-all duration-300">
+                                {solutionData.tag && (
+                                    <span className="text-[#0ea5e9] text-base md:text-[20px] font-semibold tracking-tight">
+                                        {solutionData.tag}
+                                    </span>
+                                )}
                                 <h2 className="text-[#121213] text-2xl md:text-[48px] font-medium leading-tight md:leading-[64px] tracking-tight md:tracking-[-0.48px] whitespace-pre-line">
                                     {solutionData.title}
                                 </h2>

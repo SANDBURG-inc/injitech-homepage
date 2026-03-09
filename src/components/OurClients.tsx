@@ -13,10 +13,18 @@ const logos = [
     "/assets/partners/Logo-Card6.png",
     "/assets/partners/Logo-Card7.png",
     "/assets/partners/Logo-Card8.png",
+    "/assets/partners/Logo-Card9.png",
+    "/assets/partners/Logo-Card10.png",
+    "/assets/partners/Logo-Card11.png",
+    "/assets/partners/Logo-Card12.png",
+    "/assets/partners/Logo-Card13.png",
+    "/assets/partners/Logo-Card14.png",
+    "/assets/partners/Logo-Card15.png",
+    "/assets/partners/Logo-Card16.png",
 ];
 
-const row1 = logos.slice(0, 4);
-const row2 = logos.slice(4, 8);
+const row1 = logos.slice(0, 8);
+const row2 = logos.slice(8, 16);
 
 const LogoCard = ({ src }: { src: string }) => (
     <div className="flex-shrink-0 w-[200px] h-[86px] lg:w-[357px] lg:h-[152px] bg-white rounded-[4px] flex items-center justify-center overflow-hidden">
