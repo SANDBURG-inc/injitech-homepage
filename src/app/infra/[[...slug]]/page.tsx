@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo } from "react";
+import { useParams } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Inquiry from "@/components/Inquiry";
 import InfraHero from "@/components/infra/InfraHero";
 import InfraTabs, { InfraTab } from "@/components/infra/InfraTabs";
 import InfraDell from "@/components/infra/InfraDell";
@@ -14,7 +14,15 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function InfrastructurePage() {
     const { t } = useLanguage();
-    const [activeTab, setActiveTab] = useState<InfraTab>('dell');
+    const params = useParams();
+    const slug = params.slug as string[] | undefined;
+
+    const activeTab = useMemo(() => {
+        if (!slug || slug.length === 0) return 'dell';
+        const tab = slug[0] as InfraTab;
+        if (['dell', 'hpe', 'vmware', 'cohesity'].includes(tab)) return tab;
+        return 'dell';
+    }, [slug]);
 
     const renderContent = () => {
         switch (activeTab) {
@@ -31,8 +39,6 @@ export default function InfrastructurePage() {
         }
     };
 
-    // Using different backgrounds for each tab to provide visual variety, 
-    // similar to how the Company page handles tabs.
     const heroBackgrounds: Record<InfraTab, string> = {
         dell: "/assets/infra/dell/hero_bg.png",
         hpe: "/assets/infra/hpe/hero_bg.png",
@@ -49,9 +55,8 @@ export default function InfrastructurePage() {
             />
             <InfraTabs
                 activeTab={activeTab}
-                onTabChange={setActiveTab}
             />
-            <div className="animate-in fade-in duration-500">
+            <div className="animate-in fade-in duration-500" key={activeTab}>
                 {renderContent()}
             </div>
             <Footer />

@@ -1,15 +1,15 @@
 'use client';
 
+import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 
 export type SolutionTab = 'sas' | 'medallia' | 'scalium';
 
 interface SolutionTabsProps {
     activeTab: SolutionTab;
-    onTabChange: (tab: SolutionTab) => void;
 }
 
-export default function SolutionTabs({ activeTab, onTabChange }: SolutionTabsProps) {
+export default function SolutionTabs({ activeTab }: SolutionTabsProps) {
     const { t } = useLanguage();
 
     const tabs = [
@@ -23,12 +23,10 @@ export default function SolutionTabs({ activeTab, onTabChange }: SolutionTabsPro
             <div className="max-w-[1400px] mx-auto px-4 md:px-0 w-full">
                 <div className="flex items-center justify-center gap-[24px] md:gap-[48px] overflow-x-auto no-scrollbar">
                     {tabs.map((tab) => (
-                        <button
+                        <Link
                             key={tab.id}
-                            onClick={() => {
-                                onTabChange(tab.id);
-                                window.scrollTo({ top: 0, behavior: 'instant' });
-                            }}
+                            href={`/solution/${tab.id}`}
+                            scroll={true}
                             className={`
                                 py-2 whitespace-nowrap text-[15px] md:text-[18px] font-medium tracking-[-0.01em] transition-all
                                 ${activeTab === tab.id
@@ -37,7 +35,7 @@ export default function SolutionTabs({ activeTab, onTabChange }: SolutionTabsPro
                             `}
                         >
                             {tab.label}
-                        </button>
+                        </Link>
                     ))}
                 </div>
             </div>

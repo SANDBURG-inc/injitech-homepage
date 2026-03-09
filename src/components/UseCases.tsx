@@ -3,6 +3,29 @@
 import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import ScrollReveal from "@/components/common/ScrollReveal";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+        },
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: [0.21, 0.47, 0.32, 0.98] as any,
+        },
+    },
+};
 
 export default function UseCases() {
     const { t } = useLanguage();
@@ -52,52 +75,57 @@ export default function UseCases() {
                 </ScrollReveal>
 
                 {/* Case Grid */}
-                <ScrollReveal>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-[40px] lg:gap-y-[64px]">
-                        {useCaseItems.map((item, index) => (
-                            <div
-                                key={index}
-                                className={`flex-col gap-4 lg:gap-6 group cursor-pointer ${!isExpanded && index >= 4 ? "hidden md:flex" : "flex"
-                                    }`}
-                            >
-                                <div className="w-full h-[240px] lg:h-[256px] bg-white rounded-[12px] overflow-hidden flex items-center justify-center">
-                                    <img
-                                        src={item.image}
-                                        alt={item.title}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                    />
-                                </div>
-                                <div className="flex flex-col gap-3 lg:gap-4 items-start">
-                                    <div className="px-[12px] py-[8px] border border-[#0EA5E9] border-solid rounded-[4px] flex items-center justify-center">
-                                        <span className="text-[14px] font-medium text-[#0EA5E9] leading-[20px] whitespace-nowrap">
-                                            {item.category}
-                                        </span>
-                                    </div>
-                                    <h3 className="text-[18px] lg:text-[20px] font-semibold text-[#FBFCFD] leading-[1.4] lg:leading-[28px] tracking-[-0.2px] break-keep whitespace-pre-line">
-                                        {item.title}
-                                    </h3>
-                                </div>
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={containerVariants}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-[40px] lg:gap-y-[64px]"
+                >
+                    {useCaseItems.map((item, index) => (
+                        <motion.div
+                            key={index}
+                            variants={itemVariants}
+                            className={`flex-col gap-4 lg:gap-6 group cursor-pointer ${!isExpanded && index >= 4 ? "hidden md:flex" : "flex"
+                                }`}
+                        >
+                            <div className="w-full h-[240px] lg:h-[256px] bg-white rounded-[12px] overflow-hidden flex items-center justify-center">
+                                <img
+                                    src={item.image}
+                                    alt={item.title}
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
                             </div>
-                        ))}
-                    </div>
+                            <div className="flex flex-col gap-3 lg:gap-4 items-start">
+                                <div className="px-[12px] py-[8px] border border-[#0EA5E9] border-solid rounded-[4px] flex items-center justify-center">
+                                    <span className="text-[14px] font-medium text-[#0EA5E9] leading-[20px] whitespace-nowrap">
+                                        {item.category}
+                                    </span>
+                                </div>
+                                <h3 className="text-[18px] lg:text-[20px] font-semibold text-[#FBFCFD] leading-[1.4] lg:leading-[28px] tracking-[-0.2px] break-keep whitespace-pre-line">
+                                    {item.title}
+                                </h3>
+                            </div>
+                        </motion.div>
+                    ))}
+                </motion.div>
 
-                    {/* Mobile View More Button */}
-                    {!isExpanded && useCaseItems.length > 4 && (
-                        <div className="w-full flex justify-center mt-[40px] md:hidden">
-                            <button
-                                onClick={() => setIsExpanded(true)}
-                                className="w-full h-[48px] border border-[#364050] rounded-[8px] flex items-center justify-center gap-2 group hover:bg-[#364050]/50 transition-colors"
-                            >
-                                <span className="text-[14px] font-semibold text-[#DADEE0]">
-                                    {t.hero?.viewMore || "더보기"}
-                                </span>
-                                <svg className="w-4 h-4 text-[#DADEE0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </button>
-                        </div>
-                    )}
-                </ScrollReveal>
+                {/* Mobile View More Button */}
+                {!isExpanded && useCaseItems.length > 4 && (
+                    <div className="w-full flex justify-center mt-[40px] md:hidden">
+                        <button
+                            onClick={() => setIsExpanded(true)}
+                            className="w-full h-[48px] border border-[#364050] rounded-[8px] flex items-center justify-center gap-2 group hover:bg-[#364050]/50 transition-colors"
+                        >
+                            <span className="text-[14px] font-semibold text-[#DADEE0]">
+                                {t.hero?.viewMore || "더보기"}
+                            </span>
+                            <svg className="w-4 h-4 text-[#DADEE0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                    </div>
+                )}
             </div>
         </section>
     );

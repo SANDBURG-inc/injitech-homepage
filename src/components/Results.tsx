@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ScrollReveal from "@/components/common/ScrollReveal";
+import { motion } from "framer-motion";
 
 const certificates = [
     { id: 1, image: '/assets/result/img.png' },
@@ -12,6 +13,28 @@ const certificates = [
     { id: 4, image: '/assets/result/img4.png' },
     { id: 5, image: '/assets/result/img5.png' },
 ];
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+        },
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: [0.21, 0.47, 0.32, 0.98] as any,
+        },
+    },
+};
 
 export default function Results() {
     const { t } = useLanguage();
@@ -84,27 +107,30 @@ export default function Results() {
                 </ScrollReveal>
 
                 {/* Carousel Container */}
-                <ScrollReveal>
-                    <div className="relative overflow-visible">
-                        <div
-                            className="flex transition-transform duration-500 ease-out gap-4 lg:gap-6"
-                            style={{ transform: `translateX(${getTranslateX()})` }}
-                        >
-                            {certificates.map((cert) => (
-                                <div
-                                    key={cert.id}
-                                    className="flex-shrink-0 w-[280px] lg:w-[320px] aspect-[200/280] lg:aspect-[320/452] bg-white border border-[#E5E7EB] rounded-[4px] p-0 flex items-center justify-center overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.04)]"
-                                >
-                                    <img
-                                        src={cert.image}
-                                        alt={`Certificate ${cert.id}`}
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </ScrollReveal>
+                <div className="relative overflow-visible">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={containerVariants}
+                        className="flex transition-transform duration-500 ease-out gap-4 lg:gap-6"
+                        style={{ transform: `translateX(${getTranslateX()})` }}
+                    >
+                        {certificates.map((cert) => (
+                            <motion.div
+                                key={cert.id}
+                                variants={itemVariants}
+                                className="flex-shrink-0 w-[280px] lg:w-[320px] aspect-[200/280] lg:aspect-[320/452] bg-white border border-[#E5E7EB] rounded-[4px] p-0 flex items-center justify-center overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.04)]"
+                            >
+                                <img
+                                    src={cert.image}
+                                    alt={`Certificate ${cert.id}`}
+                                    className="w-full h-full object-cover"
+                                />
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
             </div>
         </section>
     );

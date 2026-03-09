@@ -1,14 +1,41 @@
 "use client";
 
 import React, { useState } from "react";
-import { useLanguage } from "@/context/LanguageContext";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
+import InquiryModal from "../common/InquiryModal";
 import ScrollReveal from "../common/ScrollReveal";
 import MobileTabDropdown from "../common/MobileTabDropdown";
+import { motion, AnimatePresence } from "framer-motion";
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
+};
+
+const itemVariants: any = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: "easeOut"
+        }
+    }
+};
 
 export default function InfraHPE() {
     const { t } = useLanguage();
-    const [activeSolution, setActiveSolution] = useState<keyof typeof t.infra.hpe.solutions.tabs>("server");
+    const router = useRouter();
+    const [activeSolution, setActiveSolution] = useState<"server" | "storage">("server");
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const solutionData = t.infra.hpe.solutions.items[activeSolution];
 
@@ -73,9 +100,19 @@ export default function InfraHPE() {
                     </ScrollReveal>
 
                     {/* Advantage Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+                    >
                         {t.infra.hpe.advantages.items.map((item, index) => (
-                            <div key={index} className="bg-white rounded-[12px] p-8 md:px-10 md:pt-14 md:pb-24 flex flex-col items-start gap-6 md:gap-[24px] w-full shadow-sm">
+                            <motion.div
+                                key={index}
+                                variants={itemVariants}
+                                className="bg-white rounded-[12px] p-8 md:px-10 md:pt-14 md:pb-24 flex flex-col items-start gap-6 md:gap-[24px] w-full shadow-sm"
+                            >
                                 <h3 className="text-[#121213] text-lg md:text-[28px] font-semibold leading-tight tracking-tight">
                                     {item.title}
                                 </h3>
@@ -83,9 +120,9 @@ export default function InfraHPE() {
                                 <p className="text-[#25272e] text-sm md:text-[18px] font-normal leading-relaxed tracking-tight whitespace-pre-line">
                                     {item.description}
                                 </p>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -102,40 +139,60 @@ export default function InfraHPE() {
                             {/* Solution Tabs */}
                             <MobileTabDropdown
                                 tabs={t.infra.hpe.solutions.tabs}
-                                activeTab={activeSolution as string}
-                                onTabChange={(tabKey) => setActiveSolution(tabKey as any)}
+                                activeTab={activeSolution}
+                                onTabChange={(tabKey) => {
+                                    setActiveSolution(tabKey as any);
+                                }}
                             />
 
-                            {/* Title & Description */}
-                            <div className="flex flex-col gap-3 md:gap-[12px] items-start w-full transition-all duration-300">
-                                {solutionData.tag && (
-                                    <span className="text-[#0ea5e9] text-base md:text-[20px] font-semibold tracking-tight">
-                                        {solutionData.tag}
-                                    </span>
-                                )}
-                                <h2 className="text-[#121213] text-2xl md:text-[48px] font-medium leading-tight md:leading-[64px] tracking-tight md:tracking-[-0.48px] whitespace-pre-line">
-                                    {solutionData.title}
-                                </h2>
-                                <p className="text-[#495461] text-lg md:text-[24px] font-medium leading-relaxed md:leading-[36px] tracking-tight md:tracking-[-0.24px] whitespace-pre-line">
-                                    {solutionData.description}
-                                </p>
-                            </div>
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={activeSolution}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="flex flex-col gap-3 md:gap-[12px] items-start w-full"
+                                >
+                                    {solutionData.tag && (
+                                        <span className="text-[#0ea5e9] text-base md:text-[20px] font-semibold tracking-tight">
+                                            {solutionData.tag}
+                                        </span>
+                                    )}
+                                    <h2 className="text-[#121213] text-2xl md:text-[48px] font-medium leading-tight md:leading-[64px] tracking-tight md:tracking-[-0.48px] whitespace-pre-line">
+                                        {solutionData.title}
+                                    </h2>
+                                    <p className="text-[#495461] text-lg md:text-[24px] font-medium leading-relaxed md:leading-[36px] tracking-tight md:tracking-[-0.24px] whitespace-pre-line">
+                                        {solutionData.description}
+                                    </p>
+                                </motion.div>
+                            </AnimatePresence>
                         </div>
                     </ScrollReveal>
 
                     {/* Video Content */}
                     <div className="w-full relative rounded-2xl overflow-hidden aspect-video shadow-lg bg-[#121213]">
-                        <video
-                            key={activeSolution}
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            className="w-full h-full object-cover"
-                        >
-                            <source src={solutionData.video} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={activeSolution}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="w-full h-full"
+                            >
+                                <video
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    className="w-full h-full object-cover"
+                                >
+                                    <source src={solutionData.video} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </motion.div>
+                        </AnimatePresence>
                     </div>
                 </div>
             </section>
@@ -155,9 +212,19 @@ export default function InfraHPE() {
                     </ScrollReveal>
 
                     {/* Case Study Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full"
+                    >
                         {t.infra.hpe.useCases.items.map((item, index) => (
-                            <div key={index} className="flex flex-col gap-6 w-full">
+                            <motion.div
+                                key={index}
+                                variants={itemVariants}
+                                className="flex flex-col gap-6 w-full"
+                            >
                                 {/* Image Container */}
                                 <div className="bg-white rounded-[20px] flex items-center justify-center aspect-[323/240] w-full px-8 overflow-hidden">
                                     <div className="relative w-full h-full max-h-[200px]">
@@ -178,9 +245,9 @@ export default function InfraHPE() {
                                         {item.description}
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -203,18 +270,28 @@ export default function InfraHPE() {
                     </div>
 
                     {/* Capability Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+                    >
                         {t.infra.hpe.capabilities.items.map((item, index) => (
-                            <div key={index} className="bg-[#f0f9ff] rounded-[12px] pb-12 pt-10 px-8 md:pb-[96px] md:pt-[56px] md:px-[40px] flex flex-col items-start gap-4 md:gap-[24px] w-full overflow-hidden">
+                            <motion.div
+                                key={index}
+                                variants={itemVariants}
+                                className="bg-[#f0f9ff] rounded-[12px] pb-12 pt-10 px-8 md:pb-[96px] md:pt-[56px] md:px-[40px] flex flex-col items-start gap-4 md:gap-[24px] w-full overflow-hidden"
+                            >
                                 <h3 className="text-[#121213] text-lg md:text-[28px] font-semibold leading-tight md:leading-[40px] tracking-tight md:tracking-[-0.28px] whitespace-pre-wrap">
                                     {item.title}
                                 </h3>
                                 <p className="text-[#25272e] text-sm md:text-[18px] font-normal leading-relaxed md:leading-[28px] tracking-tight md:tracking-[-0.18px] whitespace-pre-wrap">
                                     {item.description}
                                 </p>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
         </div>

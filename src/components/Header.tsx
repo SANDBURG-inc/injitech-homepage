@@ -7,6 +7,13 @@ import { useLanguage } from "@/context/LanguageContext";
 
 import InquiryModal from "./common/InquiryModal";
 
+import { motion } from "framer-motion";
+
+const navItemVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: { opacity: 1, y: 0 }
+};
+
 export default function Header() {
     const { lang, setLang, t } = useLanguage();
     const [isLangOpen, setIsLangOpen] = useState(false);
@@ -45,9 +52,14 @@ export default function Header() {
                 className={`fixed top-0 left-0 right-0 z-[50] h-[64px] lg:h-[80px] transition-all duration-300 ${scrolled || isDrawerOpen ? "bg-black/90 backdrop-blur-md" : "bg-transparent"
                     }`}
             >
-                <div className="max-w-[1440px] h-full mx-auto px-8 lg:px-10 flex items-center justify-between">
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ staggerChildren: 0.1 }}
+                    className="max-w-[1440px] h-full mx-auto px-8 lg:px-10 flex items-center justify-between"
+                >
                     {/* Logo */}
-                    <div className="flex-shrink-0 relative z-50">
+                    <motion.div variants={navItemVariants} transition={{ duration: 0.5 }} className="flex-shrink-0 relative z-50">
                         <Link href="/" className="group" onClick={() => setIsDrawerOpen(false)}>
                             <img
                                 src="/assets/Logo.svg"
@@ -55,11 +67,11 @@ export default function Header() {
                                 className="w-[100px] lg:w-[118px] h-[40px] object-contain transition-transform"
                             />
                         </Link>
-                    </div>
+                    </motion.div>
 
                     {/* Navigation (Desktop) */}
                     <nav className="hidden lg:block">
-                        <ul className="flex items-center space-x-2">
+                        <motion.ul variants={navItemVariants} transition={{ duration: 0.5 }} className="flex items-center space-x-2">
                             {NAV_LINKS.map((link) => (
                                 <li key={link.name}>
                                     {link.onClick ? (
@@ -79,11 +91,11 @@ export default function Header() {
                                     )}
                                 </li>
                             ))}
-                        </ul>
+                        </motion.ul>
                     </nav>
 
                     {/* Desktop Language Switcher */}
-                    <div className="hidden lg:flex items-center space-x-3">
+                    <motion.div variants={navItemVariants} transition={{ duration: 0.5 }} className="hidden lg:flex items-center space-x-3">
                         <button
                             onClick={() => setLang('ko')}
                             className={`text-[15px] font-medium transition-colors tracking-tight ${lang === 'ko' ? "text-[#fbfcfd]" : "text-[#a6a6a6] hover:text-[#fbfcfd]"
@@ -99,10 +111,10 @@ export default function Header() {
                         >
                             ENG
                         </button>
-                    </div>
+                    </motion.div>
 
                     {/* Mobile Right Icons */}
-                    <div className="flex lg:hidden items-center gap-2 relative z-[70]">
+                    <motion.div variants={navItemVariants} transition={{ duration: 0.5 }} className="flex lg:hidden items-center gap-2 relative z-[70]">
                         {/* Language Dropdown */}
                         <div className="relative">
                             <button
@@ -151,8 +163,8 @@ export default function Header() {
                                 <img src="/assets/Header/menu.svg" alt="Menu" className="w-6 h-6" />
                             )}
                         </button>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </header>
 
             {/* Mobile Drawer Menu Overlay */}

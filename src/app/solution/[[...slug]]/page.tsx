@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo } from "react";
+import { useParams } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SolutionHero from "@/components/solution/SolutionHero";
@@ -12,7 +13,15 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function SolutionPage() {
     const { t } = useLanguage();
-    const [activeTab, setActiveTab] = useState<SolutionTab>('sas');
+    const params = useParams();
+    const slug = params.slug as string[] | undefined;
+
+    const activeTab = useMemo(() => {
+        if (!slug || slug.length === 0) return 'sas';
+        const tab = slug[0] as SolutionTab;
+        if (['sas', 'medallia', 'scalium'].includes(tab)) return tab;
+        return 'sas';
+    }, [slug]);
 
     const renderContent = () => {
         switch (activeTab) {
@@ -42,9 +51,8 @@ export default function SolutionPage() {
             />
             <SolutionTabs
                 activeTab={activeTab}
-                onTabChange={setActiveTab}
             />
-            <div className="animate-in fade-in duration-500">
+            <div className="animate-in fade-in duration-500" key={activeTab}>
                 {renderContent()}
             </div>
             <Footer />

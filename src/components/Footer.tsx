@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import { useLanguage } from "@/context/LanguageContext";
+import ScrollReveal from "@/components/common/ScrollReveal";
 
 export default function Footer() {
     const { t } = useLanguage();
 
     return (
         <footer className="bg-[#1D1F23] text-white py-[144px] px-8 flex justify-center">
-            <div className="max-w-[1400px] w-full flex flex-col gap-14">
+            <ScrollReveal className="max-w-[1400px] w-full flex flex-col gap-14">
                 {/* Logo and Branding Area */}
                 <div className="flex flex-col gap-10">
                     <img src="/assets/Logo.svg" alt="Injitech Logo" className="w-[124px] h-auto brightness-0 invert" />
@@ -38,7 +39,7 @@ export default function Footer() {
                     <Link href="#" className="hover:text-white transition-colors">{t.footer.thirdPartyConsent}</Link>
                     <Link href="#" className="hover:text-white transition-colors">{t.footer.collectInfoGuide}</Link>
                 </div>
-            </div>
+            </ScrollReveal>
         </footer>
     );
 }

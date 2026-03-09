@@ -1,14 +1,41 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import InquiryModal from "../common/InquiryModal";
 import ScrollReveal from "../common/ScrollReveal";
 import MobileTabDropdown from "../common/MobileTabDropdown";
+import { motion, AnimatePresence } from "framer-motion";
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
+};
+
+const itemVariants: any = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: "easeOut"
+        }
+    }
+};
 
 export default function InfraVMware() {
     const { t } = useLanguage();
-    const [activeSolution, setActiveSolution] = useState<keyof typeof t.infra.vmware.major_solution.tabs>("vsan");
+    const router = useRouter();
+    const [activeSolution, setActiveSolution] = useState<"vsan" | "nsx" | "vrealize">("vsan");
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     // Ensure data exists before accessing
     const solutionData = t.infra.vmware.major_solution.items[activeSolution];
@@ -74,9 +101,19 @@ export default function InfraVMware() {
                     </ScrollReveal>
 
                     {/* Card List */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+                    >
                         {t.infra.vmware.major_advantages.items.map((item, index) => (
-                            <div key={index} className="bg-white rounded-[12px] flex flex-col items-start gap-6 px-8 py-10 md:px-[40px] md:pt-[56px] md:pb-[96px] w-full">
+                            <motion.div
+                                key={index}
+                                variants={itemVariants}
+                                className="bg-white rounded-[12px] flex flex-col items-start gap-6 px-8 py-10 md:px-[40px] md:pt-[56px] md:pb-[96px] w-full"
+                            >
                                 {/* Title */}
                                 <h3 className="text-[#121213] text-xl md:text-[28px] font-semibold leading-snug md:leading-[40px] tracking-tight md:tracking-[-0.28px] whitespace-pre-line">
                                     {item.title}
@@ -87,9 +124,9 @@ export default function InfraVMware() {
                                 <p className="text-[#25272e] text-base md:text-[18px] font-normal leading-relaxed md:leading-[28px] tracking-tight md:tracking-[-0.18px] whitespace-pre-line">
                                     {item.desc}
                                 </p>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -106,31 +143,52 @@ export default function InfraVMware() {
                             {/* Solution Tabs */}
                             <MobileTabDropdown
                                 tabs={t.infra.vmware.major_solution.tabs}
-                                activeTab={activeSolution as string}
-                                onTabChange={(tabKey) => setActiveSolution(tabKey as any)}
+                                activeTab={activeSolution}
+                                onTabChange={(tabKey) => {
+                                    setActiveSolution(tabKey as any);
+                                }}
                             />
 
-                            <div className="flex flex-col gap-3 md:gap-[12px] items-start w-full">
-                                <h2 className="text-[#121213] text-3xl md:text-[48px] font-medium leading-tight md:leading-[64px] tracking-tight md:tracking-[-0.48px] whitespace-pre-line">
-                                    {solutionData.title}
-                                </h2>
-                                <p className="text-[#495461] text-lg md:text-[24px] font-medium leading-relaxed md:leading-[36px] tracking-tight md:tracking-[-0.24px] whitespace-pre-line">
-                                    {solutionData.description}
-                                </p>
-                            </div>
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={activeSolution}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="flex flex-col gap-3 md:gap-[12px] items-start w-full"
+                                >
+                                    <h2 className="text-[#121213] text-3xl md:text-[48px] font-medium leading-tight md:leading-[64px] tracking-tight md:tracking-[-0.48px] whitespace-pre-line">
+                                        {solutionData.title}
+                                    </h2>
+                                    <p className="text-[#495461] text-lg md:text-[24px] font-medium leading-relaxed md:leading-[36px] tracking-tight md:tracking-[-0.24px] whitespace-pre-line">
+                                        {solutionData.description}
+                                    </p>
+                                </motion.div>
+                            </AnimatePresence>
                         </div>
                     </ScrollReveal>
 
                     {/* Solution Image */}
                     <div className="w-full relative rounded-md overflow-hidden shadow-lg h-[400px] md:h-[788px] bg-white border border-gray-100">
-                        <Image
-                            key={activeSolution}
-                            src={solutionData.image}
-                            alt={solutionData.title}
-                            fill
-                            className="object-contain p-4 md:p-8"
-                            priority
-                        />
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={activeSolution}
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -20 }}
+                                transition={{ duration: 0.3 }}
+                                className="w-full h-full relative"
+                            >
+                                <Image
+                                    src={solutionData.image}
+                                    alt={solutionData.title}
+                                    fill
+                                    className="object-contain p-4 md:p-8"
+                                    priority
+                                />
+                            </motion.div>
+                        </AnimatePresence>
                     </div>
                 </div>
             </section>
@@ -157,9 +215,19 @@ export default function InfraVMware() {
                     </ScrollReveal>
 
                     {/* Case Study Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+                    >
                         {t.infra.vmware.useCases.items.map((item, index) => (
-                            <div key={index} className="flex flex-col gap-6 w-full">
+                            <motion.div
+                                key={index}
+                                variants={itemVariants}
+                                className="flex flex-col gap-6 w-full"
+                            >
                                 {/* Image Container */}
                                 <div className="bg-white rounded-[12px] flex items-center justify-center h-[256px] w-full overflow-hidden relative">
                                     <div className="relative w-full h-full max-h-[200px]">
@@ -180,9 +248,9 @@ export default function InfraVMware() {
                                         {item.description}
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 

@@ -1,14 +1,39 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import InquiryModal from "../common/InquiryModal";
 import ScrollReveal from "../common/ScrollReveal";
 import MobileTabDropdown from "../common/MobileTabDropdown";
+import { motion, AnimatePresence } from "framer-motion";
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
+};
+
+const itemVariants: any = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: "easeOut"
+        }
+    }
+};
 
 export default function InfraDell() {
     const { t } = useLanguage();
+    const router = useRouter();
     const [activeSolution, setActiveSolution] = useState<"storage" | "server" | "etc">("storage");
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -73,10 +98,17 @@ export default function InfraDell() {
                     </ScrollReveal>
 
                     {/* Card List */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full"
+                    >
                         {t.infra.dell.advantages.items.map((item, index) => (
-                            <div
+                            <motion.div
                                 key={index}
+                                variants={itemVariants}
                                 className="bg-white flex flex-col gap-6 items-start pb-16 md:pb-[96px] pt-10 md:pt-[56px] px-8 md:px-[40px] rounded-xl shadow-sm hover:shadow-md transition-shadow"
                             >
                                 <h3 className="text-[#121213] text-xl md:text-[28px] font-semibold leading-tight md:leading-[40px] tracking-tight">
@@ -87,9 +119,9 @@ export default function InfraDell() {
                                 <p className="text-[#25272e] text-base md:text-[18px] font-normal leading-relaxed md:leading-[28px] tracking-tight whitespace-pre-line">
                                     {item.description}
                                 </p>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -107,39 +139,59 @@ export default function InfraDell() {
                             <MobileTabDropdown
                                 tabs={t.infra.dell.solutions.tabs}
                                 activeTab={activeSolution}
-                                onTabChange={(tabKey) => setActiveSolution(tabKey as any)}
+                                onTabChange={(tabKey) => {
+                                    setActiveSolution(tabKey as any);
+                                }}
                             />
 
-                            {/* Title & Description */}
-                            <div className="flex flex-col gap-3 md:gap-[12px] items-start w-full transition-all duration-300">
-                                {solutionData.tag && (
-                                    <span className="text-[#0ea5e9] text-base md:text-[20px] font-semibold tracking-tight">
-                                        {solutionData.tag}
-                                    </span>
-                                )}
-                                <h2 className="text-[#121213] text-2xl md:text-[48px] font-medium leading-tight md:leading-[64px] tracking-tight md:tracking-[-0.48px] whitespace-pre-line">
-                                    {solutionData.title}
-                                </h2>
-                                <p className="text-[#495461] text-lg md:text-[24px] font-medium leading-relaxed md:leading-[36px] tracking-tight md:tracking-[-0.24px] whitespace-pre-line">
-                                    {solutionData.description}
-                                </p>
-                            </div>
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={activeSolution}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="flex flex-col gap-3 md:gap-[12px] items-start w-full"
+                                >
+                                    {solutionData.tag && (
+                                        <span className="text-[#0ea5e9] text-base md:text-[20px] font-semibold tracking-tight">
+                                            {solutionData.tag}
+                                        </span>
+                                    )}
+                                    <h2 className="text-[#121213] text-2xl md:text-[48px] font-medium leading-tight md:leading-[64px] tracking-tight md:tracking-[-0.48px] whitespace-pre-line">
+                                        {solutionData.title}
+                                    </h2>
+                                    <p className="text-[#495461] text-lg md:text-[24px] font-medium leading-relaxed md:leading-[36px] tracking-tight md:tracking-[-0.24px] whitespace-pre-line">
+                                        {solutionData.description}
+                                    </p>
+                                </motion.div>
+                            </AnimatePresence>
                         </div>
                     </ScrollReveal>
 
                     {/* Video Content */}
                     <div className="w-full relative rounded-2xl overflow-hidden aspect-video shadow-lg">
-                        <video
-                            key={activeSolution} // Key change triggers re-render/re-load for new source
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            className="w-full h-full object-cover"
-                        >
-                            <source src={solutionData.video} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={activeSolution}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="w-full h-full"
+                            >
+                                <video
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    className="w-full h-full object-cover"
+                                >
+                                    <source src={solutionData.video} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </motion.div>
+                        </AnimatePresence>
                     </div>
                 </div>
             </section>
@@ -160,9 +212,19 @@ export default function InfraDell() {
                     </ScrollReveal>
 
                     {/* Case Study Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full"
+                    >
                         {t.infra.dell.useCases.items.map((item, index) => (
-                            <div key={index} className="flex flex-col gap-6 w-full">
+                            <motion.div
+                                key={index}
+                                variants={itemVariants}
+                                className="flex flex-col gap-6 w-full"
+                            >
                                 {/* Logo Container */}
                                 <div className="bg-white rounded-[20px] flex items-center justify-center aspect-[323/240] w-full px-8 overflow-hidden">
                                     <div className="relative w-full h-full max-h-[200px]">
@@ -183,9 +245,9 @@ export default function InfraDell() {
                                         {item.description}
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -210,9 +272,19 @@ export default function InfraDell() {
                     {/* Capability Cards List Block */}
                     <div className="flex flex-col gap-10 md:gap-[48px] items-center w-full">
                         {/* Capability Cards */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                        <motion.div
+                            variants={containerVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+                        >
                             {t.infra.dell.partnerCapabilities.items.map((item, index) => (
-                                <div key={index} className="bg-[#f0f9ff] rounded-[12px] pb-12 pt-10 px-8 md:pb-[96px] md:pt-[56px] md:px-[40px] flex flex-col items-start gap-4 md:gap-[24px] w-full overflow-hidden">
+                                <motion.div
+                                    key={index}
+                                    variants={itemVariants}
+                                    className="bg-[#f0f9ff] rounded-[12px] pb-12 pt-10 px-8 md:pb-[96px] md:pt-[56px] md:px-[40px] flex flex-col items-start gap-4 md:gap-[24px] w-full overflow-hidden"
+                                >
                                     <h3 className="text-[#121213] text-lg md:text-[28px] font-semibold leading-tight md:leading-[40px] tracking-tight md:tracking-[-0.28px]">
                                         {item.title}
                                     </h3>
@@ -222,9 +294,9 @@ export default function InfraDell() {
                                     <p className="text-[#25272e] text-sm md:text-[18px] font-normal leading-relaxed md:leading-[28px] tracking-tight md:tracking-[-0.18px] whitespace-pre-line">
                                         {item.description}
                                     </p>
-                                </div>
+                                </motion.div>
                             ))}
-                        </div>
+                        </motion.div>
 
                         <div className="flex justify-center w-full">
                             <button

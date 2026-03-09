@@ -14,10 +14,36 @@ type BusinessCardProps = {
     imageSrc?: string;
 };
 
+import { motion } from "framer-motion";
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+        },
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: [0.21, 0.47, 0.32, 0.98] as any,
+        },
+    },
+};
+
 const BusinessCard = ({ title, description, bgType, imageSrc }: BusinessCardProps) => {
     return (
-        <div className={`relative flex flex-col items-start pt-[32px] lg:pt-[56px] pb-[24px] lg:pb-[48px] px-8 lg:p-10 min-h-[240px] lg:min-h-[480px] rounded-[12px] overflow-hidden group transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] ${bgType === "gradient" ? "bg-gradient-to-l from-[#38bdf8] to-[#0ea5e9]" : ""
-            }`}>
+        <motion.div
+            variants={itemVariants}
+            className={`relative flex flex-col items-start pt-[32px] lg:pt-[56px] pb-[24px] lg:pb-[48px] px-8 lg:p-10 min-h-[240px] lg:min-h-[480px] rounded-[12px] overflow-hidden group transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] ${bgType === "gradient" ? "bg-gradient-to-l from-[#38bdf8] to-[#0ea5e9]" : ""
+                }`}>
             {bgType === "image" && imageSrc && (
                 <>
                     <img
@@ -41,7 +67,7 @@ const BusinessCard = ({ title, description, bgType, imageSrc }: BusinessCardProp
 
                 <div className="h-[80px] lg:h-40 w-full" />
             </div>
-        </div>
+        </motion.div>
     );
 };
 
@@ -94,13 +120,17 @@ export default function MainBusiness() {
                 </ScrollReveal>
 
                 {/* Card Grid */}
-                <ScrollReveal>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {businessData.map((data, index) => (
-                            <BusinessCard key={index} {...data} />
-                        ))}
-                    </div>
-                </ScrollReveal>
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={containerVariants}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+                >
+                    {businessData.map((data, index) => (
+                        <BusinessCard key={index} {...data} />
+                    ))}
+                </motion.div>
             </div>
         </section>
     );
