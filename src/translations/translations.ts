@@ -897,7 +897,7 @@ export const translations = {
           description: "㈜인지테크는 국내 최대 SAS 파트너사로, 설치부터 유지보수, 분석 알고리즘 개발, 시스템 통합까지 SAS 활용에 최적화된 종합 서비스를 제공합니다.\n이미 다수의 주요 기관과 기업들이 인지테크의 전문성과 신뢰를 선택하고 있습니다.",
           items: [
             { category: "금융", title: "BC카드", image: "/assets/solution/SAS/cases/bc_card.png" },
-            { category: "해운", title: "HMM", image: "/assets/solution/SAS/cases/hmm.png" },
+            { category: "해운", title: "HMM", image: "/assets/solution/SAS/cases/HMM.png" },
             { category: "금융", title: "KB국민은행", image: "/assets/solution/SAS/cases/kb_bank.png" },
             { category: "통신", title: "LG유플러스(인건비)", image: "/assets/solution/SAS/cases/lg_uplus.png" },
             { category: "공공", title: "건강보험심사평가원", image: "/assets/solution/SAS/cases/hira.png" },
@@ -2090,7 +2090,7 @@ export const translations = {
           description: "Injitech Co., Ltd. is Korea's largest SAS partner, providing total services optimized for SAS utilization, from installation and maintenance to analysis algorithm development and system integration.\nMany major institutions and companies are already choosing Injitech's expertise and reliability.",
           items: [
             { category: "Finance", title: "BC카드", image: "/assets/solution/SAS/cases/bc_card.png" },
-            { category: "Shipping", title: "HMM", image: "/assets/solution/SAS/cases/hmm.png" },
+            { category: "Shipping", title: "HMM", image: "/assets/solution/SAS/cases/HMM.png" },
             { category: "Finance", title: "KB국민은행", image: "/assets/solution/SAS/cases/kb_bank.png" },
             { category: "Telecom", title: "LG유플러스(인건비)", image: "/assets/solution/SAS/cases/lg_uplus.png" },
             { category: "Public", title: "건강보험심사평가원", image: "/assets/solution/SAS/cases/hira.png" },
