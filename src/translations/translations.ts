@@ -243,10 +243,21 @@ export const translations = {
         subtitle:
           "구축, 운영, 컨설팅 프로젝트를 통해 신뢰받는 IT 파트너로 성장했습니다.",
         banner: {
-          title: "회사 연혁",
-          period: "2019-현재",
+          title: "사업고도화",
+          period: "2020-현재",
+          title2: "도약",
+          period2: "설립-2019",
         },
         timeline: [
+          {
+            year: "2026",
+            events: [
+              {
+                month: "02.",
+                text: "Medallia: APAC Partner of The Year 수상",
+              },
+            ],
+          },
           {
             year: "2025",
             events: [
@@ -288,13 +299,13 @@ export const translations = {
                 month: "08.",
                 text: "한국평가데이터: 신용등급 우수기업 재인증",
               },
-              { month: "02.", text: "대한적십자사 은장 포상장 수상" },
+              { month: "02.", text: "대한적십자사: 은장 포상장 수상" },
             ],
           },
           {
             year: "2021",
             events: [
-              { month: "11.", text: "SAS Gold Partner 지정" },
+              { month: "11.", text: "SAS: Gold Partner 지정" },
               { month: "09.", text: "MEDALLIA 협력 파트너 계약 체결" },
               { month: "03.", text: "서울 사무실 확장 이전(방배동 초석빌딩)" },
             ],
@@ -303,20 +314,62 @@ export const translations = {
             year: "2020",
             events: [
               { month: "07.", text: "벤처기업협회 정회원 등록" },
-              { month: "03.", text: "SAS : Partner of the Year Korea 수상" },
+              { month: "03.", text: "SAS: Partner of the Year Korea 수상" },
               { month: "01.", text: "고용노동부 인증 강소기업 선정" },
             ],
           },
           {
             year: "2019",
             events: [
-              { month: "12.", text: "연매출 100억 원 달성" },
-              {
-                month: "08.",
-                text: "경영혁신형 중소기업 (Main-Biz) 인증 취득",
-              },
-              { month: "03.", text: "Dell EMC 협력 파트너 계약 체결" },
-              { month: "02.", text: "서울 사무실 확장 이전 (서초동 도요빌딩)" },
+              { month: "00.", text: "한국기업데이터: 신용등급 우수기업 인증" },
+              { month: "00.", text: "02월 서울 사무실 확장 이전(서초동_도요빌딩)" },
+              { month: "00.", text: "DELL EMC 협력 파트너 계약 체결" },
+              { month: "00.", text: "중소벤처기업부 : 경영혁신형 중소기업 (Main-Biz)" },
+              { month: "00.", text: "연매출 100억원 달성 (매출액: )" },
+            ],
+          },
+          {
+            year: "2018",
+            events: [{ month: "00.", text: "SAS 협력 파트너 계약 체결" }],
+          },
+          {
+            year: "2017",
+            events: [{ month: "00.", text: "NICE평가정보: 기술평가 우수기업 인증" }],
+          },
+          {
+            year: "2016",
+            events: [
+              { month: "00.", text: "정보통신공사업 등록" },
+              { month: "00.", text: "SK㈜ C&C cloud 서비스 파트너 계약 체결" },
+            ],
+          },
+          {
+            year: "2015",
+            events: [
+              { month: "00.", text: "10월 강원도 원주시 소재로 본점 확장 이전(관설동_비젼빌딩)" },
+              { month: "00.", text: "서울사무소 개설 (서초동 한성빌딩)" },
+              { month: "00.", text: "자본금 150백만원으로 증자" },
+            ],
+          },
+          {
+            year: "2014",
+            events: [{ month: "00.", text: "기술보증기금 벤처기업 인증" }],
+          },
+          {
+            year: "2013",
+            events: [
+              { month: "00.", text: "클립소프트 Rexpert 공공총판 계약 체결" },
+              { month: "00.", text: "05월 서울시 서초구 소재로 본점 확장 이전(서초동_LG서초에클라트)" },
+            ],
+          },
+          {
+            year: "2012",
+            events: [{ month: "00.", text: "HP 협력 파트너 계약 체결" }],
+          },
+          {
+            year: "2011",
+            events: [
+              { month: "11.", text: "㈜인지테크 회사법인 설립(서초동 한성빌딩), 자본금 50백만원" },
             ],
           },
         ],
@@ -428,15 +481,15 @@ export const translations = {
         solutions: {
           tag: "Major Solution",
           tabs: {
-            storage: "STORAGE",
-            server: "SERVER",
+            storage: "Storage",
+            server: "Server",
             etc: "ETC"
           },
           items: {
             storage: {
               tag: "AI와 멀티클라우드 환경을 완벽히 지원하는 통합 스토리지",
               title: "데이터의 경계를 허무는 Dell 엔터프라이즈 솔루션",
-              description: "Dell PowerStore, PowerScale, ECS 스토리지는 블록·파일·오브젝트를 아우르는 통합 스토리지 포트폴리오로, 멀티클라우드와 AI 데이터 활용까지 고려한 엔터프라이즈 표준 스토리지 환경을 제공합니다.",
+              description: "Dell PowerStore, PowerScale, ECS 스토리지는 블록·파일·오브젝트를 아우르는 통합 스토리지 포트폴리오로,\n 멀티클라우드와 AI 데이터 활용까지 고려한 엔터프라이즈 표준 스토리지 환경을 제공합니다.",
               video: "/assets/infra/dell/dell_video.mp4"
             },
             server: {
@@ -843,54 +896,56 @@ export const translations = {
           title: "SAS 글로벌 주요 고객사 – 대형 기업 및 공공기관 중심",
           description: "㈜인지테크는 국내 최대 SAS 파트너사로, 설치부터 유지보수, 분석 알고리즘 개발, 시스템 통합까지 SAS 활용에 최적화된 종합 서비스를 제공합니다.\n이미 다수의 주요 기관과 기업들이 인지테크의 전문성과 신뢰를 선택하고 있습니다.",
           items: [
-            {
-              category: "금융",
-              title: "한국은행",
-              description: "통계 SW SAS 임차갱신 계약",
-              image: "/assets/solution/SAS/img.png"
-            },
-            {
-              category: "금융",
-              title: "우리은행",
-              description: "신용리스크 및 시장리스크 분석",
-              image: "/assets/solution/SAS/img2.png"
-            },
-            {
-              category: "금융",
-              title: "케이뱅크",
-              description: "SAS 시스템 라이선스 갱신",
-              image: "/assets/solution/SAS/img3.png"
-            },
-            {
-              category: "금융",
-              title: "삼성화재",
-              description: "SAS 임차 계약",
-              image: "/assets/solution/SAS/img4.png"
-            },
-            {
-              category: "공공",
-              title: "국민연금공단",
-              description: "생산 설비 데이터를 실시간 분석할 수 있는 Desktop Cloud 환경 구축",
-              image: "/assets/solution/SAS/img5.png"
-            },
-            {
-              category: "공공",
-              title: "국민건강보험공단",
-              description: "MRI·CT 영상 대용량 스토리지 환경 구성\n자동 백업 및 이중화 시스템",
-              image: "/assets/solution/SAS/img6.png"
-            },
-            {
-              category: "공공",
-              title: "통계청",
-              description: "금융권 내부 전산 처리 속도 향상을 위해 PowerEdge 서버 기반 인프라 구축",
-              image: "/assets/solution/SAS/img7.png"
-            },
-            {
-              category: "공공",
-              title: "국세청",
-              description: "24시간 물류 추적 서비스가 가능한\n고신뢰 서버 구성",
-              image: "/assets/solution/SAS/img8.png"
-            }
+            { category: "금융", title: "BC카드", image: "/assets/solution/SAS/cases/BC카드.png" },
+            { category: "해운", title: "HMM", image: "/assets/solution/SAS/cases/HMM.png" },
+            { category: "금융", title: "KB국민은행", image: "/assets/solution/SAS/cases/KB국민은행.png" },
+            { category: "통신", title: "LG유플러스(인건비)", image: "/assets/solution/SAS/cases/LG유플러스(인건비).png" },
+            { category: "공공", title: "건강보험심사평가원", image: "/assets/solution/SAS/cases/건강보험심사평가원.png" },
+            { category: "금융", title: "경남은행", image: "/assets/solution/SAS/cases/경남은행.png" },
+            { category: "의료", title: "경희의료원", image: "/assets/solution/SAS/cases/경희의료원.png" },
+            { category: "의료", title: "국립 암센터", image: "/assets/solution/SAS/cases/국립 암센터.png" },
+            { category: "의료", title: "국립보건연구원", image: "/assets/solution/SAS/cases/국립보건연구원.png" },
+            { category: "의료", title: "국립중앙의료원(신한수)", image: "/assets/solution/SAS/cases/국립중앙의료원(신한수).png" },
+            { category: "의료", title: "국립중앙의료원(신한수연구원)", image: "/assets/solution/SAS/cases/국립중앙의료원(신한수연구원).png" },
+            { category: "의료", title: "국립중앙의료원(중앙치매센터)", image: "/assets/solution/SAS/cases/국립중앙의료원(중앙치매센터).png" },
+            { category: "의료", title: "국립중앙의료원", image: "/assets/solution/SAS/cases/국립중앙의료원.png" },
+            { category: "의료", title: "국립중앙의료원_중앙응급의료센터", image: "/assets/solution/SAS/cases/국립중앙의료원_중앙응급의료센터.png" },
+            { category: "공공", title: "국립환경과학원", image: "/assets/solution/SAS/cases/국립환경과학원.png" },
+            { category: "공공", title: "국립환경과학원_환경보건연구과", image: "/assets/solution/SAS/cases/국립환경과학원_환경보건연구과.png" },
+            { category: "의료", title: "국민건강보험공단 일산병원", image: "/assets/solution/SAS/cases/국민건강보험공단 일산병원.png" },
+            { category: "공공", title: "국민건강보험공단", image: "/assets/solution/SAS/cases/국민건강보험공단.png" },
+            { category: "공공", title: "국민연금공단", image: "/assets/solution/SAS/cases/국민연금공단.png" },
+            { category: "공공", title: "국세청", image: "/assets/solution/SAS/cases/국세청.png" },
+            { category: "공공", title: "국토연구원", image: "/assets/solution/SAS/cases/국토연구원.png" },
+            { category: "금융", title: "기술보증기금", image: "/assets/solution/SAS/cases/기술보증기금.png" },
+            { category: "공공", title: "농촌진흥청", image: "/assets/solution/SAS/cases/농촌진흥청.png" },
+            { category: "IT", title: "비아이매트릭스(인건비)", image: "/assets/solution/SAS/cases/비아이매트릭스(인건비).png" },
+            { category: "제조", title: "삼성전자", image: "/assets/solution/SAS/cases/삼성전자.png" },
+            { category: "금융", title: "삼성화재보험", image: "/assets/solution/SAS/cases/삼성화재보험.png" },
+            { category: "금융", title: "신용보증기금", image: "/assets/solution/SAS/cases/신용보증기금.png" },
+            { category: "의료", title: "양산부산대학교병원", image: "/assets/solution/SAS/cases/양산부산대학교병원.png" },
+            { category: "공공", title: "에너지경제연구원", image: "/assets/solution/SAS/cases/에너지경제연구원.png" },
+            { category: "금융", title: "우리은행", image: "/assets/solution/SAS/cases/우리은행.png" },
+            { category: "IT", title: "위테크(한국사회보장정보원)", image: "/assets/solution/SAS/cases/위테크(한국사회보장정보원).png" },
+            { category: "공공", title: "육아정책연구소", image: "/assets/solution/SAS/cases/육아정책연구소.png" },
+            { category: "금융", title: "전북은행", image: "/assets/solution/SAS/cases/전북은행.png" },
+            { category: "금융", title: "케이뱅크", image: "/assets/solution/SAS/cases/케이뱅크.png" },
+            { category: "공공", title: "통계청", image: "/assets/solution/SAS/cases/통계청.png" },
+            { category: "공공", title: "한국건강증진개발원", image: "/assets/solution/SAS/cases/한국건강증진개발원.png" },
+            { category: "공공", title: "한국고용정보원(DW)", image: "/assets/solution/SAS/cases/한국고용정보원(DW).png" },
+            { category: "공공", title: "한국고용정보원", image: "/assets/solution/SAS/cases/한국고용정보원.png" },
+            { category: "공공", title: "한국데이터산업진흥원", image: "/assets/solution/SAS/cases/한국데이터산업진흥원.png" },
+            { category: "공공", title: "한국문화관광연구원", image: "/assets/solution/SAS/cases/한국문화관광연구원.png" },
+            { category: "의료", title: "한국보건의료정보원", image: "/assets/solution/SAS/cases/한국보건의료정보원.png" },
+            { category: "공공", title: "한국부동산원", image: "/assets/solution/SAS/cases/한국부동산원.png" },
+            { category: "공공", title: "한국사회보장정보원", image: "/assets/solution/SAS/cases/한국사회보장정보원.png" },
+            { category: "의료", title: "한국원자력의학원", image: "/assets/solution/SAS/cases/한국원자력의학원.png" },
+            { category: "금융", title: "한국은행", image: "/assets/solution/SAS/cases/한국은행.png" },
+            { category: "공공", title: "한국의약품안전관리원", image: "/assets/solution/SAS/cases/한국의약품안전관리원.png" },
+            { category: "공공", title: "한국전력거래소", image: "/assets/solution/SAS/cases/한국전력거래소.png" },
+            { category: "공공", title: "한국종축개량협회", image: "/assets/solution/SAS/cases/한국종축개량협회.png" },
+            { category: "공공", title: "한국직업능력연구원", image: "/assets/solution/SAS/cases/한국직업능력연구원.png" },
+            { category: "공공", title: "한국통계진흥원", image: "/assets/solution/SAS/cases/한국통계진흥원.png" },
           ]
         },
         awards: {
@@ -1106,6 +1161,10 @@ export const translations = {
         agreeLabel: "동의합니다."
       },
       submitButton: "문의하기"
+    },
+    common: {
+      fold: "접기",
+      unfold: "펼치기",
     },
   },
   en: {
@@ -1356,10 +1415,21 @@ export const translations = {
         subtitle:
           "We have grown into a trusted IT partner through deployment, operation, and consulting projects.",
         banner: {
-          title: "Company History",
-          period: "2019-Present",
+          title: "Business Advancement",
+          period: "2020-Present",
+          title2: "Leap Forward",
+          period2: "Establishment-2019",
         },
         timeline: [
+          {
+            year: "2026",
+            events: [
+              {
+                month: "02.",
+                text: "Medallia: Received APAC Partner of The Year Award",
+              },
+            ],
+          },
           {
             year: "2025",
             events: [
@@ -1413,7 +1483,7 @@ export const translations = {
           {
             year: "2021",
             events: [
-              { month: "11.", text: "Designated as SAS Gold Partner" },
+              { month: "11.", text: "Designated as SAS: Gold Partner" },
               { month: "09.", text: "Signed MEDALLIA Partnership Agreement" },
               {
                 month: "03.",
@@ -1441,16 +1511,55 @@ export const translations = {
           {
             year: "2019",
             events: [
-              {
-                month: "12.",
-                text: "Achieved Annual Revenue of 10 Billion KRW",
-              },
-              { month: "08.", text: "Main-Biz Certification" },
-              { month: "03.", text: "Signed Dell EMC Partnership Agreement" },
-              {
-                month: "02.",
-                text: "Seoul Office Expansion & Relocation (Seocho-dong)",
-              },
+              { month: "00.", text: "KoDATA: Excellent Credit Rating Certification" },
+              { month: "00.", text: "Feb. Seoul Office Expansion & Relocation (Seocho-dong)" },
+              { month: "00.", text: "Signed Dell EMC Partnership Agreement" },
+              { month: "00.", text: "Main-Biz Certification (Ministry of SMEs and Startups)" },
+              { month: "00.", text: "Achieved Annual Revenue of 10 Billion KRW" },
+            ],
+          },
+          {
+            year: "2018",
+            events: [{ month: "00.", text: "Signed SAS Partnership Agreement" }],
+          },
+          {
+            year: "2017",
+            events: [{ month: "00.", text: "NICE Information Service: Excellent Technology Evaluation Certification" }],
+          },
+          {
+            year: "2016",
+            events: [
+              { month: "00.", text: "Registered Information and Communication Construction Business" },
+              { month: "00.", text: "Signed SK C&C cloud Service Partnership Agreement" },
+            ],
+          },
+          {
+            year: "2015",
+            events: [
+              { month: "00.", text: "Oct. Relocated HQ to Wonju, Gangwon-do (Gwanseol-dong, Vision Bldg.)" },
+              { month: "00.", text: "Opened Seoul Office (Seocho-dong, Hanseong Building)" },
+              { month: "00.", text: "Increased Capital to 150 Million KRW" },
+            ],
+          },
+          {
+            year: "2014",
+            events: [{ month: "00.", text: "Venture Business Certification by Korea Technology Finance Corporation" }],
+          },
+          {
+            year: "2013",
+            events: [
+              { month: "00.", text: "Signed CLIPSOFT Rexpert Public Sector Distribution Agreement" },
+              { month: "00.", text: "May. Relocated HQ to Seocho-gu, Seoul (Seocho-dong, LG Seocho Eclat)" },
+            ],
+          },
+          {
+            year: "2012",
+            events: [{ month: "00.", text: "Signed HP Partnership Agreement" }],
+          },
+          {
+            year: "2011",
+            events: [
+              { month: "11.", text: "Founded Injitech Co., Ltd. (Seocho-dong, Hanseong Building), Capital 50 Million KRW" },
             ],
           },
         ],
@@ -1565,8 +1674,8 @@ export const translations = {
         solutions: {
           tag: "Major Solution",
           tabs: {
-            storage: "STORAGE",
-            server: "SERVER",
+            storage: "Storage",
+            server: "Server",
             etc: "ETC"
           },
           items: {
@@ -1980,54 +2089,56 @@ export const translations = {
           title: "Major SAS Global Customers – Large Corporations and Public Institutions",
           description: "Injitech Co., Ltd. is Korea's largest SAS partner, providing total services optimized for SAS utilization, from installation and maintenance to analysis algorithm development and system integration.\nMany major institutions and companies are already choosing Injitech's expertise and reliability.",
           items: [
-            {
-              category: "Finance",
-              title: "Bank of Korea",
-              description: "Statistical SW SAS lease renewal contract",
-              image: "/assets/solution/SAS/img.png"
-            },
-            {
-              category: "Finance",
-              title: "Woori Bank",
-              description: "Credit risk and market risk analysis",
-              image: "/assets/solution/SAS/img2.png"
-            },
-            {
-              category: "Finance",
-              title: "K Bank",
-              description: "SAS system license renewal",
-              image: "/assets/solution/SAS/img3.png"
-            },
-            {
-              category: "Finance",
-              title: "Samsung Fire & Marine",
-              description: "SAS lease contract",
-              image: "/assets/solution/SAS/img4.png"
-            },
-            {
-              category: "Public",
-              title: "National Pension Service",
-              description: "Building a Desktop Cloud environment for real-time analysis of production equipment data",
-              image: "/assets/solution/SAS/img5.png"
-            },
-            {
-              category: "Public",
-              title: "National Health Insurance Service",
-              description: "MRI/CT image large-capacity storage environment configuration\nAutomatic backup and redundancy system",
-              image: "/assets/solution/SAS/img6.png"
-            },
-            {
-              category: "Public",
-              title: "Statistics Korea",
-              description: "Building infrastructure based on PowerEdge servers to improve internal computer processing speeds",
-              image: "/assets/solution/SAS/img7.png"
-            },
-            {
-              category: "Public",
-              title: "National Tax Service",
-              description: "High-reliability server configuration for\n24-hour logistics tracking services",
-              image: "/assets/solution/SAS/img8.png"
-            }
+            { category: "Finance", title: "BC카드", image: "/assets/solution/SAS/cases/BC카드.png" },
+            { category: "Shipping", title: "HMM", image: "/assets/solution/SAS/cases/HMM.png" },
+            { category: "Finance", title: "KB국민은행", image: "/assets/solution/SAS/cases/KB국민은행.png" },
+            { category: "Telecom", title: "LG유플러스(인건비)", image: "/assets/solution/SAS/cases/LG유플러스(인건비).png" },
+            { category: "Public", title: "건강보험심사평가원", image: "/assets/solution/SAS/cases/건강보험심사평가ᅯᆫ.png" },
+            { category: "Finance", title: "경남은행", image: "/assets/solution/SAS/cases/경남은행.png" },
+            { category: "Medical", title: "경희의료원", image: "/assets/solution/SAS/cases/경희의료원.png" },
+            { category: "Medical", title: "국립 암센터", image: "/assets/solution/SAS/cases/국립 암센터.png" },
+            { category: "Medical", title: "국립보건연구원", image: "/assets/solution/SAS/cases/국립보건연구원.png" },
+            { category: "Medical", title: "국립중앙의료원(신한수)", image: "/assets/solution/SAS/cases/국립중앙의료원(신한수).png" },
+            { category: "Medical", title: "국립중앙의료원(신한수연구원)", image: "/assets/solution/SAS/cases/국립중앙의료원(신한수연구원).png" },
+            { category: "Medical", title: "국립중앙의료원(중앙치매센터)", image: "/assets/solution/SAS/cases/국립중앙의료원(중앙치매센터).png" },
+            { category: "Medical", title: "국립중앙의료원", image: "/assets/solution/SAS/cases/국립중앙의료원.png" },
+            { category: "Medical", title: "국립중앙의료원_중앙응급의료센터", image: "/assets/solution/SAS/cases/국립중앙의료원_중앙응급의료센터.png" },
+            { category: "Public", title: "국립환경과학원", image: "/assets/solution/SAS/cases/국립환경과학원.png" },
+            { category: "Public", title: "국립환경과학원_환경보건연구과", image: "/assets/solution/SAS/cases/국립환경과학원_환경보건연구과.png" },
+            { category: "Medical", title: "국민건강보험공단 일산병원", image: "/assets/solution/SAS/cases/국민건강보험공단 일산병원.png" },
+            { category: "Public", title: "국민건강보험공단", image: "/assets/solution/SAS/cases/국민건강보험공단.png" },
+            { category: "Public", title: "국민연금공단", image: "/assets/solution/SAS/cases/국민연금공단.png" },
+            { category: "Public", title: "국세청", image: "/assets/solution/SAS/cases/국세청.png" },
+            { category: "Public", title: "국토연구원", image: "/assets/solution/SAS/cases/국토연구원.png" },
+            { category: "Finance", title: "기술보증기금", image: "/assets/solution/SAS/cases/기술보증기금.png" },
+            { category: "Public", title: "농촌진흥청", image: "/assets/solution/SAS/cases/농촌진흥청.png" },
+            { category: "IT", title: "비아이매트릭스(인건비)", image: "/assets/solution/SAS/cases/비아이매트릭스(인건비).png" },
+            { category: "Manufacturing", title: "삼성전자", image: "/assets/solution/SAS/cases/삼성전자.png" },
+            { category: "Finance", title: "삼성화재보험", image: "/assets/solution/SAS/cases/삼성화재보험.png" },
+            { category: "Finance", title: "신용보증기금", image: "/assets/solution/SAS/cases/신용보증기금.png" },
+            { category: "Medical", title: "양산부산대학교병원", image: "/assets/solution/SAS/cases/양산부산대학교병원.png" },
+            { category: "Public", title: "에너지경제연구원", image: "/assets/solution/SAS/cases/에너지경제연구원.png" },
+            { category: "Finance", title: "우리은행", image: "/assets/solution/SAS/cases/우리은행.png" },
+            { category: "IT", title: "위테크(한국사회보장정보원)", image: "/assets/solution/SAS/cases/위테크(한국사회보장정보원).png" },
+            { category: "Public", title: "육아정책연구소", image: "/assets/solution/SAS/cases/육아정책연구소.png" },
+            { category: "Finance", title: "전북은행", image: "/assets/solution/SAS/cases/전북은행.png" },
+            { category: "Finance", title: "케이뱅크", image: "/assets/solution/SAS/cases/케이뱅크.png" },
+            { category: "Public", title: "통계청", image: "/assets/solution/SAS/cases/통계청.png" },
+            { category: "Public", title: "한국건강증진개발원", image: "/assets/solution/SAS/cases/한국건강증진개발원.png" },
+            { category: "Public", title: "한국고용정보원(DW)", image: "/assets/solution/SAS/cases/한국고용정보원(DW).png" },
+            { category: "Public", title: "한국고용정보원", image: "/assets/solution/SAS/cases/한국고용정보원.png" },
+            { category: "Public", title: "한국데이터산업진흥원", image: "/assets/solution/SAS/cases/한국데이터산업진흥원.png" },
+            { category: "Public", title: "한국문화관광연구원", image: "/assets/solution/SAS/cases/한국문화관광연구원.png" },
+            { category: "Medical", title: "한국보건의료정보원", image: "/assets/solution/SAS/cases/한국보건의료정보원.png" },
+            { category: "Public", title: "한국부동산원", image: "/assets/solution/SAS/cases/한국부동산원.png" },
+            { category: "Public", title: "한국사회보장정보원", image: "/assets/solution/SAS/cases/한국사회보장정보원.png" },
+            { category: "Medical", title: "한국원자력의학원", image: "/assets/solution/SAS/cases/한국원자력의학원.png" },
+            { category: "Finance", title: "한국은행", image: "/assets/solution/SAS/cases/한국은행.png" },
+            { category: "Public", title: "한국의약품안전관리원", image: "/assets/solution/SAS/cases/한국의약품안전관리원.png" },
+            { category: "Public", title: "한국전력거래소", image: "/assets/solution/SAS/cases/한국전력거래소.png" },
+            { category: "Public", title: "한국종축개량협회", image: "/assets/solution/SAS/cases/한국종축개량협회.png" },
+            { category: "Public", title: "한국직업능력연구원", image: "/assets/solution/SAS/cases/한국직업능력연구원.png" },
+            { category: "Public", title: "한국통계진흥원", image: "/assets/solution/SAS/cases/한국통계진흥원.png" },
           ]
         },
         awards: {
@@ -2243,6 +2354,10 @@ export const translations = {
         agreeLabel: "I agree."
       },
       submitButton: "Send Inquiry"
+    },
+    common: {
+      fold: "Fold",
+      unfold: "Unfold",
     },
   },
 };

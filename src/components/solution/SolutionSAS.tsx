@@ -164,7 +164,7 @@ export default function SolutionSAS() {
                     </ScrollReveal>
 
                     {/* Asset Content (Video or Image) */}
-                    <div className="w-full relative rounded-2xl overflow-hidden aspect-video bg-[#f5f6f7]">
+                    <div className="w-full relative rounded-md overflow-hidden bg-white border border-[#d0d5dc]/50">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeSolution}
@@ -180,7 +180,7 @@ export default function SolutionSAS() {
                                         muted
                                         loop
                                         playsInline
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-auto object-contain"
                                     >
                                         <source src={(solutionData as any).video} type="video/mp4" />
                                     </video>
@@ -188,8 +188,9 @@ export default function SolutionSAS() {
                                     <Image
                                         src={(solutionData as any).image}
                                         alt={solutionData.title}
-                                        fill
-                                        className="object-cover"
+                                        width={1400}
+                                        height={788}
+                                        className="w-full h-auto object-contain"
                                         priority
                                     />
                                 )}
@@ -200,8 +201,8 @@ export default function SolutionSAS() {
             </section>
 
             {/* Section 4: Use Cases */}
-            <section className="bg-[#1d1f23] flex flex-col items-center px-8 md:px-[120px] w-full">
-                <div className="flex flex-col gap-10 md:gap-[72px] items-start py-20 md:py-[160px] w-full max-w-[1400px]">
+            <section className="bg-[#1d1f23] flex flex-col items-center overflow-hidden w-full">
+                <div className="flex flex-col gap-10 md:gap-[72px] items-start py-20 md:py-[160px] w-full max-w-[1400px] px-8 md:px-0">
                     <div className="flex flex-col gap-8 md:gap-[32px] items-start w-full">
                         <span className="text-[#0ea5e9] text-lg md:text-[20px] font-medium tracking-tight">
                             {data.useCases.tag}
@@ -215,52 +216,75 @@ export default function SolutionSAS() {
                             </p>
                         </div>
                     </div>
+                </div>
 
-                    <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-16 w-full"
-                    >
-                        {data.useCases.items.map((item: any, index: number) => (
-                            <motion.div
-                                key={index}
-                                variants={itemVariants}
-                                className="flex flex-col gap-6 w-full"
-                            >
-                                <div className="bg-white rounded-[12px] flex items-center justify-center h-[256px] w-full px-10 overflow-hidden relative">
-                                    <div className="relative w-full h-full">
-                                        <Image
-                                            src={item.image}
-                                            alt={item.title}
-                                            fill
-                                            className="object-contain"
-                                            onError={(e) => {
-                                                const target = e.target as HTMLImageElement;
-                                                target.style.display = 'none';
-                                            }}
-                                        />
+                {/* Marquee Section */}
+                <div className="w-full relative pb-20 md:pb-[160px]">
+                    {/* Gradient Overlays */}
+                    <div className="absolute inset-y-0 left-0 w-[15%] bg-gradient-to-r from-[#1d1f23] to-transparent z-10 pointer-events-none" />
+                    <div className="absolute inset-y-0 right-0 w-[15%] bg-gradient-to-l from-[#1d1f23] to-transparent z-10 pointer-events-none" />
+
+                    <div className="flex flex-col gap-16 md:gap-[100px]">
+                        {/* Row 1: To Right */}
+                        <div className="flex gap-6 w-max overflow-visible">
+                            <div className="flex gap-6 animate-marquee-reverse-slow">
+                                {[...data.useCases.items.slice(0, 25), ...data.useCases.items.slice(0, 25)].map((item: any, index: number) => (
+                                    <div key={index} className="flex flex-col gap-6 w-[280px] md:w-[320px] shrink-0">
+                                        <div className="bg-white rounded-[12px] flex items-center justify-center h-[200px] md:h-[256px] w-full px-8 overflow-hidden relative">
+                                            <div className="relative w-full h-full">
+                                                <Image
+                                                    src={item.image}
+                                                    alt={item.title}
+                                                    fill
+                                                    className="object-contain"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-col gap-4">
+                                            <div className="self-start border border-[#0ea5e9] rounded-[4px] px-3 py-1 flex items-center justify-center">
+                                                <span className="text-[#0ea5e9] text-[14px] font-medium leading-[20px]">
+                                                    {item.category}
+                                                </span>
+                                            </div>
+                                            <h3 className="text-[#fbfcfd] text-[18px] md:text-[20px] font-semibold tracking-tight leading-[28px] truncate">
+                                                {item.title}
+                                            </h3>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="flex flex-col gap-4">
-                                    <div className="self-start border border-[#0ea5e9] rounded-[4px] px-3 py-1 flex items-center justify-center">
-                                        <span className="text-[#0ea5e9] text-[14px] font-medium leading-[20px]">
-                                            {item.category}
-                                        </span>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Row 2: To Left */}
+                        <div className="flex gap-6 w-max overflow-visible ml-[-150px]">
+                            <div className="flex gap-6 animate-marquee-slow">
+                                {[...data.useCases.items.slice(25, 50), ...data.useCases.items.slice(25, 50)].map((item: any, index: number) => (
+                                    <div key={index} className="flex flex-col gap-6 w-[280px] md:w-[320px] shrink-0">
+                                        <div className="bg-white rounded-[12px] flex items-center justify-center h-[200px] md:h-[256px] w-full px-8 overflow-hidden relative">
+                                            <div className="relative w-full h-full">
+                                                <Image
+                                                    src={item.image}
+                                                    alt={item.title}
+                                                    fill
+                                                    className="object-contain"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-col gap-4">
+                                            <div className="self-start border border-[#0ea5e9] rounded-[4px] px-3 py-1 flex items-center justify-center">
+                                                <span className="text-[#0ea5e9] text-[14px] font-medium leading-[20px]">
+                                                    {item.category}
+                                                </span>
+                                            </div>
+                                            <h3 className="text-[#fbfcfd] text-[18px] md:text-[20px] font-semibold tracking-tight leading-[28px] truncate">
+                                                {item.title}
+                                            </h3>
+                                        </div>
                                     </div>
-                                    <div className="flex flex-col gap-2">
-                                        <h3 className="text-[#fbfcfd] text-[20px] font-semibold tracking-tight leading-[28px]">
-                                            {item.title}
-                                        </h3>
-                                        <p className="text-[#dadee0] text-[18px] font-medium leading-[28px] tracking-tight whitespace-pre-line">
-                                            {item.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
