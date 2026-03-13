@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
+import ChannelTalk from "@/components/common/ChannelTalk";
 
 export const metadata: Metadata = {
   title: "인지테크 | 글로벌 제품과 솔루션",
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className="antialiased">
         <LanguageProvider>
           {children}
+          <ChannelTalk />
         </LanguageProvider>
       </body>
     </html>

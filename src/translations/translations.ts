@@ -1067,7 +1067,7 @@ export const translations = {
             {
               year: "2026",
               title: "APAC Partner of The Year",
-              description: "국내 Medallia 최대 매출 리딩 파트너 선정"
+              description: "APAC Medallia 최대 매출 리딩 파트너 선정"
             }
           ]
         }
@@ -2260,7 +2260,7 @@ export const translations = {
             {
               year: "2026",
               title: "APAC Partner of The Year",
-              description: "Selected as the leading Medallia sales partner in Korea"
+              description: "Selected as the leading Medallia sales partner in APAC"
             }
           ]
         }
