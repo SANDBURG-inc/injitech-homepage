@@ -956,27 +956,27 @@ export const translations = {
             {
               year: "2025",
               title: "SAS Partner of The Year 수상",
-              detail: "국내 SAS 파트너 중 최상위 매출 실적 달성"
+              detail: ""
             },
             {
               year: "2025",
               title: "Innovation On Tour in Seoul 단독 부스 운영",
-              detail: "SAS Certfied Engineer 다수 보유"
+              detail: ""
             },
             {
               year: "2024",
-              title: "SaS Partner Appreciation Award 수상",
-              detail: "중앙부처 및 주요 공공부문 특화 파트너"
+              title: "SAS Partner Appreciation Award 수상",
+              detail: ""
             },
             {
               year: "2021",
               title: "SAS Gold Partner 수상",
-              detail: "플랫폼 구축 및 운영 고도화까지 End-to-End 수행 역량 보유"
+              detail: ""
             },
             {
               year: "2020",
               title: "SAS Partner of The Year 수상",
-              detail: "실전 중심 컨설팅 파트너 선정"
+              detail: ""
             }
           ]
         }
@@ -2149,27 +2149,27 @@ export const translations = {
             {
               year: "2025",
               title: "SAS Partner of The Year",
-              detail: "Achieved highest sales performance among SAS partners in Korea"
+              detail: ""
             },
             {
               year: "2025",
               title: "Operated Independent Booth at Innovation On Tour in Seoul",
-              detail: "Possess numerous SAS Certified Engineers"
+              detail: ""
             },
             {
               year: "2024",
               title: "SAS Partner Appreciation Award",
-              detail: "Specialized partner for central government and major public sectors"
+              detail: ""
             },
             {
               year: "2021",
               title: "SAS Gold Partner Award",
-              detail: "Possess end-to-end execution capabilities from platform construction to operation advancement"
+              detail: ""
             },
             {
               year: "2020",
               title: "SAS Partner of The Year",
-              detail: "Selected as a practical consulting partner"
+              detail: ""
             }
           ]
         }
