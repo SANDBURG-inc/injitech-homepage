@@ -254,7 +254,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                                     <h3 className="text-[#25272e] text-lg font-semibold">
                                         {t.privacy.title}
                                     </h3>
-                                    <div className="text-[#495461] text-sm leading-relaxed whitespace-pre-line bg-gray-50 p-4 rounded-md border border-gray-100">
+                                    <div className="text-[#495461] text-sm leading-relaxed whitespace-pre-line bg-gray-50 p-4 rounded-md border border-gray-100 h-[160px] overflow-y-auto">
                                         {t.privacy.content}
                                     </div>
                                 </div>
