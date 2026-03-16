@@ -100,10 +100,22 @@ export const translations = {
         "(원주) 강원도 원주시 입춘로 45, B동 925호(반곡동, 엔터비즈타워)",
       phoneSeoul: "(서울) 전화: 02-3487-6235 / FAX: 02-3487-6236",
       phoneWonju: "(원주) 전화: 033-765-6235 / FAX: 033-765-6234",
-      privacyPolicy: "개인정보처리방침",
-      termsOfService: "서비스 이용약관",
-      thirdPartyConsent: "개인정보 제3자 제공 동의",
-      collectInfoGuide: "개인정보수집이용안내",
+      collectInfoGuide: "개인정보의 수집 및 이용목적",
+    },
+    privacyModal: {
+      title: "개인정보의 수집 및 이용목적",
+      desc1: "당사는 고객 문의사항에 대한 답변을 드리기 위한 목적으로 귀하의 개인정보를 수집·이용합니다.",
+      subtitle1: "수집하는 개인정보의 항목",
+      desc2: "이름, 이메일주소, 전화번호, 회사명, 내용",
+      subtitle2: "수집한 개인정보의 보유 및 이용기간",
+      desc3: "당사는 개인정보 수집 및 이용에 관한 동의 후 3년간 보유하고 이후 해당 정보를 지체없이 파기합니다.\n단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령이 정한 일정한 기간동안 개인정보를 보관합니다.",
+      title2: "개인정보 처리방침",
+      desc4: "(주)인지테크(이하 '회사')는 이용자의 개인정보를 소중히 다루며, 관련 법령을 준수합니다.",
+      list1: "수집 항목: 이름, 이메일주소, 전화번호, 회사명, 내용, 접속 로그, 쿠키.",
+      list2: "이용 목적: 서비스 제공, 고객 문의 응대, 홈페이지 개선.",
+      list3: "보유 및 이용기간: 관계 법령에 따라 보존이 필요한 경우 해당 기간까지 보관",
+      list4: "파기 절차: 전자적 파일 형태는 복구 불가능한 방법으로 영구 삭제",
+      close: "닫기"
     },
     company: {
       hero: {
@@ -1157,7 +1169,7 @@ export const translations = {
       },
       privacy: {
         title: "개인정보 수집 및 이용에 대한 안내",
-        content: "개인정보의 수집 및 이용목적\n당사는 고객 문의사항에 대한 답변을 드리기 위한 목적으로 귀하의 개인정보를 수집·이용합니다.\n\n수집하는 개인정보의 항목\n이름, 이메일주소, 전화번호, 회사명, 내용\n\n수집한 개인정보의 보유 및 이용기간\n당사는 개인정보 수집 및 이용에 관한 동의 후 3년간 보유하고 이후 해당 정보를 지체없이 파기합니다.\n단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령이 정한 일정한 기간동안 개인정보를 보관합니다.",
+        content: "개인정보의 수집 및 이용목적\n당사는 고객 문의사항에 대한 답변을 드리기 위한 목적으로 귀하의 개인정보를 수집·이용합니다.\n\n수집하는 개인정보의 항목\n이름, 이메일주소, 전화번호, 회사명, 내용\n\n수집한 개인정보의 보유 및 이용기간\n당사는 개인정보 수집 및 이용에 관한 동의 후 3년간 보유하고 이후 해당 정보를 지체없이 파기합니다.\n단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령이 정한 일정한 기간동안 개인정보를 보관합니다.\n\n고객 개인정보 관리책임자\n㈜인지테크에서는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 이용자의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보보호책임자와 담당자를 지정하고 있습니다.\n[개인정보보호 책임자]\n• 성명 : 이상호\n• 직책 : 이사\n• 연락처 : 02-3487-6235\n[개인정보보호 담당자(개인정보 열람청구)]\n• 성명 : 최진혁\n• 직책 : 과장\n• 연락처 : 02-3487-6235\n• 이메일: jhchoi@inji-tech.com\n\n권익침해에 대한 구제방법\n이용자는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회,한국인터넷진흥원 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다. 이 밖에 기타 개인정보침해의 신고, 상담에 대하여는 아래의 기관에 문의하여 주시기 바랍니다.\n[개인정보 침해신고센터 (한국인터넷진흥원 운영)]\n• 소관업무 : 개인정보 침해사실 신고, 상담 신청\n• 홈페이지 : privacy.kisa.or.kr\n• 전화 : (국번없이) 118\n• 주소 : (58324) 전남 나주시 진흥길 9(빛가람동 301-2) 3층 개인정보침해신고센터\n[개인정보 분쟁조정위원회]\n• 소관업무 : 개인정보 분쟁조정신청, 집단분쟁조정 (민사적 해결)\n• 홈페이지 : www.kopico.go.kr\n• 전화 : (국번없이) 1833-6972\n• 주소 : (03171)서울특별시 종로구 세종대로 209 정부서울청사 4층\n[대검찰청 : 1301 (www.spo.go.kr)]\n[경찰청 : 182 (http://cyberbureau.police.go.kr)]",
         agreeLabel: "동의합니다."
       },
       submitButton: "문의하기"
@@ -1270,10 +1282,22 @@ export const translations = {
         "(Wonju) #925, Building B, 45, Ipchun-ro, Wonju-si, Gangwon-do (Enter Biz Tower)",
       phoneSeoul: "(Seoul) Tel: 02-3487-6235 / FAX: 02-3487-6236",
       phoneWonju: "(Wonju) Tel: 033-765-6235 / FAX: 033-765-6234",
-      privacyPolicy: "Privacy Policy",
-      termsOfService: "Terms of Service",
-      thirdPartyConsent: "Third-Party Disclosure Consent",
-      collectInfoGuide: "Collection & Use of Personal Information",
+      collectInfoGuide: "Purpose of collecting and using personal information",
+    },
+    privacyModal: {
+      title: "Purpose of collecting and using personal information",
+      desc1: "We collect and use your personal information for the purpose of answering customer inquiries.",
+      subtitle1: "Items of personal information collected",
+      desc2: "Name, email address, phone number, company name, content",
+      subtitle2: "Retention and use period of collected personal information",
+      desc3: "We retain the information for 3 years after agreeing to the collection and use of personal information, and then destroy the information without delay.\nHowever, if there is a need to preserve it according to the provisions of related laws, the company will keep the personal information for a certain period determined by the related laws.",
+      title2: "Privacy Policy",
+      desc4: "Injitech Co., Ltd. (hereinafter referred to as the 'Company') treats the user's personal information with care and complies with related laws.",
+      list1: "Collection items: Name, email address, phone number, company name, content, access log, cookies.",
+      list2: "Purpose of use: Service provision, customer inquiry response, homepage improvement.",
+      list3: "Retention and use period: If preservation is required by related laws, it is kept until that period",
+      list4: "Destruction procedure: Permanent deletion in an irreversible way for electronic file formats",
+      close: "Close"
     },
     company: {
       hero: {
@@ -2350,7 +2374,7 @@ export const translations = {
       },
       privacy: {
         title: "Information Collection and Usage Agreement",
-        content: "Purpose of Collection and Use of Personal Information\nWe collect and use your personal information for the purpose of responding to customer inquiries.\n\nItems of Personal Information Collected\nName, Email Address, Phone Number, Company Name, Inquiry Content\n\nRetention and Usage Period\nWe retain collected personal information for 3 years after consent and destroy it without delay thereafter.\nHowever, if retention is required by relevant laws and regulations, the company retains personal information for a specified period as determined by such laws.",
+        content: "Purpose of Collection and Use of Personal Information\nWe collect and use your personal information for the purpose of responding to customer inquiries.\n\nItems of Personal Information Collected\nName, Email Address, Phone Number, Company Name, Inquiry Content\n\nRetention and Usage Period\nWe retain collected personal information for 3 years after consent and destroy it without delay thereafter.\nHowever, if retention is required by relevant laws and regulations, the company retains personal information for a specified period as determined by such laws.\n\nChief Privacy Officer\nInjitech Co., Ltd. is responsible for overall personal information processing and has designated the following Chief Privacy Officer and Manager to handle user complaints and damage relief related to personal information processing.\n[Chief Privacy Officer]\n• Name: Lee Sang-ho\n• Title: Director\n• Contact: 02-3487-6235\n[Privacy Manager (Personal Information Access Request)]\n• Name: Choi Jin-hyuk\n• Title: Manager\n• Contact: 02-3487-6235\n• Email: jhchoi@inji-tech.com\n\nRemedies for Infringement of Rights\nTo receive relief from personal information infringement, users may apply for dispute resolution or consultation to the Personal Information Dispute Mediation Committee, KISA Personal Information Infringement Report Center, etc. For other personal information infringement reports and consultation, please contact the following organizations.\n[Personal Information Infringement Report Center (Operated by KISA)]\n• Responsibilities: Report personal information infringement facts, apply for consultation\n• Website: privacy.kisa.or.kr\n• Phone: 118 (without area code)\n• Address: (58324) 3F Personal Information Infringement Report Center, 9 Jinheung-gil (301-2 Bitgaram-dong), Naju-si, Jeollanam-do\n[Personal Information Dispute Mediation Committee]\n• Responsibilities: Apply for personal information dispute mediation, collective dispute mediation (civil resolution)\n• Website: www.kopico.go.kr\n• Phone: 1833-6972 (without area code)\n• Address: (03171) 4F Government Complex Seoul, 209 Sejong-daero, Jongno-gu, Seoul\n[Supreme Prosecutors' Office: 1301 (www.spo.go.kr)]\n[National Police Agency: 182 (http://cyberbureau.police.go.kr)]",
         agreeLabel: "I agree."
       },
       submitButton: "Send Inquiry"

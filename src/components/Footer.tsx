@@ -1,11 +1,14 @@
 "use client";
 
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useLanguage } from "@/context/LanguageContext";
 import ScrollReveal from "@/components/common/ScrollReveal";
+import PrivacyModal from "@/components/common/PrivacyModal";
 
 export default function Footer() {
     const { t } = useLanguage();
+    const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
 
     return (
         <footer className="bg-[#1D1F23] text-white py-[144px] px-8 flex justify-center">
@@ -34,12 +37,20 @@ export default function Footer() {
 
                 {/* Utility Links - Brighter Color as Requested */}
                 <div className="flex flex-wrap gap-x-6 gap-y-2 text-[#E5E7EB] text-[14px]">
-                    <Link href="#" className="hover:text-white transition-colors">{t.footer.privacyPolicy}</Link>
-                    <Link href="#" className="hover:text-white transition-colors">{t.footer.termsOfService}</Link>
-                    <Link href="#" className="hover:text-white transition-colors">{t.footer.thirdPartyConsent}</Link>
-                    <Link href="#" className="hover:text-white transition-colors">{t.footer.collectInfoGuide}</Link>
+                    <button
+                        onClick={() => setIsPrivacyModalOpen(true)}
+                        className="hover:text-white transition-colors text-left"
+                    >
+                        {t.footer.collectInfoGuide}
+                    </button>
                 </div>
             </ScrollReveal>
+
+            {/* Privacy Modal */}
+            <PrivacyModal
+                isOpen={isPrivacyModalOpen}
+                onClose={() => setIsPrivacyModalOpen(false)}
+            />
         </footer>
     );
 }
