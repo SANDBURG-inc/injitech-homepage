@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 
-export type SolutionTab = 'sas' | 'medallia' | 'scalium';
+export type SolutionTab = 'sas' | 'medallia' | 'scailium';
 
 interface SolutionTabsProps {
     activeTab: SolutionTab;
@@ -15,7 +15,7 @@ export default function SolutionTabs({ activeTab }: SolutionTabsProps) {
     const tabs = [
         { id: 'sas' as SolutionTab, label: t.solution.tabs.sas },
         { id: 'medallia' as SolutionTab, label: t.solution.tabs.medallia },
-        { id: 'scalium' as SolutionTab, label: t.solution.tabs.scalium },
+        { id: 'scailium' as SolutionTab, label: t.solution.tabs.scailium },
     ];
 
     return (

@@ -6,11 +6,11 @@ import { useLanguage } from "@/context/LanguageContext";
 import InquiryModal from "../common/InquiryModal";
 import ScrollReveal from "../common/ScrollReveal";
 
-export default function SolutionSCALIUM() {
+export default function SolutionSCAILIUM() {
     const { t } = useLanguage();
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const data = t.solution.scalium;
+    const data = t.solution.scailium;
 
     return (
         <div className="w-full">
@@ -18,12 +18,12 @@ export default function SolutionSCALIUM() {
             <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col items-center pb-20 md:pb-[160px] pt-24 md:pt-[200px] w-full max-w-[1400px]">
                     <div className="flex flex-col gap-10 md:gap-[72px] items-center justify-center max-w-[960px] w-full">
-                        {/* SCALIUM Logo */}
+                        {/* SCAILIUM Logo */}
                         <ScrollReveal delay={100} className="w-full flex justify-center">
                             <div className="relative w-full max-w-[960px] h-[80px] md:h-[165px]">
                                 <Image
-                                    src="/assets/solution/SCALIUM/Scalium_logo.png"
-                                    alt="SCALIUM"
+                                    src="/assets/solution/SCAILIUM/Scailium_logo.png"
+                                    alt="SCAILIUM"
                                     fill
                                     className="object-contain"
                                     priority
@@ -50,7 +50,7 @@ export default function SolutionSCALIUM() {
                                     playsInline
                                     className="absolute inset-0 w-full h-full object-cover"
                                 >
-                                    <source src="/assets/solution/SCALIUM/SQREAM_video.mp4" type="video/mp4" />
+                                    <source src="/assets/solution/SCAILIUM/SQREAM_video.mp4" type="video/mp4" />
                                 </video>
                             </div>
                         </div>

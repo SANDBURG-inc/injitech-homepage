@@ -848,7 +848,7 @@ export const translations = {
       tabs: {
         sas: "SAS",
         medallia: "Medallia",
-        scalium: "SCALIUM",
+        scailium: "SCAILIUM",
       },
       sas: {
         title: "SAS",
@@ -1084,8 +1084,8 @@ export const translations = {
           ]
         }
       },
-      scalium: {
-        title: "SCALIUM",
+      scailium: {
+        title: "SCAILIUM",
         description: "엔터프라이즈 스케일링 솔루션",
         intro: "스칼리움(SCAILIUM)은 GPU-Native 아키텍처를 기반으로\n데이터 수집·처리·분석부터 AI 모델 학습과 추론까지\n하나의 환경에서 수행하는 AI Factory 통합 플랫폼입니다.\n데이터 이동 없이 DB 내부(GPU 상)에서 AI를 실행함으로써\n페타급 데이터도 최소 인프라로 초고속 처리하며,\nSQL·Python·Spark·LLM을 아우르는 원스톱 AI 운영 환경을 제공합니다.",
         advantages: {
@@ -1127,14 +1127,14 @@ export const translations = {
               badge: "공공",
               title: "건강보험 심사평가원",
               description: "건강보험 심사평가원 자보진료정보 분석시스템",
-              image: "/assets/solution/SCALIUM/img.png"
+              image: "/assets/solution/SCAILIUM/img.png"
             }
           ]
         },
         partnerCapabilities: {
           tag: "Partner Capabilities",
           title: "통합 제안이 가능한 파트너 역량 보유",
-          description: "(주)인지테크는 단순 DB 공급을 넘어 AI Factory 구축 컨설팅과 아키텍처 설계까지 확장 가능한 역량을 바탕으로, 공공·금융·대기업 대상 대용량 데이터+AI 융합 사업으로 적용 범위를 넓혀가고 있습니다.\n또한 GPU 인프라(Dell/HPE)와 스칼리움(Scalium) 소프트웨어를 결합해 성능·확장성·운영 효율을 동시에 만족시키는 고부가가치 통합 제안이 가능합니다."
+          description: "(주)인지테크는 단순 DB 공급을 넘어 AI Factory 구축 컨설팅과 아키텍처 설계까지 확장 가능한 역량을 바탕으로, 공공·금융·대기업 대상 대용량 데이터+AI 융합 사업으로 적용 범위를 넓혀가고 있습니다.\n또한 GPU 인프라(Dell/HPE)와 스칼리움(Scailium) 소프트웨어를 결합해 성능·확장성·운영 효율을 동시에 만족시키는 고부가가치 통합 제안이 가능합니다."
         }
       },
     },
@@ -2053,7 +2053,7 @@ export const translations = {
       tabs: {
         sas: "SAS",
         medallia: "Medallia",
-        scalium: "SCALIUM",
+        scailium: "SCAILIUM",
       },
       sas: {
         title: "SAS",
@@ -2289,10 +2289,10 @@ export const translations = {
           ]
         }
       },
-      scalium: {
-        title: "SCALIUM",
+      scailium: {
+        title: "SCAILIUM",
         description: "Enterprise Scaling solution",
-        intro: "SCALIUM is an AI Factory integrated platform that performs everything from data collection, processing, and analysis to AI model training and inference in a single environment based on GPU-Native architecture. By executing AI inside the database (on GPU) without data movement, it processes peta-scale data at high speed with minimum infrastructure, providing a one-stop AI operating environment encompassing SQL, Python, Spark, and LLM.",
+        intro: "SCAILIUM is an AI Factory integrated platform that performs everything from data collection, processing, and analysis to AI model training and inference in a single environment based on GPU-Native architecture. By executing AI inside the database (on GPU) without data movement, it processes peta-scale data at high speed with minimum infrastructure, providing a one-stop AI operating environment encompassing SQL, Python, Spark, and LLM.",
         advantages: {
           tag: "Major Advantages",
           title: "Key Advantages",
@@ -2332,14 +2332,14 @@ export const translations = {
               badge: "Public",
               title: "HIRA (Health Insurance Review & Assessment Service)",
               description: "HIRA Automobile Insurance Treatment Information Analysis System",
-              image: "/assets/solution/SCALIUM/img.png"
+              image: "/assets/solution/SCAILIUM/img.png"
             }
           ]
         },
         partnerCapabilities: {
           tag: "Partner Capabilities",
           title: "Equipped with Integrated Partner Capabilities",
-          description: "Injitech Co., Ltd. is expanding its business scope to large-scale data and AI convergence projects for the public, financial, and enterprise sectors, leveraging capabilities that go beyond simple database supply to include AI Factory consulting and architecture design.\nFurthermore, by integrating GPU infrastructure (Dell/HPE) with SCALIUM software, we deliver high-value integrated solutions that simultaneously satisfy performance, scalability, and operational efficiency."
+          description: "Injitech Co., Ltd. is expanding its business scope to large-scale data and AI convergence projects for the public, financial, and enterprise sectors, leveraging capabilities that go beyond simple database supply to include AI Factory consulting and architecture design.\nFurthermore, by integrating GPU infrastructure (Dell/HPE) with SCAILIUM software, we deliver high-value integrated solutions that simultaneously satisfy performance, scalability, and operational efficiency."
         }
       },
     },

@@ -50,7 +50,7 @@ export default function Hero() {
                         </Link>
 
                         <a
-                            href="/인지테크 회사소개서.pdf"
+                            href="/injitech_brochure.pdf"
                             download
                             className="h-12 lg:h-16 px-8 lg:px-8 bg-white border border-primary rounded-lg flex items-center justify-center gap-3 group hover:bg-white/90 hover:scale-[1.02] transition-all active:scale-[0.98] cursor-pointer w-full sm:w-auto text-decoration-none"
                         >
