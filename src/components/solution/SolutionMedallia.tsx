@@ -75,6 +75,7 @@ export default function SolutionMedallia() {
                                 muted
                                 loop
                                 playsInline
+                                controls
                                 className="w-full h-full object-cover"
                             >
                                 <source src="/assets/solution/Medallia/medallia_video.mp4" type="video/mp4" />
@@ -181,6 +182,7 @@ export default function SolutionMedallia() {
                                         muted
                                         loop
                                         playsInline
+                                        controls
                                         className="w-full h-auto object-contain"
                                     >
                                         <source src={(solutionData as any).video} type="video/mp4" />

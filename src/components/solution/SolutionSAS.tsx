@@ -73,6 +73,7 @@ export default function SolutionSAS() {
                                 muted
                                 loop
                                 playsInline
+                                controls
                                 className="w-full h-full object-cover"
                             >
                                 <source src="/assets/solution/SAS/SAS_video2.mp4" type="video/mp4" />
@@ -180,6 +181,7 @@ export default function SolutionSAS() {
                                         muted
                                         loop
                                         playsInline
+                                        controls
                                         className="w-full h-auto object-contain"
                                     >
                                         <source src={(solutionData as any).video} type="video/mp4" />

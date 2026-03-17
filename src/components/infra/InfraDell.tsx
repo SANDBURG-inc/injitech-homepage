@@ -185,6 +185,7 @@ export default function InfraDell() {
                                     muted
                                     loop
                                     playsInline
+                                    controls
                                     className="w-full h-full object-cover"
                                 >
                                     <source src={solutionData.video} type="video/mp4" />

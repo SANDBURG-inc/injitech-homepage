@@ -48,6 +48,7 @@ export default function SolutionSCAILIUM() {
                                     muted
                                     loop
                                     playsInline
+                                    controls
                                     className="absolute inset-0 w-full h-full object-cover"
                                 >
                                     <source src="/assets/solution/SCAILIUM/SQREAM_video.mp4" type="video/mp4" />

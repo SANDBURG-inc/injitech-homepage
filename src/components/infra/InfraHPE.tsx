@@ -73,6 +73,7 @@ export default function InfraHPE() {
                                     muted
                                     loop
                                     playsInline
+                                    controls
                                     className="w-full h-full object-cover"
                                 >
                                     <source src="/assets/infra/hpe/HPE_video.mp4" type="video/mp4" />
@@ -186,6 +187,7 @@ export default function InfraHPE() {
                                     muted
                                     loop
                                     playsInline
+                                    controls
                                     className="w-full h-full object-cover"
                                 >
                                     <source src={solutionData.video} type="video/mp4" />

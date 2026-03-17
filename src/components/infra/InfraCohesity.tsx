@@ -79,6 +79,7 @@ export default function InfraCohesity() {
                                     muted
                                     loop
                                     playsInline
+                                    controls
                                     className="w-full h-full object-cover"
                                 >
                                     <source src="/assets/infra/cohesity/cohesity_video.mp4" type="video/mp4" />

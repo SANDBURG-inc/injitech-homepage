@@ -74,6 +74,7 @@ export default function InfraVMware() {
                                     muted
                                     loop
                                     playsInline
+                                    controls
                                     className="w-full h-full object-cover"
                                 >
                                     <source src="/assets/infra/vmware/vmware_video.mp4" type="video/mp4" />
