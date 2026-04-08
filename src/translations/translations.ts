@@ -282,7 +282,6 @@ export const translations = {
           {
             year: "2024",
             events: [
-              { month: "12.", text: "연매출 200억원 달성" },
               { month: "06.", text: "APPIAN 협력 파트너 계약 체결" },
               { month: "01.", text: "SAS Partner Appreciation Award 수상" },
             ],
@@ -337,7 +336,6 @@ export const translations = {
               { month: "00.", text: "02월 서울 사무실 확장 이전(서초동_도요빌딩)" },
               { month: "00.", text: "DELL EMC 협력 파트너 계약 체결" },
               { month: "00.", text: "중소벤처기업부 : 경영혁신형 중소기업 (Main-Biz)" },
-              { month: "00.", text: "연매출 100억원 달성 (매출액: )" },
             ],
           },
           {
@@ -360,7 +358,6 @@ export const translations = {
             events: [
               { month: "00.", text: "10월 강원도 원주시 소재로 본점 확장 이전(관설동_비젼빌딩)" },
               { month: "00.", text: "서울사무소 개설 (서초동 한성빌딩)" },
-              { month: "00.", text: "자본금 150백만원으로 증자" },
             ],
           },
           {
@@ -381,7 +378,7 @@ export const translations = {
           {
             year: "2011",
             events: [
-              { month: "11.", text: "㈜인지테크 회사법인 설립(서초동 한성빌딩), 자본금 50백만원" },
+              { month: "11.", text: "㈜인지테크 회사법인 설립(서초동 한성빌딩)" },
             ],
           },
         ],
@@ -1267,7 +1264,7 @@ export const translations = {
       button: "Contact Us",
     },
     footer: {
-      companyInfo: "Injitech Co., Ltd. CEO Lim Jeong-hwan",
+      companyInfo: "Injitech Co., Ltd. CEO Junghan Lim",
       bizNumber: "Business Registration Number 214-88-86449",
       addressSeoul:
         "(Seoul) 5F/6F, Choseok Building, 7, Bangbaecheon-ro 24-gil, Seocho-gu, Seoul",
@@ -1340,7 +1337,7 @@ export const translations = {
           label: "Organization",
           title:
             "Expert group with technical understanding and execution\ndelivering success to our clients.",
-          ceo: "CEO Jeonghan Lim",
+          ceo: "CEO Junghan Lim",
           departments: [
             {
               id: "358:7863",
@@ -1459,10 +1456,6 @@ export const translations = {
           {
             year: "2024",
             events: [
-              {
-                month: "12.",
-                text: "Achieved Annual Revenue of 20 Billion KRW",
-              },
               { month: "06.", text: "Signed APPIAN Partnership Agreement" },
               { month: "01.", text: "Received SAS Partner Appreciation Award" },
             ],
@@ -1532,7 +1525,6 @@ export const translations = {
               { month: "00.", text: "Feb. Seoul Office Expansion & Relocation (Seocho-dong)" },
               { month: "00.", text: "Signed Dell EMC Partnership Agreement" },
               { month: "00.", text: "Main-Biz Certification (Ministry of SMEs and Startups)" },
-              { month: "00.", text: "Achieved Annual Revenue of 10 Billion KRW" },
             ],
           },
           {
@@ -1555,7 +1547,6 @@ export const translations = {
             events: [
               { month: "00.", text: "Oct. Relocated HQ to Wonju, Gangwon-do (Gwanseol-dong, Vision Bldg.)" },
               { month: "00.", text: "Opened Seoul Office (Seocho-dong, Hanseong Building)" },
-              { month: "00.", text: "Increased Capital to 150 Million KRW" },
             ],
           },
           {
@@ -1576,7 +1567,7 @@ export const translations = {
           {
             year: "2011",
             events: [
-              { month: "11.", text: "Founded Injitech Co., Ltd. (Seocho-dong, Hanseong Building), Capital 50 Million KRW" },
+              { month: "11.", text: "Founded Injitech Co., Ltd. (Seocho-dong, Hanseong Building)" },
             ],
           },
         ],

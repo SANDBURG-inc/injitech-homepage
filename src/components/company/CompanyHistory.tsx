@@ -51,12 +51,7 @@ export default function CompanyHistory() {
                             {/* Events */}
                             <div className="flex flex-col gap-[16px] md:gap-[24px] flex-1 md:pt-[12px]">
                                 {item.events.map((event: any, idx: number) => (
-                                    <div key={idx} className="flex flex-col md:flex-row gap-[8px] md:gap-0 group">
-                                        <div className="w-full md:w-[160px] shrink-0">
-                                            <span className="text-[#25272E] text-[18px] md:text-[24px] font-semibold leading-[28px] md:leading-[36px] tracking-[-0.24px]">
-                                                {event.month}
-                                            </span>
-                                        </div>
+                                    <div key={idx} className="flex flex-col md:flex-row group">
                                         <p className="text-[#25272E] text-[16px] md:text-[24px] font-normal leading-[24px] md:leading-[36px] tracking-[-0.24px] flex-1">
                                             {event.text}
                                         </p>

@@ -11,7 +11,7 @@ const VIDEO_SRC = "/videos/technology-background-information-technology-2025-10-
 export default function Hero() {
     const { t } = useLanguage();
     return (
-        <section className="relative w-full h-[125vh] overflow-hidden flex items-center justify-center bg-black">
+        <section className="relative w-full h-[90vh] overflow-hidden flex items-center justify-center bg-black">
             {/* Video Background */}
             <div className="absolute inset-0 z-0">
                 <video
@@ -42,12 +42,12 @@ export default function Hero() {
 
                 <ScrollReveal delay={400}>
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                        <Link href="/company" className="h-12 lg:h-16 px-8 lg:px-8 bg-primary rounded-lg flex items-center justify-center gap-3 group hover:bg-primary/90 hover:scale-[1.02] transition-all active:scale-[0.98] cursor-pointer w-full sm:w-auto">
+                        {/* <Link href="/company" className="h-12 lg:h-16 px-8 lg:px-8 bg-primary rounded-lg flex items-center justify-center gap-3 group hover:bg-primary/90 hover:scale-[1.02] transition-all active:scale-[0.98] cursor-pointer w-full sm:w-auto">
                             <span className="text-[16px] lg:text-lg font-semibold text-white tracking-tight">
                                 {t.hero.viewMore}
                             </span>
                             <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
-                        </Link>
+                        </Link> */}
 
                         <a
                             href="/injitech_brochure.pdf"

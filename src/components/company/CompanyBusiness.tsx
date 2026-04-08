@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import ScrollReveal from "../common/ScrollReveal";
+import OurClients from "@/components/OurClients";
 
 export default function CompanyBusiness() {
     const { t } = useLanguage();
@@ -68,6 +69,9 @@ export default function CompanyBusiness() {
                     })}
                 </div>
             </div>
+
+            {/* Our Clients Section */}
+            <OurClients />
         </div>
     );
 }
