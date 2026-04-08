@@ -44,7 +44,7 @@ export default function InfraDell() {
             {/* Section 1: Introduction */}
             <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col items-center pb-20 md:pb-[160px] pt-24 md:pt-[200px] w-full max-w-[1400px]">
-                    <div className="flex flex-col gap-10 md:gap-[56px] items-center justify-center max-w-[960px] w-full">
+                    <div className="flex flex-col gap-10 md:gap-[56px] items-center justify-center max-w-[1200px] w-full">
                         {/* Dell Logo */}
                         <ScrollReveal delay={100} className="w-full flex justify-center">
                             <div className="relative w-full max-w-[300px] h-[60px] md:max-w-[750px] md:h-[112px]">
@@ -69,7 +69,7 @@ export default function InfraDell() {
 
                         {/* Intro Image */}
                         <ScrollReveal delay={200} className="w-full">
-                            <div className="relative w-full aspect-[960/338] md:h-[338px] overflow-hidden rounded-xl">
+                            <div className="relative w-full aspect-[1200/400] md:h-[400px] overflow-hidden rounded-xl">
                                 <Image
                                     src="/assets/infra/dell/dell_intro_img.png"
                                     alt="Dell Technologies Infrastructure Overview"

@@ -45,7 +45,7 @@ export default function SolutionMedallia() {
             {/* Section 1: Introduction */}
             <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col items-center pb-20 md:pb-[160px] pt-24 md:pt-[200px] w-full max-w-[1400px]">
-                    <div className="flex flex-col gap-10 md:gap-[56px] items-center justify-center max-w-[960px] w-full">
+                    <div className="flex flex-col gap-10 md:gap-[56px] items-center justify-center max-w-[1400px] w-full">
                         {/* Medallia Logo */}
                         <ScrollReveal delay={100} className="w-full flex justify-center">
                             <div className="relative w-full max-w-[320px] h-[60px] md:max-w-[408px] md:h-[112px]">
@@ -69,7 +69,7 @@ export default function SolutionMedallia() {
                         </ScrollReveal>
 
                         {/* Intro Video */}
-                        <div className="w-full relative rounded-2xl overflow-hidden aspect-video bg-[#f5f6f7]">
+                        <div className="w-full relative rounded-2xl overflow-hidden aspect-video bg-[#f5f6f7] max-w-[960px]">
                             <video
                                 autoPlay
                                 muted

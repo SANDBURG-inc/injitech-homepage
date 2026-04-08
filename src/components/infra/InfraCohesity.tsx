@@ -49,7 +49,7 @@ export default function InfraCohesity() {
         <div className="flex flex-col w-full">
             {/* Section 1: Logo & Intro */}
             <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
-                <div className="flex flex-col items-center py-20 md:pb-[160px] md:pt-[200px] w-full max-w-[960px]">
+                <div className="flex flex-col items-center py-20 md:pb-[160px] md:pt-[200px] w-full max-w-[1400px]">
                     <div className="flex flex-col gap-10 md:gap-[56px] items-center text-center w-full">
                         {/* Logo */}
                         <ScrollReveal delay={100} className="w-full flex justify-center">
@@ -72,8 +72,8 @@ export default function InfraCohesity() {
                         </ScrollReveal>
 
                         {/* Intro Video */}
-                        <ScrollReveal delay={200} className="w-full">
-                            <div className="w-full relative rounded-[12px] overflow-hidden shadow-lg aspect-video">
+                        <ScrollReveal delay={200} className="w-full flex justify-center">
+                            <div className="w-full relative rounded-[12px] overflow-hidden shadow-lg aspect-video max-w-[960px]">
                                 <video
                                     autoPlay
                                     muted

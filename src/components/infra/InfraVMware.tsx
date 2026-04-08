@@ -44,8 +44,8 @@ export default function InfraVMware() {
         <div className="flex flex-col w-full">
             {/* Section 1: Logo & Intro */}
             <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
-                <div className="flex flex-col items-center py-20 md:pb-[160px] md:pt-[200px] w-full max-w-[960px]">
-                    <div className="flex flex-col gap-10 md:gap-[56px] items-center text-center w-full">
+                <div className="flex flex-col items-center py-20 md:pb-[160px] md:pt-[200px] w-full max-w-[1400px]">
+                    <div className="flex flex-col gap-10 md:gap-[56px] items-center justify-center text-center w-full">
                         {/* Logo */}
                         <ScrollReveal delay={100} className="w-full flex justify-center">
                             <div className="relative w-[200px] h-[60px] md:w-[444px] md:h-[72px]">
@@ -67,8 +67,8 @@ export default function InfraVMware() {
                         </ScrollReveal>
 
                         {/* Intro Video */}
-                        <ScrollReveal delay={200} className="w-full">
-                            <div className="w-full relative rounded-2xl overflow-hidden aspect-video shadow-lg bg-[#121213]">
+                        <ScrollReveal delay={200} className="w-full flex justify-center">
+                            <div className="w-full relative rounded-2xl overflow-hidden aspect-video shadow-lg bg-[#121213] max-w-[960px]">
                                 <video
                                     autoPlay
                                     muted

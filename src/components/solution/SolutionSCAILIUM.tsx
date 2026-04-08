@@ -17,7 +17,7 @@ export default function SolutionSCAILIUM() {
             {/* Section 1: Introduction */}
             <section className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
                 <div className="flex flex-col items-center pb-20 md:pb-[160px] pt-24 md:pt-[200px] w-full max-w-[1400px]">
-                    <div className="flex flex-col gap-10 md:gap-[72px] items-center justify-center max-w-[960px] w-full">
+                    <div className="flex flex-col gap-10 md:gap-[72px] items-center justify-center max-w-[1400px] w-full">
                         {/* SCAILIUM Logo */}
                         <ScrollReveal delay={100} className="w-full flex justify-center">
                             <div className="relative w-full max-w-[960px] h-[80px] md:h-[165px]">
@@ -42,7 +42,7 @@ export default function SolutionSCAILIUM() {
                             </ScrollReveal>
 
                             {/* Intro Video */}
-                            <div className="aspect-video bg-[#f5f6f7] overflow-clip relative shrink-0 w-full rounded-[12px]">
+                            <div className="aspect-video bg-[#f5f6f7] overflow-clip relative shrink-0 w-full rounded-[12px] max-w-[960px]">
                                 <video
                                     autoPlay
                                     muted
@@ -109,7 +109,7 @@ export default function SolutionSCAILIUM() {
                                 <h2 className="text-[#121213] text-3xl md:text-[48px] font-medium leading-tight md:leading-[64px] tracking-tight md:tracking-[-0.48px]">
                                     {data.comparison.title}
                                 </h2>
-                                <p className="text-[#495461] text-lg md:text-[24px] font-medium leading-relaxed md:leading-[36px] tracking-tight max-w-[1000px]">
+                                <p className="text-[#495461] text-lg md:text-[24px] font-medium leading-relaxed md:leading-[36px] tracking-tight max-w-[1000px] whitespace-pre-wrap">
                                     {data.comparison.description}
                                 </p>
                             </div>

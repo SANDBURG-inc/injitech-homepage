@@ -19,7 +19,7 @@ export default function CompanyIntro() {
                             {t.companyIntro.tag}
                         </span>
                         <div className="flex flex-col gap-[12px] lg:space-y-3">
-                            <h2 className="text-[28px] lg:text-[48px] font-semibold lg:font-medium text-[#121213] leading-[40px] lg:leading-[64px] tracking-[-0.01em] break-keep">
+                            <h2 className="text-[28px] lg:text-[48px] font-semibold lg:font-medium text-[#121213] leading-[40px] lg:leading-[64px] tracking-[-0.01em] break-keep whitespace-pre-line">
                                 {t.companyIntro.title}
                             </h2>
                             <p className="text-[18px] lg:text-[24px] font-medium text-[#495461] leading-[28px] lg:leading-[36px] tracking-[-0.01em] break-keep whitespace-pre-line">

@@ -33,7 +33,7 @@ export const translations = {
       },
       business2: {
         title: "솔루션 구축 & 유통",
-        description: "SAS Gold 파트너\nSQream 파트너",
+        description: "SAS Gold 파트너\nMedallia 파트너\nScailium 파트너",
       },
       business3: {
         title: "유지 / 보수 / 운영",
@@ -146,7 +146,7 @@ export const translations = {
             {
               id: "01",
               title: "공헌",
-              desc: "기술 도입의 장벽을 낮추고, 국내 기업이\n글로벌 기술을 실질적으로 활용할 수 있도록\n기여합니다.",
+              desc: "기술 도입의 장벽을 낮추고,\n국내 기업이 글로벌 기술을 실질적으로\n활용할 수 있도록 기여합니다.",
             },
             {
               id: "02",
@@ -226,7 +226,7 @@ export const translations = {
           {
             id: "01",
             title: "인프라구축",
-            desc: "서버, 네트워크, 스토리지, 보안 등 기업 IT 인프라를 설계·구축하여\n안정적인 시스템 환경을 제공합니다.\n다양한 산업에서 축적된 구축 경험을 바탕으로,\n고객 환경에 최적화된 인프라를 구현합니다.",
+            desc: "서버, 네트워크, 스토리지, 보안 등 기업 IT 인프라를\n설계·구축하여 안정적인 시스템 환경을 제공합니다.\n다양한 산업에서 축적된 구축 경험을 바탕으로,\n고객 환경에 최적화된 인프라를 구현합니다.",
             image: "/assets/business-area/img.png",
           },
           {
@@ -507,13 +507,13 @@ export const translations = {
             server: {
               tag: "자동화와 확장성으로 대규모 데이터센터에 최적화된 플랫폼",
               title: "모든 워크로드를 품는 혁신의 기반, Dell PowerEdge 서버",
-              description: "Dell PowerEdge 서버는 AI, 가상화, 업무 시스템 등 다양한 워크로드를 하나의 표준 인프라에서 안정적으로 운영할 수 있도록 설계된 범용 서버 플랫폼입니다. 자동화된 관리와 높은 확장성을 기반으로 대규모 데이터센터 운영에 최적화되어 있습니다.",
+              description: "Dell PowerEdge 서버는 AI, 가상화, 업무 시스템 등 다양한 워크로드를 하나의 표준 인프라에서 안정적으로 운영할 수 있도록\n 설계된 범용 서버 플랫폼입니다. 자동화된 관리와 높은 확장성을 기반으로 대규모 데이터센터 운영에 최적화되어 있습니다.",
               video: "/assets/infra/dell/dell_video.mp4"
             },
             etc: {
               tag: "복잡한 IT 환경을 하나로 묶는 단일 표준 플랫폼의 완성",
               title: "효율과 안정을 극대화한 Dell 차세대 데이터센터 인프라",
-              description: "Dell은 서버·스토리지·네트워크·백업·AI 인프라를 단일 플랫폼으로 표준화·통합하여, 다양한 워크로드를 안정적이고 효율적으로 운영할 수 있는 데이터센터 인프라를 제공합니다.",
+              description: "Dell은 서버·스토리지·네트워크·백업·AI 인프라를 단일 플랫폼으로 표준화·통합하여,\n다양한 워크로드를 안정적이고 효율적으로 운영할 수 있는 데이터센터 인프라를 제공합니다.",
               video: "/assets/infra/dell/dell_video.mp4"
             }
           }
@@ -571,7 +571,7 @@ export const translations = {
       hpe: {
         title: "HPE",
         description: "차세대 서버 및 하이브리드 클라우드 솔루션",
-        intro: "HPE(Hewlett Packard Enterprise)는 전 세계적으로 인정받는\n고성능 서버, 스토리지, 네트워크 및 클라우드 인프라 분야에서\n강력한 경쟁력을 보유하고 있습니다.\n인지테크는 HPE의 신뢰할 수 있는 파트너로서,\n고객의 비즈니스 환경에 최적화된 인프라 구축을 지원하고 있습니다.",
+        intro: "HPE(Hewlett Packard Enterprise)는 전 세계적으로 인정받는\n고성능 서버, 스토리지, 네트워크 및 클라우드\n인프라 분야에서 강력한 경쟁력을 보유하고 있습니다.\n인지테크는 HPE의 신뢰할 수 있는 파트너로서,\n고객의 비즈니스 환경에 최적화된 인프라 구축을 지원하고 있습니다.",
         advantages: {
           tag: "Major Advantages",
           title: "주요 장점",
@@ -658,7 +658,7 @@ export const translations = {
         }
       },
       vmware: {
-        intro: "VMware는 서버·스토리지·네트워크를 통합하는 유연한 가상화 솔루션을 통해 기업의 디지털 전환과 클라우드 전환을 가속합니다.\n인지테크는 VMware의 공식 파트너사로, \n다양한 공공기관 및 대기업 프로젝트에서\n가상화 기반 인프라구축과 유지보수 서비스를 성공적으로 수행해 왔습니다.",
+        intro: "VMware는 서버·스토리지·네트워크를 통합하는 유연한 가상화\n솔루션을 통해 기업의 디지털 전환과 클라우드 전환을 가속합니다.\n인지테크는 VMware의 공식 파트너사로, \n다양한 공공기관 및 대기업 프로젝트에서 가상화 기반\n인프라구축과 유지보수 서비스를 성공적으로 수행해 왔습니다.",
         title: "VMware",
         description: "가상화 및 클라우드 인프라 솔루션",
         major_advantages: {
@@ -667,15 +667,15 @@ export const translations = {
           items: [
             {
               title: "높은 리소스 효율성과 비용 절감",
-              desc: "VMware는 하나의 물리 서버에서 여러 가상 머신을 실행하여 하드웨어 활용도를 크게 높이고, 물리적 서버 수를 줄여 인프라 비용과 에너지 비용을 절감합니다.",
+              desc: "VMware는 하나의 물리 서버에서 여러 가상 머신을\n실행하여 하드웨어 활용도를 크게 높이고, 물리적\n서버 수를 줄여 인프라 비용과 에너지 비용을 절감합니다.",
             },
             {
               title: "확장성·유연성 및 IT 민첩성",
-              desc: "가상 머신 기반으로 IT 자원을 스케일 업/다운할 수 있어 변화하는 비즈니스 요구에 빠르게 대응하며, 클라우드/하이브리드 환경으로의 전환도 원활합니다.",
+              desc: "가상 머신 기반으로 IT 자원을 스케일 업/다운할 수\n있어 변화하는 비즈니스 요구에 빠르게 대응하며,\n클라우드/하이브리드 환경으로의 전환도 원활합니다.",
             },
             {
               title: "안정성·보안 및 비즈니스 연속성",
-              desc: "가상화 기반으로 워크로드를 분리·격리하여 보안을 강화하고, 장애나 계획되지 않은 다운타임에서도 빠른 복구와 비즈니스 연속성을 확보할 수 있습니다.",
+              desc: "가상화 기반으로 워크로드를 분리·격리하여 보안을\n강화하고, 장애나 계획되지 않은 다운타임에서도\n빠른 복구와 비즈니스 연속성을 확보할 수 있습니다.",
             },
           ],
         },
@@ -711,7 +711,7 @@ export const translations = {
           items: [
             {
               title: "국민건강보험공단",
-              description: "건강보험 클라우드 표준 플랫폼 구축 및\n복지서비스 정보시스템 구축 사업 수행을 위한 VMware 공급",
+              description: "건강보험 클라우드 표준 플랫폼 구축 및 복지서비스\n정보시스템 구축 사업 수행을 위한 VMware 공급",
               image: "/assets/infra/vmware/img.png"
             },
             {
@@ -740,7 +740,7 @@ export const translations = {
           items: [
             {
               title: "통합 데이터 보호 및 관리",
-              desc: "Cohesity는 백업·복구·데이터 관리·보안을 하나의\n플랫폼으로 통합해 데이터 라이프사이클 전반을\n단순화합니다."
+              desc: "Cohesity는 백업·복구·데이터 관리·보안을\n하나의 플랫폼으로 통합해 데이터\n라이프사이클 전반을 단순화합니다."
             },
             {
               title: "AI 기반 사이버 복원력",
@@ -748,7 +748,7 @@ export const translations = {
             },
             {
               title: "폭넓은 워크로드 지원",
-              desc: "Veritas와의 결합으로 가장 넓은 범위의 워크로드를\n지원하며, 대규모 엔터프라이즈 환경에서도 신뢰할 수\n있는 데이터 보호 서비스를 제공합니다."
+              desc: "Veritas와의 결합으로 가장 넓은 범위의 워크로드를\n지원하며, 대규모 엔터프라이즈 환경에서도\n신뢰할 수 있는 데이터 보호 서비스를 제공합니다."
             }
           ]
         },
@@ -813,10 +813,7 @@ export const translations = {
               title: "보안 / 회복 탄력성",
               highlight: "99%",
               items: [
-                "업계에서 가장 강력한 공급망",
-                "복원력, 민첩성, 지속 가능성, 글로벌 확장성",
-                "글로벌 유통망과 물류 센터",
-                "AI 기반의 자동화"
+                "업계에서 가장 강력한 공급망 복원력, 민첩성,지속\n가능성과 AI 기반의 자동화 지원"
               ]
             },
             {
@@ -860,7 +857,7 @@ export const translations = {
           items: [
             {
               title: "검증된 분석 정확도와 신뢰성",
-              description: "수십 년간 금융, 공공, 제조, 헬스케어 등 핵심 산업에 사용되며 분석 정확도와 안정성을 검증받았습니다."
+              description: "수십 년간 금융, 공공, 제조, 헬스케어 등 핵심 산업에\n사용되며 분석 정확도와 안정성을 검증받았습니다."
             },
             {
               title: "고급 통계·AI·머신러닝 통합 분석",
@@ -868,7 +865,7 @@ export const translations = {
             },
             {
               title: "강력한 데이터 거버넌스와 보안",
-              description: "데이터 관리, 접근 제어, 감사 추적을 통해 엄격한 규제에 대응하고 컴플라이언스를 충족합니다."
+              description: "데이터 관리, 접근 제어, 감사 추적을 통해\n엄격한 규제에 대응하고 컴플라이언스를 충족합니다."
             }
           ]
         },
@@ -909,9 +906,7 @@ export const translations = {
           description: "㈜인지테크는 국내 최대 SAS 파트너사로, 설치부터 유지보수, 분석 알고리즘 개발, 시스템 통합까지 SAS 활용에 최적화된 종합 서비스를 제공합니다.\n이미 다수의 주요 기관과 기업들이 인지테크의 전문성과 신뢰를 선택하고 있습니다.",
           items: [
             { category: "금융", title: "BC카드", image: "/assets/solution/SAS/cases/bc_card.png" },
-            { category: "해운", title: "HMM", image: "/assets/solution/SAS/cases/HMM.png" },
             { category: "금융", title: "KB국민은행", image: "/assets/solution/SAS/cases/kb_bank.png" },
-            { category: "통신", title: "LG유플러스(인건비)", image: "/assets/solution/SAS/cases/lg_uplus.png" },
             { category: "공공", title: "건강보험심사평가원", image: "/assets/solution/SAS/cases/hira.png" },
             { category: "금융", title: "경남은행", image: "/assets/solution/SAS/cases/kyongnam_bank.png" },
             { category: "의료", title: "경희의료원", image: "/assets/solution/SAS/cases/kyunghee_medical.png" },
@@ -931,8 +926,6 @@ export const translations = {
             { category: "공공", title: "국토연구원", image: "/assets/solution/SAS/cases/krihs.png" },
             { category: "금융", title: "기술보증기금", image: "/assets/solution/SAS/cases/kibo.png" },
             { category: "공공", title: "농촌진흥청", image: "/assets/solution/SAS/cases/rda.png" },
-            { category: "IT", title: "비아이매트릭스(인건비)", image: "/assets/solution/SAS/cases/bimatrix.png" },
-            { category: "제조", title: "삼성전자", image: "/assets/solution/SAS/cases/samsung_electronics.png" },
             { category: "금융", title: "삼성화재보험", image: "/assets/solution/SAS/cases/samsung_fire.png" },
             { category: "금융", title: "신용보증기금", image: "/assets/solution/SAS/cases/kodit.png" },
             { category: "의료", title: "양산부산대학교병원", image: "/assets/solution/SAS/cases/yp_hospitals.png" },
@@ -963,7 +956,7 @@ export const translations = {
         awards: {
           tag: "Awards & Recognition",
           title: "주요 수상 및 평가",
-          description: "(주)인지테크는 국내 SAS 파트너 중 최상위 매출 실적을 보유한 대표 파트너로,\n다수의 SAS Certified Engineer로 구성된 전문 조직이 중앙부처·주요 공공기관 사업을 수행해온 공공부문 특화 역량을 갖추고 있습니다.",
+          description: "(주)인지테크는 국내 SAS 파트너 중 최상위 매출 실적을 보유한 대표 파트너로, 다수의 SAS Certified Engineer로\n구성된 전문 조직이 중앙부처·주요 공공기관 사업을 수행해온 공공부문 특화 역량을 갖추고 있습니다.",
           items: [
             {
               year: "2025",
@@ -1003,15 +996,15 @@ export const translations = {
           items: [
             {
               title: "옴니채널 피드백 수집 및 통합 분석",
-              description: "Medallia는 웹, 모바일, 소셜, 콜센터 등의 다양한 채널에서 고객 및 직원 의견을 수집하고 하나의 플랫폼에서 통합 분석합니다."
+              description: "Medallia는 웹, 모바일, 소셜, 콜센터 등의\n다양한 채널에서 고객 및 직원 의견을 수집하고\n하나의 플랫폼에서 통합 분석합니다."
             },
             {
               title: "AI 기반 인사이트와 예측 분석",
-              description: "AI·머신러닝 기반 기술로 감정 분석, 행동 패턴 식별, 우선순위화된 인사이트를 제공하며,\n실행 가능한 추천을 통해 빠른 의사결정을 지원합니다."
+              description: "AI·머신러닝 기반 기술로 감정 분석, 행동 패턴 식별,\n우선 순위화된 인사이트를 제공하며, 실행 가능한\n추천을 통해 빠른 의사결정을 지원합니다."
             },
             {
               title: "고객·직원 경험 개선",
-              description: "단순히 피드백만 모으는 것이 아니라 고객 충성도 향상, 운영 비용 절감, 수익 증대 등 실질적 비즈니스 성과로 연결할 수 있습니다."
+              description: "단순히 피드백만 모으는 것이 아니라\n고객 충성도 향상, 운영 비용 절감, 수익 증대 등\n실질적 비즈니스 성과로 연결할 수 있습니다."
             }
           ]
         },
@@ -1025,7 +1018,7 @@ export const translations = {
           items: {
             experience_cloud: {
               title: "AI 기반 전사적 통합 경험 관리 플랫폼",
-              description: "기업의 모든 고객 및 직원 접점을 하나의 플랫폼에서 실시간으로 수집·분석·조치할 수 있는 엔터프라이즈급 경험 관리 솔루션으로,\nAI 기반 인사이트로 조직 전반의 경험 개선을 촉진합니다.",
+              description: "기업의 모든 고객 및 직원 접점을 하나의 플랫폼에서 실시간으로 수집·분석·조치할 수 있는\n엔터프라이즈급 경험 관리 솔루션으로, AI 기반 인사이트로 조직 전반의 경험 개선을 촉진합니다.",
               image: "/assets/solution/Medallia/Medallia Experience Cloud.png"
             },
             dxa: {
@@ -1035,7 +1028,7 @@ export const translations = {
             },
             clf: {
               title: "실시간 피드백 자동 배정 및 신속 조치 시스템",
-              description: "고객 피드백이 접수되는 즉시 사전 정의된 규칙에 따라 담당자에게 자동 배정되고, 신속한 조치·추적·완료까지 연결함으로써\n고객 경험 이슈를 실시간으로 해결하는 액션 중심의 피드백 관리 프로세스입니다.",
+              description: "고객 피드백이 접수되는 즉시 사전 정의된 규칙에 따라 담당자에게 자동 배정되고, 신속한 조치·추적·완료까지\n연결함으로써 고객 경험 이슈를 실시간으로 해결하는 액션 중심의 피드백 관리 프로세스입니다.",
               image: "/assets/solution/Medallia/Medallia Closed Loop Feedback.png"
             }
           }
@@ -1094,22 +1087,22 @@ export const translations = {
           items: [
             {
               title: "GPU 기반 병렬처리 엔진",
-              description: "SQream은 NVIDIA GPU를 활용해 병렬 처리를 통해 빅데이터 분석 성능을 크게 향상시킵니다.\n전통적인 CPU 기반 시스템보다 훨씬 빠르게 페타바이트 규모의 복잡한 쿼리를 처리할 수 있습니다"
+              description: "SQream은 NVIDIA GPU를 활용해 병렬 처리를 통해\n빅데이터 분석 성능을 크게 향상시킵니다.\n전통적인 CPU 기반 시스템보다 훨씬 빠르게\n페타바이트 규모의 복잡한 쿼리를 처리할 수 있습니다"
             },
             {
               title: "비용 효율적 운영과 확장성",
-              description: "GPU 하드웨어의 병렬 처리 효율로 높은 성능을 유지하면서도 유연한 스케일링을 통해 운영 비용을 절감할 수 있을 뿐 아니라, 전통적인 데이터웨어하우스 대비 운영 비용을 절감할 수 있습니다."
+              description: "GPU 하드웨어의 병렬 처리 효율로 높은 성능을\n유지하면서도 유연한 스케일링을 통해 운영 비용을\n절감할 수 있을 뿐 아니라, 전통적인 데이터웨어하우스\n대비 운영 비용을 절감할 수 있습니다."
             },
             {
               title: "표준 SQL 기반 호환성",
-              description: "SQream은 ANSI SQL을 기본으로 활용할 수 있어 기존 SQL 기반 분석·쿼리 환경과 호환이 용이합니다.\nODBC/JDBC, Python 등 표준 커넥터를 지원해 데이터 파이프라인과 BI/ML 도구와 쉽게 통합됩니다."
+              description: "SQream은 ANSI SQL을 기본으로 활용할 수 있어\n기존 SQL 기반 분석·쿼리 환경과 호환이 용이합니다.\nODBC/JDBC, Python 등 표준 커넥터를 지원해\n데이터 파이프라인과 BI/ML 도구와 쉽게 통합됩니다."
             }
           ]
         },
         comparison: {
           tag: "SQream vs 기존 솔루션",
           title: "GPU(그래픽카드)를 활용한 고성능 데이터 분석 플랫폼",
-          description: "SQream은 전통적인 CPU 기반 시스템보다 훨씬 빠르게 페타바이트급 데이터의 복잡한 쿼리를 처리할 수 있는 고성능 GPU 가속 데이터 분석 플랫폼입니다.",
+          description: "SQream은 전통적인 CPU 기반 시스템보다 훨씬 빠르게 페타바이트급 데이터의\n복잡한 쿼리를 처리할 수 있는 고성능 GPU 가속 데이터 분석 플랫폼입니다.",
           headers: ["항목", "기존 RDBMS / DWH", "Hadoop / Spark 기반 분석", "SQream"],
           rows: [
             ["데이터처리방식", "Row 기반, 디스크 중심", "분산 처리, 메모리 의존", "GPU 기반 칼럼형 병렬 처리"],
@@ -1134,12 +1127,12 @@ export const translations = {
         partnerCapabilities: {
           tag: "Partner Capabilities",
           title: "통합 제안이 가능한 파트너 역량 보유",
-          description: "(주)인지테크는 단순 DB 공급을 넘어 AI Factory 구축 컨설팅과 아키텍처 설계까지 확장 가능한 역량을 바탕으로, 공공·금융·대기업 대상 대용량 데이터+AI 융합 사업으로 적용 범위를 넓혀가고 있습니다.\n또한 GPU 인프라(Dell/HPE)와 스칼리움(Scailium) 소프트웨어를 결합해 성능·확장성·운영 효율을 동시에 만족시키는 고부가가치 통합 제안이 가능합니다."
+          description: "(주)인지테크는 단순 DB 공급을 넘어 AI Factory 구축 컨설팅과 아키텍처 설계까지 확장 가능한 역량을 바탕으로,\n공공·금융·대기업 대상 대용량 데이터+AI 융합 사업으로 적용 범위를 넓혀가고 있습니다.\n또한 GPU 인프라(Dell/HPE)와 스칼리움(Scailium) 소프트웨어를 결합해 성능·확장성·운영 효율을\n동시에 만족시키는 고부가가치 통합 제안이 가능합니다."
         }
       },
     },
     inquiryModal: {
-      title: "인지테크와 함께할 파트너",
+      title: "인지테크와 함께할\n파트너",
       description: "문의사항을 남겨주시면 확인 후 연락드리겠습니다.",
       fields: {
         organization: {
@@ -1197,7 +1190,7 @@ export const translations = {
     companyIntro: {
       tag: "Company Introduction",
       title:
-        'Establishing ourselves as a "Trusted Digital Transformation Partner."',
+        'Establishing ourselves as a\n"Trusted Digital Transformation Partner."',
       description:
         "Based on global solution partnerships and domestic deployment experience,\nwe support digital transformation optimized for the customer environment.",
     },
@@ -1206,32 +1199,32 @@ export const translations = {
       title:
         "Responsible for the entire process of global solution introduction, from consultation to operation.",
       description:
-        "Providing one-stop services tailored to the domestic environment, including review of global products and solutions, technical consultation, contracts, construction, and operation support.",
+        "Providing one-stop services tailored to the domestic environment, including review of global products and solutions,\ntechnical consultation, contracts, construction, and operation support.",
       business1: {
         title: "Infrastructure Deployment",
         description:
-          "IT Infrastructure Deployment Service Data\nMigration Server/Storage/DB Deployment",
+          "• IT Infrastructure Deployment Service Data\n• Migration\nServer/Storage/DB Deployment",
       },
       business2: {
         title: "Solution Deployment & Distribution",
-        description: "SAS Gold Partner\nSQream Partner",
+        description: "• SAS Gold Partner\n• Medallia Partner\n• Scailium Partner",
       },
       business3: {
         title: "Maintenance / Repair / Operation",
-        description: "Server/Storage/DB Maintenance\nSystem Maintenance",
+        description: "• Server/Storage/DB\n• Maintenance\n• System Maintenance",
       },
       business4: {
         title: "Consulting Services",
         description:
-          "IT Infrastructure & Digitalization Consulting\nBIP (Business Information Planning)",
+          "• IT Infrastructure & Digitalization Consulting\n• BIP (Business Information Planning)",
       },
     },
     ourClients: {
       tag: "Our Clients",
       title:
-        "Industry leaders creating growth complete IT transformation with Injitech.",
+        "Industry leaders creating growth complete IT transformation\nwith Injitech.",
       description:
-        "From major domestic corporations to fast-growing organizations, we work with diverse clients requiring global technology introduction.",
+        "From major domestic corporations to fast-growing organizations, we work with diverse clients\nrequiring global technology introduction.",
     },
     useCases: {
       tag: "Use cases",
@@ -1264,7 +1257,7 @@ export const translations = {
     },
     results: {
       tag: "Main Business",
-      title: "Recognized for performance based on partnership and execution.",
+      title: "Recognized for performance based on\npartnership and execution.",
       description:
         "We have built trust through official cooperation with global partners and project results.",
     },
@@ -1315,15 +1308,15 @@ export const translations = {
           title:
             "IT Service Partner\nCreating Customer Success\nwith Tech & Solution",
           descriptionStrong:
-            "Since its establishment in 2011, Injitech is a specialized high-tech IT service company\nthat has achieved continuous growth based on expert personnel and technical prowess.\nAcross various industries including government agencies and public institutions, ",
+            "Since its establishment in 2011,\nInji-Tech is a specialized high-tech IT service company\nthat has achieved continuous growth based on\nexpert personnel and technical prowess.\nAcross various industries including\ngovernment agencies and public institutions,",
           descriptionAssistive:
-            'we provide customized IT solutions\nand advanced infrastructure deployment services, establishing ourselves as a\n"Trusted Digital Transformation Partner" that contributes to\ncustomers\' business innovation and performance creation.',
+            "we provide customized IT solutions and advanced infrastructure deployment services, establishing ourselves as a\n\"Trusted Digital Transformation Partner\"\nthat contributes to customers' business innovation\nand performance creation.",
           descriptionMobile:
             "Since its establishment in 2011, Injitech is a specialized high-tech IT service company that has achieved continuous growth based on expert personnel and technical prowess. Across various industries including government agencies and public institutions, we provide customized IT solutions and advanced infrastructure deployment services, establishing ourselves as a \"Trusted Digital Transformation Partner\" that contributes to customers' business innovation and performance creation.",
         },
         vision: {
           title: "Our Vision",
-          mainTitle: "A Reliable Partner Connecting Global Technology to Local Sites",
+          mainTitle: "A Reliable Partner Connecting Global Technology\nto Local Sites",
           text: "A company that grows with customers as a global IT leader",
           values: [
             {
@@ -1676,7 +1669,7 @@ export const translations = {
       dell: {
         title: "Dell Technologies",
         description: "Enterprise High-end Storage Solutions",
-        intro: "Dell Technologies' storage infrastructure is an enterprise-grade solution designed to reliably store and manage critical corporate data.\nIt flexibly responds to various business environments and scales,\nproviding a consistent data operating environment from\non-premises to hybrid clouds.",
+        intro: "Dell Technologies' storage infrastructure is an enterprise-grade solution\ndesigned to reliably store and manage critical corporate data.\nIt flexibly responds to various business environments and scales,\nproviding a consistent data operating environment from\non-premises to hybrid clouds.",
         advantages: {
           tag: "Major Advantages",
           title: "Major Advantages",
@@ -1757,17 +1750,17 @@ export const translations = {
             {
               title: "End-to-End Execution System",
               value: "100%",
-              description: "Not just simple delivery, but an execution system\nwhere one team is responsible for design, construction,\noperation transition, maintenance, and advancement."
+              description: "Not just simple delivery, but an execution\nsystem where one team is responsible for\ndesign, construction, operation transition,\nmaintenance, and advancement."
             },
             {
               title: "Large-scale Dell Infra Verification",
               value: "10+ Cases",
-              description: "Verified design, construction, and operation\ncapabilities in large-scale environments based on\ncore system experience for major clients."
+              description: "Verified design, construction, and operation\ncapabilities in large-scale environments \n based on core system experience for major clients."
             },
             {
               title: "Solution-Linked Tech Organization",
               value: "No.1",
-              description: "Operates a solution-linked engineer organization\ncapable of designing and building VMware\nvirtualization, backup, DR, and cloud links together."
+              description: "Operates a solution-linked engineer\norganization capable of designing\nand building VMware virtualization,\nbackup, DR, and cloud links together."
             }
           ],
           button: "Inquiry"
@@ -1787,11 +1780,11 @@ export const translations = {
             },
             {
               title: "Hybrid/Multi-Cloud Optimization",
-              description: "On-premises and cloud can be operated like a single environment,\nsimplifying complex IT structures."
+              description: "On-premises and cloud can be operated\nlike a single environment,\nsimplifying complex IT structures."
             },
             {
               title: "Automation-Based Operational Efficiency",
-              description: "Lower operational complexity through automation and intelligent management features,\nminimizing the management burden on IT personnel."
+              description: "Lower operational complexity through\nautomation and intelligent management\nfeatures, minimizing the management\nburden on IT personnel."
             }
           ]
         },
@@ -1805,7 +1798,7 @@ export const translations = {
             server: {
               tag: "High-density, high-efficiency infrastructure accelerating HPC and AI innovation",
               title: "The standard for high performance for compute-intensive workloads, HPE servers",
-              description: "HPE ProLiant and Apollo servers are high-performance servers optimized for compute-intensive workloads such as HPC, AI, and big data analytics,\nproviding performance-oriented infrastructure through high-density design and power/cooling efficiency.",
+              description: "HPE ProLiant and Apollo servers are high-performance servers optimized for compute-intensive workloads such as HPC, AI,\nand big data analytics, providing performance-oriented infrastructure through high-density design and power/cooling efficiency.",
               video: "/assets/infra/hpe/HPE_major_solution_video_server.mp4"
             },
             storage: {
@@ -1845,15 +1838,15 @@ export const translations = {
         capabilities: {
           tag: "Partner Capabilities",
           title: "Construction experience accumulated in critical sites",
-          description: "We have accumulated field verification by supplying and building server infrastructure in projects requiring internal/external service-based infrastructure, such as the construction of a healthcare image diagnosis reading system demonstration lab, the Employment24 platform, and the expansion of virtual internet PC clouds.",
+          description: "We have accumulated field verification by supplying and building server infrastructure in projects requiring internal/external\nservice-based infrastructure, such as the construction of a healthcare image diagnosis reading system demonstration lab,\nthe Employment24 platform, and the expansion of virtual internet PC clouds.",
           items: [
             {
               title: "Large-scale Public/Enterprise\nInfrastructure Construction References",
-              description: "We have strengths in 'design considering operation' rather than simple introduction. Experience in meeting performance/stability standards through various institutions/business types is the basis of quality."
+              description: "We have strengths in 'design considering\noperation' rather than simple introduction.\nExperience in meeting performance/stability\nstandards through various institutions/business types is the basis of quality."
             },
             {
               title: "Multi-infrastructure capabilities covering\nHPE servers + DELL storage",
-              description: "Flexible infrastructure configuration tailored to the customer's existing architecture/requirements is possible. In other words, we are strong in meeting 'performance, stability, and scalability' with a combination optimized for the customer environment, not just single-vendor delivery."
+              description: "Flexible infrastructure configuration tailored to\nthe customer's existing architecture/requirements is possible.\nIn other words, we are strong in meeting\n'performance, stability, and scalability' with\na combination optimized for the customer\nenvironment, not just single-vendor delivery."
             },
             {
               title: "Long-term partnership orientation based on\noperation/maintenance experience",
@@ -1863,7 +1856,7 @@ export const translations = {
         }
       },
       vmware: {
-        intro: "VMware accelerates enterprise digital and cloud transformation through flexible virtualization solutions that integrate server, storage, and networking.\nAs an official VMware partner, Injitech has successfully performed virtualization-based infrastructure construction and maintenance services in various public institutions and large enterprise projects.",
+        intro: "VMware accelerates enterprise digital and cloud transformation through\nflexible virtualization solutions that integrate server, storage, and networking.\nAs an official VMware partner, Injitech has successfully performed\nvirtualization-based infrastructure construction and maintenance services\nin various public institutions and large enterprise projects.",
         title: "VMware",
         description: "Virtualization & Cloud Infrastructure Solutions",
         major_advantages: {
@@ -1977,7 +1970,7 @@ export const translations = {
             },
             smartfiles: {
               title: "Integrated Management and Protection of Large-Scale Unstructured Data (File/Object)",
-              description: "A platform for integrated management of file and object data, supporting stable operation of large-scale unstructured data environments.\nStrengthens security and availability for file data through data change history protection and snapshot-based recovery.\nConsistent data management policies can be applied in both on-premises and cloud environments.",
+              description: "A platform for integrated management of file and object data, supporting stable operation of large-scale unstructured\ndata environments.\nStrengthens security and availability for file data through data change history protection and snapshot-based recovery.\nConsistent data management policies can be applied in both on-premises and cloud environments.",
               image: "/assets/infra/cohesity/cohesity_Smart Files.png"
             }
           }
@@ -2020,8 +2013,8 @@ export const translations = {
               items: [
                 "Strongest supply chain in the industry",
                 "Resilience, Agility, Sustainability, Scalability",
-                "Global distribution network and logistics centers",
-                "AI-driven automation"
+                "Global distribution network and logistics ",
+                "centers AI-driven automation"
               ]
             },
             {
@@ -2040,7 +2033,7 @@ export const translations = {
               items: [
                 "Large-scale direct sales workforce",
                 "Global ecosystem of extensive partners",
-                "Optimal online experience and consumption models"
+                "Optimal online experience and\nconsumption models"
               ]
             }
           ],
@@ -2103,20 +2096,18 @@ export const translations = {
             },
             visual_analytics: {
               title: "Self-Service Based Data Visualization and BI Tool",
-              description: "SAS Visual Analytics is a self-service data analysis and visualization tool,\nspecifically specialized in dashboard creation, interactive reporting, BI, and exploratory analysis, and also runs on the SAS Viya platform.",
+              description: "SAS Visual Analytics is a self-service data analysis and visualization tool, specifically specialized in\ndashboard creation, interactive reporting, BI, and exploratory analysis, and also runs on the SAS Viya platform.",
               image: "/assets/solution/SAS/SAS Visual Analytics.png"
             }
           }
         },
         useCases: {
           tag: "Use cases",
-          title: "Major SAS Global Customers – Large Corporations and Public Institutions",
-          description: "Injitech Co., Ltd. is Korea's largest SAS partner, providing total services optimized for SAS utilization, from installation and maintenance to analysis algorithm development and system integration.\nMany major institutions and companies are already choosing Injitech's expertise and reliability.",
+          title: "Major SAS Global Customers – Large Corporations and\nPublic Institutions",
+          description: "Injitech Co., Ltd. is Korea's largest SAS partner, providing total services optimized for SAS utilization, from installation\nand maintenance to analysis algorithm development and system integration.\nMany major institutions and companies are already choosing Injitech's expertise and reliability.",
           items: [
             { category: "Finance", title: "BC카드", image: "/assets/solution/SAS/cases/bc_card.png" },
-            { category: "Shipping", title: "HMM", image: "/assets/solution/SAS/cases/HMM.png" },
             { category: "Finance", title: "KB국민은행", image: "/assets/solution/SAS/cases/kb_bank.png" },
-            { category: "Telecom", title: "LG유플러스(인건비)", image: "/assets/solution/SAS/cases/lg_uplus.png" },
             { category: "Public", title: "건강보험심사평가원", image: "/assets/solution/SAS/cases/hira.png" },
             { category: "Finance", title: "경남은행", image: "/assets/solution/SAS/cases/kyongnam_bank.png" },
             { category: "Medical", title: "경희의료원", image: "/assets/solution/SAS/cases/kyunghee_medical.png" },
@@ -2136,8 +2127,6 @@ export const translations = {
             { category: "Public", title: "국토연구원", image: "/assets/solution/SAS/cases/krihs.png" },
             { category: "Finance", title: "기술보증기금", image: "/assets/solution/SAS/cases/kibo.png" },
             { category: "Public", title: "농촌진흥청", image: "/assets/solution/SAS/cases/rda.png" },
-            { category: "IT", title: "비아이매트릭스(인건비)", image: "/assets/solution/SAS/cases/bimatrix.png" },
-            { category: "Manufacturing", title: "삼성전자", image: "/assets/solution/SAS/cases/samsung_electronics.png" },
             { category: "Finance", title: "삼성화재보험", image: "/assets/solution/SAS/cases/samsung_fire.png" },
             { category: "Finance", title: "신용보증기금", image: "/assets/solution/SAS/cases/kodit.png" },
             { category: "Medical", title: "양산부산대학교병원", image: "/assets/solution/SAS/cases/yp_hospitals.png" },
@@ -2201,7 +2190,7 @@ export const translations = {
       medallia: {
         title: "Medallia",
         description: "Customer Experience Management (CXM) & Employee Experience Management (EXM) Platform",
-        intro: "Medallia is a SaaS solution specializing in customer/employee experience analysis,\ncollecting various customer feedbacks in real-time,\nand providing results analysis and actions through AI / NLP technology.\nIt is an enterprise-grade solution that can be performed reliably.",
+        intro: "Medallia is a SaaS solution specializing in\ncustomer/employee experience analysis,\ncollecting various customer feedbacks in real-time,\nand providing results analysis and actions through AI / NLP technology.\nIt is an enterprise-grade solution that can be performed reliably.",
         advantages: {
           tag: "Major Advantages",
           title: "Key Advantages",
@@ -2230,12 +2219,12 @@ export const translations = {
           items: {
             experience_cloud: {
               title: "AI-Powered Enterprise-Wide Integrated Experience Management Platform",
-              description: "An enterprise-grade experience management solution that enables real-time collection, analysis, and action across all customer and employee touchpoints on a single platform,\npromoting experience improvement throughout the organization with AI-driven insights.",
+              description: "An enterprise-grade experience management solution that enables real-time collection, analysis, and action across\nall customer and employee touchpoints on a single platform, promoting experience improvement\nthroughout the organization with AI-driven insights.",
               image: "/assets/solution/Medallia/Medallia Experience Cloud.png"
             },
             dxa: {
               title: "Digital Experience Optimization Based on Customer Behavior Analysis",
-              description: "Automatically analyzes customer behavior and real-time feedback across digital channels to immediately identify conversion barriers,\nand supports data-driven digital experience improvement by recreating actual customer behavior through session replays.",
+              description: "Automatically analyzes customer behavior and real-time feedback across digital channels to immediately identify\nconversion barriers, and supports data-driven digital experience improvement by recreating actual\ncustomer behavior through session replays.",
               video: "/assets/solution/Medallia/Medallia DEA.mp4"
             },
             clf: {
@@ -2248,7 +2237,7 @@ export const translations = {
         useCases: {
           tag: "Use cases",
           title: "Industry Application Cases and Representative Implementation Cases",
-          description: "Medallia currently operates global customer and employee experience management programs with major corporations such as Apple, Walmart, and Samsung,\nand is utilized across various industries including retail, manufacturing, finance, automotive, telecommunications, insurance, travel, hospitals, public institutions, and B2B.",
+          description: "Medallia currently operates global customer and employee experience management programs with major corporations\nsuch as Apple, Walmart, and Samsung, and is utilized across various industries including retail, manufacturing, finance,\nautomotive, telecommunications, insurance, travel, hospitals, public institutions, and B2B.",
           items: [
             {
               badge: "IT",
@@ -2292,7 +2281,7 @@ export const translations = {
       scailium: {
         title: "SCAILIUM",
         description: "Enterprise Scaling solution",
-        intro: "SCAILIUM is an AI Factory integrated platform that performs everything from data collection, processing, and analysis to AI model training and inference in a single environment based on GPU-Native architecture. By executing AI inside the database (on GPU) without data movement, it processes peta-scale data at high speed with minimum infrastructure, providing a one-stop AI operating environment encompassing SQL, Python, Spark, and LLM.",
+        intro: "SCAILIUM is an AI Factory integrated platform that performs\neverything from data collection, processing, and analysis to AI\nmodel training and inference in a single environment based on GPU-Native architecture.\nBy executing AI inside the database (on GPU) without data movement,\nit processes peta-scale data at high speed with minimum infrastructure,\nproviding a one-stop AI operating environment encompassing\nSQL, Python, Spark, and LLM.",
         advantages: {
           tag: "Major Advantages",
           title: "Key Advantages",
@@ -2339,13 +2328,13 @@ export const translations = {
         partnerCapabilities: {
           tag: "Partner Capabilities",
           title: "Equipped with Integrated Partner Capabilities",
-          description: "Injitech Co., Ltd. is expanding its business scope to large-scale data and AI convergence projects for the public, financial, and enterprise sectors, leveraging capabilities that go beyond simple database supply to include AI Factory consulting and architecture design.\nFurthermore, by integrating GPU infrastructure (Dell/HPE) with SCAILIUM software, we deliver high-value integrated solutions that simultaneously satisfy performance, scalability, and operational efficiency."
+          description: "Injitech Co., Ltd. is expanding its business scope to large-scale data and AI convergence projects for the public, financial,\nand enterprise sectors, leveraging capabilities that go beyond simple database supply to include AI Factory consulting\nand architecture design.\nFurthermore, by integrating GPU infrastructure (Dell/HPE) with SCAILIUM software, we deliver high-value integrated solutions that\nsimultaneously satisfy performance, scalability, and operational efficiency."
         }
       },
     },
     inquiryModal: {
       title: "Partner with Injitech",
-      description: "Leave your inquiry and we will get back to you after review.",
+      description: "Leave your inquiry and we will\nget back to you after review.",
       fields: {
         organization: {
           label: "Organization Name",

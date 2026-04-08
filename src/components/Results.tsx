@@ -71,7 +71,7 @@ export default function Results() {
                                 {t.results.tag}
                             </span>
                             <div className="flex flex-col gap-3">
-                                <h2 className="text-[#1D1F23] text-[28px] lg:text-[48px] font-semibold leading-[40px] lg:leading-[64px] tracking-[-0.28px] lg:tracking-[-0.48px] break-keep">
+                                <h2 className="text-[#1D1F23] text-[28px] lg:text-[48px] font-semibold leading-[40px] lg:leading-[64px] tracking-[-0.28px] lg:tracking-[-0.48px] break-keep whitespace-pre-line">
                                     {t.results.title}
                                 </h2>
                                 <p className="text-[#4B5563] text-[18px] lg:text-[24px] font-medium leading-[28px] lg:leading-[36px] tracking-[-0.18px] lg:tracking-[-0.24px] break-keep whitespace-pre-line">
