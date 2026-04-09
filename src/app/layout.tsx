@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import ChannelTalk from "@/components/common/ChannelTalk";
+import FloatingBrochureButton from "@/components/common/FloatingBrochureButton";
 
 export const metadata: Metadata = {
   title: "인지테크 | 글로벌 제품과 솔루션",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <LanguageProvider>
           {children}
           <ChannelTalk />
+          <FloatingBrochureButton />
         </LanguageProvider>
       </body>
     </html>

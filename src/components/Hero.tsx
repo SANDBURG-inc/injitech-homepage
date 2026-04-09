@@ -49,7 +49,7 @@ export default function Hero() {
                             <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
                         </Link> */}
 
-                        <a
+                        {/* <a
                             href="/injitech_brochure.pdf"
                             download
                             className="h-12 lg:h-16 px-8 lg:px-8 bg-white border border-primary rounded-lg flex items-center justify-center gap-3 group hover:bg-white/90 hover:scale-[1.02] transition-all active:scale-[0.98] cursor-pointer w-full sm:w-auto text-decoration-none"
@@ -59,6 +59,20 @@ export default function Hero() {
                             </span>
                             <img
                                 src="/assets/download-icon.png"
+                                alt="Download"
+                                className="w-5 lg:w-6 h-5 lg:h-6 object-contain group-hover:translate-y-0.5 transition-transform"
+                            />
+                        </a> */}
+                        <a
+                            href="/injitech_brochure.pdf"
+                            download
+                            className="h-12 lg:h-16 px-8 lg:px-8 bg-primary rounded-lg flex items-center justify-center gap-3 group hover:bg-primary/90 hover:scale-[1.02] transition-all active:scale-[0.98] cursor-pointer w-full sm:w-auto"
+                        >
+                            <span className="text-[16px] lg:text-lg font-semibold text-white tracking-tight">
+                                {t.hero.getBrochure}
+                            </span>
+                            <img
+                                src="/assets/download.svg"
                                 alt="Download"
                                 className="w-5 lg:w-6 h-5 lg:h-6 object-contain group-hover:translate-y-0.5 transition-transform"
                             />

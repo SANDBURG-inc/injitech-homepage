@@ -86,34 +86,28 @@ export default function CompanyOverview() {
                         {t.company.overview.organization.ceo}
                     </div>
 
-                    <div className="flex flex-col gap-[32px] md:gap-[64px] w-full">
-                        {/* 3x3 Grid Implementation - Mobile 2 columns */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-[16px] gap-y-[40px] md:gap-x-[24px] md:gap-y-[64px]">
-                            {t.company.overview.organization.departments.map((dept: any) => (
-                                <div
-                                    key={dept.id}
-                                    className="border-l border-[#D0D5DC] pl-[16px] md:px-[24px] py-[8px] md:py-[32px] flex flex-col gap-[16px] md:gap-[24px]"
-                                >
-                                    <div className="w-[48px] h-[48px] md:w-[72px] md:h-[72px] relative">
-                                        <Image
-                                            src={dept.icon}
-                                            alt={dept.title}
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                    <div className="flex flex-col gap-[8px] md:gap-[16px]">
-                                        <h3 className="text-[#25272E] text-[16px] md:text-[20px] font-bold md:font-semibold leading-tight md:leading-[28px] tracking-[-0.2px]">
-                                            {dept.title}
-                                        </h3>
-                                        <div className="text-[#495461] text-[13px] md:text-[18px] leading-tight md:leading-[28px] tracking-[-0.18px] font-medium whitespace-pre-line">
-                                            {dept.teams ? dept.teams.join('\n') : dept.desc}
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
+                    <ScrollReveal className="w-full">
+                        <div className="w-full relative mt-[8px] md:mt-[16px]">
+                            <div className="block md:hidden w-full relative">
+                                <Image
+                                    src="/assets/company/organization_mobile.png"
+                                    alt="Organization Chart Mobile"
+                                    width={800}
+                                    height={1600}
+                                    className="w-full h-auto object-contain"
+                                />
+                            </div>
+                            <div className="hidden md:block w-full relative">
+                                <Image
+                                    src="/assets/company/organization_pc.png"
+                                    alt="Organization Chart PC"
+                                    width={2800}
+                                    height={1200}
+                                    className="w-full h-auto object-contain"
+                                />
+                            </div>
                         </div>
-                    </div>
+                    </ScrollReveal>
                 </div>
             </div>
         </div>
