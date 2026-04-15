@@ -664,7 +664,7 @@ export const translations = {
           items: [
             {
               title: "높은 리소스 효율성과 비용 절감",
-              desc: "VMware는 하나의 물리 서버에서 여러 가상 머신을\n실행하여 하드웨어 활용도를 크게 높이고, 물리적\n서버 수를 줄여 인프라 비용과 에너지 비용을 절감합니다.",
+              desc: "VMware는 하나의 물리 서버에서 여러 가상 머신을\n실행하여 하드웨어 활용도를 크게 높이고, 물리적\n서버 수를 줄여 인프라와 에너지 비용을 절감합니다.",
             },
             {
               title: "확장성·유연성 및 IT 민첩성",
@@ -777,7 +777,7 @@ export const translations = {
         useCases: {
           tag: "Use cases",
           title: "다양한 산업 환경에서 성공적으로 구축합니다.",
-          subtitle: "'신뢰받는디지털전환파트너'로자리매김하고있습니다.",
+          subtitle: "'신뢰받는 디지털전환 파트너'로 자리매김하고 있습니다.",
           items: [
             {
               title: "제조 공정 자동화용 프라이빗 클라우드 구축",
@@ -1130,7 +1130,7 @@ export const translations = {
     },
     inquiryModal: {
       title: "인지테크와 함께할\n파트너",
-      description: "문의사항을 남겨주시면 확인 후 연락드리겠습니다.",
+      description: "문의사항을 남겨주시면 확인 후\n 연락 드리겠습니다.",
       fields: {
         organization: {
           label: "소속기관명",
@@ -1833,11 +1833,11 @@ export const translations = {
           items: [
             {
               title: "Large-scale Public/Enterprise\nInfrastructure Construction References",
-              description: "We have strengths in 'design considering\noperation' rather than simple introduction.\nExperience in meeting performance/stability\nstandards through various institutions/business types is the basis of quality."
+              description: "We have strengths in 'design considering\noperation' rather than simple introduction.\nExperience in meeting performance/stability\nstandards through various institutions and business types is the basis of quality."
             },
             {
               title: "Multi-infrastructure capabilities covering\nHPE servers + DELL storage",
-              description: "Flexible infrastructure configuration tailored to\nthe customer's existing architecture/requirements is possible.\nIn other words, we are strong in meeting\n'performance, stability, and scalability' with\na combination optimized for the customer\nenvironment, not just single-vendor delivery."
+              description: "HPE servers + Dell storage provide a flexible,\ncustomer-tailored infrastructure architecture.\nWe deliver optimal performance, stability,\nand scalability through best-fit multi-vendor\nconfigurations—not limited to a single vendor"
             },
             {
               title: "Long-term partnership orientation based on\noperation/maintenance experience",
@@ -2214,7 +2214,7 @@ export const translations = {
               image: "/assets/solution/Medallia/Medallia Experience Cloud.png"
             },
             dxa: {
-              title: "Digital Experience Optimization Based on Customer Behavior Analysis",
+              title: "Digital Experience Optimization Based on\nCustomer Behavior Analysis",
               description: "Automatically analyzes customer behavior and real-time feedback across digital channels to immediately identify\nconversion barriers, and supports data-driven digital experience improvement by recreating actual\ncustomer behavior through session replays.",
               video: "/assets/solution/Medallia/Medallia DEA.mp4"
             },

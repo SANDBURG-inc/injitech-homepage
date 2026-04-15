@@ -239,6 +239,9 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                                             <option value="HPE">HPE</option>
                                             <option value="VMware">VMware</option>
                                             <option value="Cohesity">Cohesity</option>
+                                            <option value="SAS">SAS</option>
+                                            <option value="Medallia">Medallia</option>
+                                            <option value="SCAILIUM">SCAILIUM</option>
                                             <option value="Other">Other</option>
                                         </select>
                                         <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
