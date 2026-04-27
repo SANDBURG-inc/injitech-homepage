@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import ScrollReveal from "../common/ScrollReveal";
 
 export default function CompanyOverview() {
-    const { t } = useLanguage();
+    const { t, lang } = useLanguage();
 
     return (
         <div className="bg-white flex flex-col items-center">
@@ -90,7 +90,7 @@ export default function CompanyOverview() {
                         <div className="w-full relative mt-[8px] md:mt-[16px]">
                             <div className="block md:hidden w-full relative">
                                 <Image
-                                    src="/assets/company/organization_mobile.png"
+                                    src={lang === 'en' ? "/assets/company/organization_mobile_eng.png" : "/assets/company/organization_mobile.png"}
                                     alt="Organization Chart Mobile"
                                     width={800}
                                     height={1600}
@@ -99,7 +99,7 @@ export default function CompanyOverview() {
                             </div>
                             <div className="hidden md:block w-full relative">
                                 <Image
-                                    src="/assets/company/organization_pc.png"
+                                    src={lang === 'en' ? "/assets/company/organization_pc_eng.png" : "/assets/company/organization_pc.png"}
                                     alt="Organization Chart PC"
                                     width={2800}
                                     height={1200}
