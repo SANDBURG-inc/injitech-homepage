@@ -443,17 +443,17 @@ export const translations = {
         tag: "Location",
         tabs: {
           hq: "본사",
-          seoul: "서울",
+          wonju: "원주사무소",
         },
         hq: {
-          address: "강원도 원주시 입춘로 45, B동 925호(반곡동, 엔터비즈타워)",
-          tel: "033-765-6235",
-          fax: "033-765-6234",
-        },
-        seoul: {
           address: "서울특별시 서초구 방배천로 24길 7, 초석빌딩 5층/6층(방배동)",
           tel: "02-3487-6235",
           fax: "02-3487-6236",
+        },
+        wonju: {
+          address: "강원도 원주시 입춘로 45, B동 925호(반곡동, 엔터비즈타워)",
+          tel: "033-765-6235",
+          fax: "033-765-6234",
         },
       },
     },
@@ -1633,19 +1633,19 @@ export const translations = {
         tag: "Location",
         tabs: {
           hq: "Headquarters",
-          seoul: "Seoul",
+          wonju: "Wonju Office",
         },
         hq: {
-          address:
-            "#925, Building B, 45, Ipchun-ro, Wonju-si, Gangwon-do (Enter Biz Tower)",
-          tel: "033-765-6235",
-          fax: "033-765-6234",
-        },
-        seoul: {
           address:
             "5F/6F, Choseok Building, 7, Bangbaecheon-ro 24-gil, Seocho-gu, Seoul",
           tel: "02-3487-6235",
           fax: "02-3487-6236",
+        },
+        wonju: {
+          address:
+            "#925, Building B, 45, Ipchun-ro, Wonju-si, Gangwon-do (Enter Biz Tower)",
+          tel: "033-765-6235",
+          fax: "033-765-6234",
         },
       },
     },

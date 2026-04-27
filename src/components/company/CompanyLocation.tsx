@@ -5,17 +5,17 @@ import { useLanguage } from '@/context/LanguageContext';
 
 export default function CompanyLocation() {
     const { t } = useLanguage();
-    const [activeTab, setActiveTab] = useState<'hq' | 'seoul'>('hq');
+    const [activeTab, setActiveTab] = useState<'hq' | 'wonju'>('hq');
 
-    const data = t.company.location;
-    const currentLoc = activeTab === 'hq' ? data.hq : data.seoul;
+    const data = t.company.location as any;
+    const currentLoc = activeTab === 'hq' ? data.hq : data.wonju;
 
     // Map queries should be specific enough. Using Korean addresses for both translations might be more reliable for Google Maps.
-    const hqMapQuery = encodeURIComponent('강원도 원주시 입춘로 45');
-    const seoulMapQuery = encodeURIComponent('서울특별시 서초구 방배천로 24길 7');
+    const hqMapQuery = encodeURIComponent('서울특별시 서초구 방배천로 24길 7');
+    const wonjuMapQuery = encodeURIComponent('강원도 원주시 입춘로 45');
     const mapUrl = activeTab === 'hq'
         ? `https://maps.google.com/maps?q=${hqMapQuery}&t=&z=17&ie=UTF8&iwloc=&output=embed`
-        : `https://maps.google.com/maps?q=${seoulMapQuery}&t=&z=17&ie=UTF8&iwloc=&output=embed`;
+        : `https://maps.google.com/maps?q=${wonjuMapQuery}&t=&z=17&ie=UTF8&iwloc=&output=embed`;
 
     return (
         <section id="location" className="bg-white flex flex-col items-center px-8 md:px-[120px] w-full">
@@ -33,13 +33,13 @@ export default function CompanyLocation() {
                             {data.tabs.hq}
                         </button>
                         <button
-                            onClick={() => setActiveTab('seoul')}
-                            className={`px-8 py-2 rounded-full font-semibold text-base transition-colors ${activeTab === 'seoul'
+                            onClick={() => setActiveTab('wonju')}
+                            className={`px-8 py-2 rounded-full font-semibold text-base transition-colors ${activeTab === 'wonju'
                                     ? 'bg-[#0ea5e9] text-white'
                                     : 'bg-white border border-[#d0d5dc] text-[#495461] hover:bg-gray-50'
                                 }`}
                         >
-                            {data.tabs.seoul}
+                            {data.tabs.wonju}
                         </button>
                     </div>
 
